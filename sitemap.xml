@@ -3,15 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
+    <loc>/about/</loc>
+    <lastmod>2019-11-10T20:35:02-05:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2019-11-10T20:35:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/my-first-post/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/untagged/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
   </url>
   
 </urlset>

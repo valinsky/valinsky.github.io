@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Valinsky&#39;s Homepage</title>
-    <link>/</link>
-    <description>Recent content on Valinsky&#39;s Homepage</description>
+    <title>untagged on Valinsky&#39;s Homepage</title>
+    <link>/tags/untagged/</link>
+    <description>Recent content in untagged on Valinsky&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Nov 2019 20:35:02 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 20:34:55 -0500</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Sun, 10 Nov 2019 20:35:02 -0500</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Lorem ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
-    </item>
     
     <item>
       <title>My First Post</title>
