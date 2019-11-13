@@ -38,12 +38,28 @@
   </url>
   
   <url>
-    <loc>/posts/my-first-post/</loc>
+    <loc>/categories/</loc>
     <lastmod>2019-11-10T20:34:55-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/tags/cheatsheet/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/hugo-markdown-cheatsheet/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/markdown/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/tutorial/</loc>
+    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
   </url>
   
 </urlset>
