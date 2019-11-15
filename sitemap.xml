@@ -3,63 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/my-third-post/</loc>
-    <lastmod>2019-11-10T21:05:42-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-11-10T21:05:42-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-11-10T21:05:42-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/untagged/</loc>
-    <lastmod>2019-11-10T21:05:42-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-11-10T21:05:42-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/my-second-post/</loc>
-    <lastmod>2019-11-10T21:04:44-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/about/</loc>
-    <lastmod>2019-11-10T20:35:02-05:00</lastmod>
+    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/about/</loc>
+    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/about/</loc>
+    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/valinsky/</loc>
+    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/cheatsheet/</loc>
-    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/hugo-markdown-cheatsheet/</loc>
-    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/markdown/</loc>
-    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/markdown-cheatsheet-hugo-shortcodes/</loc>
+    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/tutorial/</loc>
-    <lastmod>2019-11-10T20:34:55-05:00</lastmod>
+    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
   </url>
   
 </urlset>

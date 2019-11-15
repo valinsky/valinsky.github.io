@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>markdown on Valinsky&#39;s Homepage</title>
+    <title>markdown on Valinsky</title>
     <link>/tags/markdown/</link>
-    <description>Recent content in markdown on Valinsky&#39;s Homepage</description>
+    <description>Recent content in markdown on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Nov 2019 20:34:55 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2019 20:34:55 -0500</lastBuildDate>
     
 	<atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hugo Markdown Cheatsheet</title>
-      <link>/posts/hugo-markdown-cheatsheet/</link>
-      <pubDate>Sun, 10 Nov 2019 20:34:55 -0500</pubDate>
+      <title>Markdown Cheatsheet and Hugo Shortcodes</title>
+      <link>/posts/markdown-cheatsheet-hugo-shortcodes/</link>
+      <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
       
-      <guid>/posts/hugo-markdown-cheatsheet/</guid>
-      <description>Markdown Cheatsheet Headers H1 H2 H3 H4 H5 H6 Alternatively, for H1 and H2, an underline-ish style:
-Alt-H1 Alt-H2 Emphasis Emphasis, aka italics, with asterisks or underscores.
-Strong emphasis, aka bold, with asterisks or underscores.
-Combined emphasis with asterisks and underscores.
-Strikethrough uses two tildes. Scratch this.
-Lists  First ordered list item Another item ⋅⋅* Unordered sub-list. Actual numbers don&amp;rsquo;t matter, just that it&amp;rsquo;s a number ⋅⋅1. Ordered sub-list And another item.</description>
+      <guid>/posts/markdown-cheatsheet-hugo-shortcodes/</guid>
+      <description>Everytime I end up writing Markdown I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&amp;rsquo;d put together a simple minimal cheatsheet for every Markdown noob out there, including myself.
+Kudos to Adam&amp;rsquo;s markdwon-here wiki, from which I was heavily inspired.
+I&amp;rsquo;m also adding some Hugo shortcodes because I&amp;rsquo;ll be using those pretty often as well.</description>
     </item>
     
   </channel>
