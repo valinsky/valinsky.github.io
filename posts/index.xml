@@ -14,12 +14,12 @@
             <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
             
             <guid>/posts/markdown-cheatsheet-hugo-shortcodes/</guid>
-            <description>Everytime I end up writing Markdown I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&amp;rsquo;d put together a simple minimal cheatsheet for every Markdown noob out there, including myself.
+            <description>Everytime I end up writing Markdown I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&amp;rsquo;d put together a minimal cheatsheet for every Markdown noob out there, including myself.
 Kudos to Adam&amp;rsquo;s markdwon-here wiki, from which I was heavily inspired.
 I&amp;rsquo;m also adding some Hugo shortcodes because I&amp;rsquo;ll be using those pretty often as well.</description>
             <content type="html"><![CDATA[
 
-<p>Everytime I end up writing <a href="https://www.markdownguide.org/">Markdown</a> I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&rsquo;d put together a simple minimal cheatsheet for every Markdown noob out there, including myself.<br />
+<p>Everytime I end up writing <a href="https://www.markdownguide.org/">Markdown</a> I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&rsquo;d put together a minimal cheatsheet for every Markdown noob out there, including myself.<br />
 Kudos to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam&rsquo;s markdwon-here wiki</a>, from which I was heavily inspired.</p>
 
 <p>I&rsquo;m also adding some <a href="https://gohugo.io/content-management/shortcodes">Hugo shortcodes</a> because I&rsquo;ll be using those pretty often as well.<br />
@@ -429,7 +429,7 @@ But again, this line is separated by a single newline, but the above paragraph h
 <script type="application/javascript" src="https://gist.github.com/valinsky/be83a3cba70f4faeb0f410423821b6de.js"></script>
 
 
-<hr>
+<p><br></p>
 
 <h2 id="highlight">Highlight</h2>
 
@@ -454,7 +454,7 @@ But again, this line is separated by a single newline, but the above paragraph h
   &lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">section</span>&gt;</code></pre></div>
 
-<hr>
+<p><br></p>
 
 <h2 id="instagram-image">Instagram image</h2>
 
