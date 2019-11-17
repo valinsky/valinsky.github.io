@@ -22,10 +22,10 @@
     
     <item>
       <title>Hugo Markdown Cheatsheet and Shortcodes</title>
-      <link>/posts/markdown-cheatsheet-hugo-shortcodes/</link>
+      <link>/posts/hugo-markdown-cheatsheet-and-shortcodes/</link>
       <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
       
-      <guid>/posts/markdown-cheatsheet-hugo-shortcodes/</guid>
+      <guid>/posts/hugo-markdown-cheatsheet-and-shortcodes/</guid>
       <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you.
 I find myself Googling simple Markdown syntax everytime, so this post is for me as well. I thought I&amp;rsquo;d put together a simple and minimal cheatsheet I can reference anytime.
 I&amp;rsquo;m also adding some Hugo shortcodes at the end as a bonus.
