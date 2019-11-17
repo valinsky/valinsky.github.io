@@ -27,7 +27,7 @@
       
       <guid>/posts/hugo-markdown-cheatsheet-and-shortcodes/</guid>
       <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you.
-I find myself Googling simple Markdown syntax everytime, so this post is for me as well. I thought I&amp;rsquo;d put together a simple and minimal cheatsheet I can reference anytime.
+I find myself Googling simple Markdown syntax everytime, so this post is for me as well. Since I&amp;rsquo;ll be writing a decent amount of Markdown for this website, I thought I&amp;rsquo;d put together a cheatsheet I can reference anytime.
 I&amp;rsquo;m also adding some Hugo shortcodes at the end as a bonus.
 
 Markdown Cheatsheet 
