@@ -17,9 +17,10 @@
       <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
       
       <guid>/posts/markdown-cheatsheet-hugo-shortcodes/</guid>
-      <description>Everytime I end up writing Markdown I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&amp;rsquo;d put together a minimal cheatsheet for every Markdown noob out there, including myself.
-Kudos to Adam&amp;rsquo;s markdwon-here wiki, from which I was heavily inspired.
-I&amp;rsquo;m also adding some Hugo shortcodes because I&amp;rsquo;ll be using those pretty often as well.</description>
+      <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you. I find myself Googling simple Markdown syntax everytime, so this post is for me as well. I thought I&amp;rsquo;d put together a simple and minimal cheatsheet I can reference anytime.
+I&amp;rsquo;m also adding some Hugo shortcodes as a bonus.
+Markdown Cheatsheet 
+Headers # H1  H1 # H2  H2 # H3  H3 # H4  H4 # H5  H5 # H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
     </item>
     
   </channel>

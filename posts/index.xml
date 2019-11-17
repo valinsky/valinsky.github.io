@@ -14,15 +14,15 @@
             <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
             
             <guid>/posts/markdown-cheatsheet-hugo-shortcodes/</guid>
-            <description>Everytime I end up writing Markdown I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&amp;rsquo;d put together a minimal cheatsheet for every Markdown noob out there, including myself.
-Kudos to Adam&amp;rsquo;s markdwon-here wiki, from which I was heavily inspired.
-I&amp;rsquo;m also adding some Hugo shortcodes because I&amp;rsquo;ll be using those pretty often as well.</description>
+            <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you. I find myself Googling simple Markdown syntax everytime, so this post is for me as well. I thought I&amp;rsquo;d put together a simple and minimal cheatsheet I can reference anytime.
+I&amp;rsquo;m also adding some Hugo shortcodes as a bonus.
+Markdown Cheatsheet 
+Headers # H1  H1 # H2  H2 # H3  H3 # H4  H4 # H5  H5 # H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
             <content type="html"><![CDATA[
 
-<p>Everytime I end up writing <a href="https://www.markdownguide.org/">Markdown</a> I find myself Googling even the simplest syntax, and since I need to write a lot of it for this site, I thought I&rsquo;d put together a minimal cheatsheet for every Markdown noob out there, including myself.<br />
-Kudos to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam&rsquo;s markdwon-here wiki</a>, from which I was heavily inspired.</p>
+<p>If you&rsquo;re not a <a href="https://www.markdownguide.org/">Markdown</a> expert yet, this post is for you. I find myself Googling simple Markdown syntax everytime, so this post is for me as well. I thought I&rsquo;d put together a simple and minimal cheatsheet I can reference anytime.</p>
 
-<p>I&rsquo;m also adding some <a href="https://gohugo.io/content-management/shortcodes">Hugo shortcodes</a> because I&rsquo;ll be using those pretty often as well.<br />
+<p>I&rsquo;m also adding some <a href="https://gohugo.io/content-management/shortcodes">Hugo shortcodes</a> as a bonus.<br />
 <br></p>
 
 <h2 id="markdown-cheatsheet">Markdown Cheatsheet</h2>
@@ -61,7 +61,7 @@ Kudos to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatshe
 
 <h6 id="h6">H6</h6>
 
-<p>Alternatively, for H1 and H2, there are two different underlines:</p>
+<p>For H1 and H2 you can also use two different types of uderlines:</p>
 
 <pre><code>Alt-H1
 ======
@@ -79,48 +79,51 @@ Kudos to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatshe
 
 <h2 id="emphasis">Emphasis</h2>
 
-<pre><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+<pre><code>Italics, with *asterisks* or _underscores_.
 </code></pre>
 
-<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Italics, with <em>asterisks</em> or <em>underscores</em>.</p>
 
-<pre><code>Strong emphasis, aka bold, with **asterisks** or __underscores__.
+<pre><code>Bold with **asterisks** or __underscores__.
 </code></pre>
 
-<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Bold with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
 
-<pre><code>Combined emphasis with **asterisks and _underscores_**.
+<pre><code>Combined **bold and _bold italics_**.
 </code></pre>
 
-<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Combined <strong>bold and <em>bold italics</em></strong>.</p>
 
-<pre><code>Strikethrough uses two tildes. ~~Scratch this.~~
+<pre><code>~~Strikethrough~~
 </code></pre>
 
-<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<p><del>Strikethrough</del></p>
 
 <p><br></p>
 
 <h2 id="lists">Lists</h2>
 
-<pre><code>1. First ordered list item
-2. Another item
-1. Actual numbers don't matter, just that it's a number
-4. And another item.
+<h3 id="ordered">Ordered</h3>
+
+<pre><code>1. First item.
+2. Second item.
+1. First item again, or third?
+6. Actual numbers don't matter, it just has to be a number.
 </code></pre>
 
 <ol>
-<li>First ordered list item</li>
-<li>Another item</li>
-<li>Actual numbers don&rsquo;t matter, just that it&rsquo;s a number</li>
+<li>First item.</li>
+<li>Second item.</li>
+<li>First item again, or third?</li>
+<li>Actual numbers don&rsquo;t matter, it just has to be a number.</li>
+</ol>
 
-<li><p>And another item.</p>
+<h3 id="unordered">Unordered</h3>
 
 <pre><code>* Unordered list can use asterisks
 - Or minuses
 + Or pluses
-</code></pre></li>
-</ol>
+</code></pre>
 
 <ul>
 <li>Unordered list can use asterisks</li>
@@ -137,12 +140,12 @@ Kudos to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatshe
 
 <p><a href="https://valinsky.com">Link</a></p>
 
-<pre><code>URLs and URLs in angle brackets will automatically get turned into links. 
+<pre><code>URLs and &lt;URLs&gt; will automatically become links.  
 http://www.example.com or &lt;http://www.example.com&gt; and sometimes 
-example.com (but not on Github, for example).
+example.com (but not on Hugo, for example).
 </code></pre>
 
-<p>URLs and URLs in angle brackets will automatically get turned into links.
+<p>URLs and &lt;URLs&gt; will automatically become links.<br />
 <a href="http://www.example.com">http://www.example.com</a> or <a href="http://www.example.com">http://www.example.com</a> and sometimes
 example.com (but not on Hugo, apparently).</p>
 
@@ -171,13 +174,13 @@ example.com (but not on Hugo, apparently).</p>
 <p>JavaScript</p>
 
 <pre><code>    ```javascript
-    var s = &quot;JavaScript syntax highlighting&quot;;
-    alert(s);
+    var s = &quot;Hello World!&quot;;
+    console.log(s);
     ```
 </code></pre>
 
-<pre><code class="language-javascript">    var s = &quot;JavaScript syntax highlighting&quot;;
-    alert(s);
+<pre><code class="language-javascript">    var s = &quot;Hello World!&quot;;
+    console.log(s);
 </code></pre>
 
 <p><br></p>
@@ -185,13 +188,15 @@ example.com (but not on Hugo, apparently).</p>
 <p>Python</p>
 
 <pre><code>    ```python
-    s = &quot;Python syntax highlighting&quot;
-    print s
+    def hello_world():
+        s = &quot;Hello World!&quot;
+    hello_world()
     ```
 </code></pre>
 
-<pre><code class="language-python">s = &quot;Python syntax highlighting&quot;
-print s
+<pre><code class="language-python">def hello_world():
+    s = &quot;Hello World!&quot;
+hello_world()
 </code></pre>
 
 <p><br></p>
@@ -199,13 +204,13 @@ print s
 <p>No language</p>
 
 <pre><code>    ```
-    No language indicated, so no syntax highlighting. 
-    But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+    No language indicated, so no syntax highlighting.
+    Still looks nice.
     ```
 </code></pre>
 
-<pre><code>No language indicated, so no syntax highlighting. 
-But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+<pre><code>No language indicated, so no syntax highlighting.
+Still looks nice.
 </code></pre>
 
 <p>Pro tip: in order to escape the backtick ` use 4 spaces before your code.</p>
@@ -218,9 +223,9 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 
 <pre><code>| Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| the cake      | is a lie      | $1600 |
+| the answer    | 42            |   $12 |
+| more words    | hell yeah     |    $1 |
 </code></pre>
 
 <table>
@@ -234,20 +239,20 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 
 <tbody>
 <tr>
-<td>col 3 is</td>
-<td align="center">right-aligned</td>
+<td>the cake</td>
+<td align="center">is a lie</td>
 <td align="right">$1600</td>
 </tr>
 
 <tr>
-<td>col 2 is</td>
-<td align="center">centered</td>
+<td>the answer</td>
+<td align="center">42</td>
 <td align="right">$12</td>
 </tr>
 
 <tr>
-<td>zebra stripes</td>
-<td align="center">are neat</td>
+<td>more words</td>
+<td align="center">hell yeah</td>
 <td align="right">$1</td>
 </tr>
 </tbody>
@@ -291,13 +296,13 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
 
 <h2 id="blockquotes">Blockquotes</h2>
 
-<pre><code>&gt; Blockquotes are very handy in email to emulate reply text.
-&gt; This line is part of the same quote.
+<pre><code>&gt; Blockquotes look like something very important.
+&gt; Here is more important text on a different line.
 </code></pre>
 
 <blockquote>
-<p>Blockquotes are very handy in email to emulate reply text.
-This line is part of the same quote.</p>
+<p>Blockquotes look like something very important.
+Here is more important text on a different line.</p>
 </blockquote>
 
 <pre><code>&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
@@ -476,6 +481,12 @@ But again, this line is separated by a single newline, but the above paragraph h
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hello world! <a href="https://twitter.com/hashtag/myfirstTweet?src=hash&amp;ref_src=twsrc%5Etfw">#myfirstTweet</a></p>&mdash; Valinsky (@valinsky2k) <a href="https://twitter.com/valinsky2k/status/1092548467409539072?ref_src=twsrc%5Etfw">February 4, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+<p><br></p>
+
+<p>Thanks to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam&rsquo;s markdown-here wiki</a>, which was the inspiration for this post.</p>
+
+<p><br></p>
 ]]></content>
         </item>
         
