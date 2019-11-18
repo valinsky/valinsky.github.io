@@ -5,8 +5,114 @@
         <description>Recent content in Posts on Valinsky</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 14 Nov 2019 20:34:55 -0500</lastBuildDate>
+        <lastBuildDate>Sun, 17 Nov 2019 10:54:46 -0500</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to configure your Github Pages website with your custom Godaddy domain</title>
+            <link>/posts/github-pages-custom-godaddy-domain/</link>
+            <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+            
+            <guid>/posts/github-pages-custom-godaddy-domain/</guid>
+            <description>You can use your own custom domain with GitHub Pages, instead of GitHub&amp;rsquo;s &amp;lt;username&amp;gt;.github.io domain. This GitHub Pages post covers the domain configuration steps.
+If you bought the domain on GoDaddy, I&amp;rsquo;m going to show you the exact GoDaddy DNS configuration you need.
+Go to your godaddy.com domain, and find the Manage DNS option.
+GoDaddy Manage DNS  Add these settings.
+GoDaddy DNS configuration  My website is hosted on GitHub under the &amp;lt;valinsky.</description>
+            <content type="html"><![CDATA[
+
+<p>You can use your own custom domain with <a href="https://pages.github.com/">GitHub Pages</a>, instead of GitHub&rsquo;s <strong>&lt;username&gt;.github.io</strong> domain. <a href="https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">This GitHub Pages post</a> covers the domain configuration steps.<br />
+If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDaddy DNS configuration you need.</p>
+
+<p>Go to your <a href="https://godaddy.com">godaddy.com</a> domain, and find the <em>Manage DNS</em> option.</p>
+
+
+    <figure class="left" >
+        <img src="/images/github_pages_godaddy_domain/manage_dns_setting.png"   />
+
+        
+            <figcaption class="center" >GoDaddy Manage DNS</figcaption>
+        
+    </figure>
+
+
+
+<p>Add these settings.</p>
+
+
+    <figure class="left" >
+        <img src="/images/github_pages_godaddy_domain/github_pages_godaddy_config_good.png"   />
+
+        
+            <figcaption class="center" >GoDaddy DNS configuration</figcaption>
+        
+    </figure>
+
+
+
+<p>My website is hosted on GitHub under the <strong>&lt;valinsky.github.io&gt;</strong> domain. You&rsquo;ll have to update the CNAME with your own <strong>&lt;username&gt;.github.io</strong> domain.</p>
+
+<p>After you configure your GitHub repository and GoDaddy DNS, you&rsquo;ll be greeted with this message in your GitHub respository&rsquo;s settings, right under the GitHub Pages section.</p>
+
+
+    <figure class="left" >
+        <img src="/images/github_pages_godaddy_domain/github_pages_https_not_available.png"   />
+
+        
+            <figcaption class="center" >HTTPS Not Available</figcaption>
+        
+    </figure>
+
+
+
+<p>Like the message says, you have to wait <em>24 hours</em> for the internet to magically issue an <a href="https://www.digicert.com/ssl-certificate/">HTTPS SSL certificate</a> for you.</p>
+
+<p>That was not the case for me.</p>
+
+<p><br></p>
+
+<h3 id="i-encountered-a-problem">I encountered a problem</h3>
+
+<p>Even though your certificate is not issued, you can still access your website through HTTP.<br />
+Never do that! Never serve your website through HTTP. <a href="https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https">Read why.</a></p>
+
+<p>When I was setting up my own custom domain for this website, I waited 24 hours, then another 24 hours, and yet another 24 hours, but the certificate wasn&rsquo;t getting issued.</p>
+
+<p>I soon realized the problem was with GoDaddy&rsquo;s DNS configuration.</p>
+
+<p>My initial configuration looked like this.</p>
+
+
+    <figure class="left" >
+        <img src="/images/github_pages_godaddy_domain/github_pages_godaddy_config_bad.png"   />
+
+        
+            <figcaption class="center" >GoDaddy DNS parked configuration</figcaption>
+        
+    </figure>
+
+
+
+<p>Those two DNS entries were setup by GoDaddy, and I didn&rsquo;t pay much attention to them initially. If you see these in your own DNS configuration, be sure to remove them, or else you&rsquo;ll end up with a <a href="https://en.wikipedia.org/wiki/Domain_parking">parked domain</a> that won&rsquo;t work with your GitHub pages setup.</p>
+
+<p>After I removed those entries, a few hours later my HTTPS SSL certificate was issued and I was able to activate it.</p>
+
+
+    <figure class="left" >
+        <img src="/images/github_pages_godaddy_domain/activate_https.png"   />
+
+        
+            <figcaption class="center" >HTTPS Enforced</figcaption>
+        
+    </figure>
+
+
+
+<p>And that&rsquo;s it.</p>
+
+<p>Now you have a website hosted by GitHub and configured with your own custom GoDaddy DNS.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Hugo Markdown Cheatsheet and Shortcodes</title>

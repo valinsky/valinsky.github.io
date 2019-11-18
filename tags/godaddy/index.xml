@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tutorial on Valinsky</title>
-    <link>/categories/tutorial/</link>
-    <description>Recent content in tutorial on Valinsky</description>
+    <title>godaddy on Valinsky</title>
+    <link>/tags/godaddy/</link>
+    <description>Recent content in godaddy on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Nov 2019 10:54:46 -0500</lastBuildDate>
     
-	<atom:link href="/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/godaddy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,20 +22,6 @@ If you bought the domain on GoDaddy, I&amp;rsquo;m going to show you the exact G
 Go to your godaddy.com domain, and find the Manage DNS option.
 GoDaddy Manage DNS  Add these settings.
 GoDaddy DNS configuration  My website is hosted on GitHub under the &amp;lt;valinsky.</description>
-    </item>
-    
-    <item>
-      <title>Hugo Markdown Cheatsheet and Shortcodes</title>
-      <link>/posts/hugo-markdown-cheatsheet-and-shortcodes/</link>
-      <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
-      
-      <guid>/posts/hugo-markdown-cheatsheet-and-shortcodes/</guid>
-      <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you.
-I find myself Googling simple Markdown syntax everytime, so this post is for me as well. Since I&amp;rsquo;ll be writing a decent amount of Markdown for this website, I thought I&amp;rsquo;d put together a cheatsheet I can reference anytime.
-I&amp;rsquo;m also adding some Hugo shortcodes at the end as a bonus.
-
-Markdown Cheatsheet 
-Headers # H1  H1 # H2  H2 # H3  H3 # H4  H4 # H5  H5 # H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
     </item>
     
   </channel>

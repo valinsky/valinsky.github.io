@@ -6,10 +6,55 @@
     <description>Recent content in Tags on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2019 20:35:02 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 10:54:46 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+      
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>/tags/github/</link>
+      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+      
+      <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>godaddy</title>
+      <link>/tags/godaddy/</link>
+      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+      
+      <guid>/tags/godaddy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>/tags/https/</link>
+      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+      
+      <guid>/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>/tags/tutorial/</link>
+      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+      
+      <guid>/tags/tutorial/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>about</title>
@@ -17,15 +62,6 @@
       <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
       
       <guid>/tags/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>/tags/blog/</link>
-      <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
-      
-      <guid>/tags/blog/</guid>
       <description></description>
     </item>
     
@@ -62,15 +98,6 @@
       <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
       
       <guid>/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>/tags/tutorial/</link>
-      <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
-      
-      <guid>/tags/tutorial/</guid>
       <description></description>
     </item>
     

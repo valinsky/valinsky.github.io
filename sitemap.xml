@@ -3,12 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
+    <loc>/tags/blog/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/about/</loc>
+    <loc>/categories/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/github/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/godaddy/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/github-pages-custom-godaddy-domain/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/https/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/tutorial/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-11-17T10:54:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
@@ -18,22 +68,7 @@
   </url>
   
   <url>
-    <loc>/tags/blog/</loc>
-    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-11-14T20:35:02-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
+    <loc>/tags/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
@@ -59,21 +94,6 @@
   
   <url>
     <loc>/tags/markdown/</loc>
-    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tutorial/</loc>
-    <lastmod>2019-11-14T20:34:55-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tutorial/</loc>
     <lastmod>2019-11-14T20:34:55-05:00</lastmod>
   </url>
   

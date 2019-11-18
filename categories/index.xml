@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2019 20:35:02 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 10:54:46 -0500</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>tutorial</title>
+      <link>/categories/tutorial/</link>
+      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+      
+      <guid>/categories/tutorial/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>about</title>
@@ -17,15 +26,6 @@
       <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
       
       <guid>/categories/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>/categories/tutorial/</link>
-      <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
-      
-      <guid>/categories/tutorial/</guid>
       <description></description>
     </item>
     
