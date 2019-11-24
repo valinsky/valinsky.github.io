@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>about on [b]logger.info(&#34;Welcome!&#34;)</title>
+    <title>about on [b]log.info(&#34;Welcome!&#34;)</title>
     <link>/tags/about/</link>
-    <description>Recent content in about on [b]logger.info(&#34;Welcome!&#34;)</description>
+    <description>Recent content in about on [b]log.info(&#34;Welcome!&#34;)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Nov 2019 20:35:02 -0500</lastBuildDate>
