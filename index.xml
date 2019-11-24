@@ -6,10 +6,21 @@
     <description>Recent content on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Nov 2019 10:54:46 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2019 17:24:58 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quake 3&#39;s Fast Inverse Square Root</title>
+      <link>/posts/quake3-fast-inverse-square-root/</link>
+      <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
+      
+      <guid>/posts/quake3-fast-inverse-square-root/</guid>
+      <description>This is one of those magical unicorn algorithms.
+I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
+This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
+    </item>
     
     <item>
       <title>How to configure your Github Pages website with your custom Godaddy domain</title>

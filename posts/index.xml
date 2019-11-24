@@ -5,8 +5,101 @@
         <description>Recent content in Posts on Vali Voicu</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 17 Nov 2019 10:54:46 -0500</lastBuildDate>
+        <lastBuildDate>Sun, 24 Nov 2019 17:24:58 -0500</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Quake 3&#39;s Fast Inverse Square Root</title>
+            <link>/posts/quake3-fast-inverse-square-root/</link>
+            <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
+            
+            <guid>/posts/quake3-fast-inverse-square-root/</guid>
+            <description>This is one of those magical unicorn algorithms.
+I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
+This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
+            <content type="html"><![CDATA[<p>This is one of those magical unicorn algorithms.</p>
+
+<p>I was always intrigued by this small piece of code, because it&rsquo;s such a unique and elegant solution to a common problem, and it&rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.</p>
+
+<p>This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</p>
+
+<p>Nowadays programmers might think to solve this problem by simply importing a library and calling a function.</p>
+
+<p>But back in 1999 the Quake 3 Arena developers realized it was computationally expensive to calculate the inverse square root of a floating point number on a large scale using traditional methods.</p>
+
+<p>One ninja developer came up with a solution that bypassed this limitation, and the <a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Fast inverse square root algorithm</a> was born.</p>
+
+<pre><code class="language-c">float Q_rsqrt( float number )
+{
+    long i;
+    float x2, y;
+    const float threehalfs = 1.5F;
+
+    x2 = number * 0.5F;
+    y  = number;
+    i  = * ( long * ) &amp;y;                       // evil floating point bit level hacking
+    i  = 0x5f3759df - ( i &gt;&gt; 1 );               // what the fuck? 
+    y  = * ( float * ) &amp;i;
+    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+    return y;
+}
+</code></pre>
+
+<p>The function makes use of <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton’s method</a>. Newton’s method is used for finding better approximations to the roots of a mathematical function.</p>
+
+<p>It looks like this:</p>
+
+<p>$$ x_{1} = x_{0} - \frac{f(x_{0})}{f&rsquo;(x_{0})} $$</p>
+
+<p>\( x_{0} \) is an initial approximation, and the formula generates \( x_{1} \) which is an even better approximation. The more iterations you perform, the better the approximation.</p>
+
+<p>If we want to find the value of \( 1 / \sqrt{number} \), we are looking for a solution to the equation \( f(x) = x^{-2} - number \). Take your best guess as to what the solution would be, and call it \( x_{0} \). We are only interested in the positive solution.</p>
+
+<p>We now know that \( f(x_{0}) \) is \( x_{0}^{-2} - number \). For clarification, <strong>number</strong> is the number which we want to find the inverse square root for, the input parameter to our C function above.</p>
+
+<p>Our Newton method now becomes:</p>
+
+<p>$$ x_{1} = x_{0} - \frac{x_{0}^{-2} - number}{-2 x_{0}^{-3}} $$</p>
+
+<p>After some algebraic magic (feel free to compute the result yourself), our equation becomes:</p>
+
+<p>$$ x_{1} = x_{0}(\frac{3}{2} - \frac{1}{2} * x_{0}^{2} * number) $$</p>
+
+<p>This is similar to line 12 in the C code.</p>
+
+<pre><code class="language-c">y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+</code></pre>
+
+<p>Remember when I asked you to guess the first approximation, \( x_{0} \)? Well, how do we get the value for it?</p>
+
+<p>Simple answer… magic.</p>
+
+<p>To quote Gary Tarolli, who (very modestly) takes partial credit for writing the function:</p>
+
+<blockquote>
+<p>Which actually is doing a floating point computation in integer - it took a long time to figure out how and why this works, and I can&rsquo;t remember the details anymore.</p>
+</blockquote>
+
+<p>It is not known how the exact value of the magic number <strong>0x5f3759df</strong> was determined.<br />
+What is known is that, if we take our input number and divide it by 2 (<a href="https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Right_shift_%3E%3E">shift it to the right by 1</a>), and then subtract this number from the magic number, we get a really good first estimate.</p>
+
+<p>To note, the input number is a <code>float</code>. In order to divide by 2 by shifting the bits to the right, it is converted into a <code>long</code> integer. Then it is converted back into a <code>float</code>.</p>
+
+<pre><code class="language-c">i  = * ( long * ) &amp;y;                       // evil floating point bit level hacking
+i  = 0x5f3759df - ( i &gt;&gt; 1 );               // what the fuck? 
+y  = * ( float * ) &amp;i;
+</code></pre>
+
+<p>This estimate, which is \( x_{0} \) in our mathematical function above, is then used in calculating the next approximation. The result is so close to the desired value, that a second iteration is not even needed anymore, as denoted by the commented code on line 13.</p>
+
+<pre><code class="language-c">    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+</code></pre>
+
+<p>You can read more about the Fast inverse square root <a href="https://www.beyond3d.com/content/articles/8">here</a> and <a href="https://www.beyond3d.com/content/articles/15">here</a>.</p>
+]]></content>
+        </item>
         
         <item>
             <title>How to configure your Github Pages website with your custom Godaddy domain</title>
