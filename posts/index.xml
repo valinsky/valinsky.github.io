@@ -54,7 +54,7 @@ This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a 
 
 <p>\( x_{0} \) is an initial approximation, and the formula generates \( x_{1} \) which is an even better approximation. The more iterations you perform, the better the approximation.</p>
 
-<p>If we want to find the value of \( 1 / \sqrt{number} \), we are looking for a solution to the equation \( f(x) = x^{-2} - number \). Take your best guess as to what the solution would be, and call it \( x_{0} \). We are only interested in the positive solution.</p>
+<p>We want to find the value of \( 1 / \sqrt{number} \), so we are looking for a solution to the equation \( f(x) = x^{-2} - number \). Take your best guess as to what the solution would be, and call it \( x_{0} \). We are only interested in the positive solution.</p>
 
 <p>We now know that \( f(x_{0}) \) is \( x_{0}^{-2} - number \). For clarification, <strong>number</strong> is the number which we want to find the inverse square root for, the input parameter to our C function above.</p>
 
