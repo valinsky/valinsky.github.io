@@ -23,6 +23,18 @@ This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a 
     </item>
     
     <item>
+      <title>Privacy Statement</title>
+      <link>/privacy-statement/</link>
+      <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
+      
+      <guid>/privacy-statement/</guid>
+      <description>GitHub The code for this website is publicly available on GitHub.
+The website is hosted on GitHub Pages.
+GitHub Pages privacy policy
+ If you create a GitHub Pages website, it is your responsibility to post a privacy statement that accurately describes how you collect, use, and share personal information and other visitor information, and how you comply with applicable data privacy laws, rules, and regulations. Please note that GitHub may collect Technical Information from visitors to your GitHub Pages website, including logs of visitor IP addresses, to maintain the security and integrity of the website and service.</description>
+    </item>
+    
+    <item>
       <title>How to configure your Github Pages website with your custom Godaddy domain</title>
       <link>/posts/github-pages-with-custom-godaddy-domain/</link>
       <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
