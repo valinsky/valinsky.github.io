@@ -6,10 +6,22 @@
     <description>Recent content in blog on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2019 17:24:58 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 21:40:31 -0500</lastBuildDate>
     
 	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stop Over Planning</title>
+      <link>/posts/stop-over-planning/</link>
+      <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
+      
+      <guid>/posts/stop-over-planning/</guid>
+      <description>OverPlanning can be a productivity killer and it can increase your stress.
+Yes, we&amp;rsquo;re all living that busy 21st century life, trying to find a balance between family, partners, work, gym, nutrition, finances, school, friends, hobbies, hustling, side projects, lazyness, vacations, unforseen events, etc. Trying to order the modern hectic life by planning every detail would seem like a good&amp;hellip; plan.
+And it is.
+You need to plan out your life in order to fully experience it, but you also need to experience life in order to plan it.</description>
+    </item>
     
     <item>
       <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
