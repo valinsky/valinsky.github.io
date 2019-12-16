@@ -46,7 +46,7 @@ I find myself Googling simple Markdown syntax everytime, so this post is for me 
 I&amp;rsquo;m also adding some Hugo shortcodes at the end as a bonus.
 
 Markdown Cheatsheet 
-Headers # H1  H1 # H2  H2 # H3  H3 # H4  H4 # H5  H5 # H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
+Headers # H1  H1 ## H2  H2 ### H3  H3 #### H4  H4 ##### H5  H5 ###### H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
     </item>
     
   </channel>
