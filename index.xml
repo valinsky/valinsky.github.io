@@ -6,10 +6,20 @@
     <description>Recent content on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Dec 2019 21:40:31 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2019 00:04:35 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Privacy Build 2020</title>
+      <link>/posts/privacy-build-2020/</link>
+      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+      
+      <guid>/posts/privacy-build-2020/</guid>
+      <description>Privacy was a hot topic in the last decade. And for good reason. A lot of companies are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
+Companies started employing intelligent and invasive tracking methods to gather user data and use intelligent word play to hide the underlying techniques used. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
+    </item>
     
     <item>
       <title>Stop Over Planning</title>
@@ -65,20 +75,6 @@ GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky.</d
       
       <guid>/about/</guid>
       <description>Hi, my name is Vali and I love the [free, open, uncensored, secure and E2EE] internet.</description>
-    </item>
-    
-    <item>
-      <title>Hugo Markdown Cheatsheet and Shortcodes</title>
-      <link>/posts/hugo-markdown-cheatsheet-and-shortcodes/</link>
-      <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
-      
-      <guid>/posts/hugo-markdown-cheatsheet-and-shortcodes/</guid>
-      <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you.
-I find myself Googling simple Markdown syntax everytime, so this post is for me as well. Since I&amp;rsquo;ll be writing a decent amount of Markdown for this website, I thought I&amp;rsquo;d put together a cheatsheet I can reference anytime.
-I&amp;rsquo;m also adding some Hugo shortcodes at the end as a bonus.
-
-Markdown Cheatsheet 
-Headers # H1  H1 ## H2  H2 ### H3  H3 #### H4  H4 ##### H5  H5 ###### H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
     </item>
     
   </channel>

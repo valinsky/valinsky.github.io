@@ -24,19 +24,5 @@ GoDaddy Manage DNS  Add these settings.
 GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky.</description>
     </item>
     
-    <item>
-      <title>Hugo Markdown Cheatsheet and Shortcodes</title>
-      <link>/posts/hugo-markdown-cheatsheet-and-shortcodes/</link>
-      <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
-      
-      <guid>/posts/hugo-markdown-cheatsheet-and-shortcodes/</guid>
-      <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you.
-I find myself Googling simple Markdown syntax everytime, so this post is for me as well. Since I&amp;rsquo;ll be writing a decent amount of Markdown for this website, I thought I&amp;rsquo;d put together a cheatsheet I can reference anytime.
-I&amp;rsquo;m also adding some Hugo shortcodes at the end as a bonus.
-
-Markdown Cheatsheet 
-Headers # H1  H1 ## H2  H2 ### H3  H3 #### H4  H4 ##### H5  H5 ###### H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
-    </item>
-    
   </channel>
 </rss>

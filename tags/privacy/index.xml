@@ -6,10 +6,20 @@
     <description>Recent content in privacy on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2019 19:14:55 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2019 00:04:35 -0500</lastBuildDate>
     
 	<atom:link href="/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Privacy Build 2020</title>
+      <link>/posts/privacy-build-2020/</link>
+      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+      
+      <guid>/posts/privacy-build-2020/</guid>
+      <description>Privacy was a hot topic in the last decade. And for good reason. A lot of companies are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
+Companies started employing intelligent and invasive tracking methods to gather user data and use intelligent word play to hide the underlying techniques used. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
+    </item>
     
     <item>
       <title>Privacy Statement</title>

@@ -5,8 +5,225 @@
         <description>Recent content in Posts on Vali Voicu</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 02 Dec 2019 21:40:31 -0500</lastBuildDate>
+        <lastBuildDate>Sun, 22 Dec 2019 00:04:35 -0500</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Privacy Build 2020</title>
+            <link>/posts/privacy-build-2020/</link>
+            <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+            
+            <guid>/posts/privacy-build-2020/</guid>
+            <description>Privacy was a hot topic in the last decade. And for good reason. A lot of companies are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
+Companies started employing intelligent and invasive tracking methods to gather user data and use intelligent word play to hide the underlying techniques used. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
+            <content type="html"><![CDATA[
+
+<p>Privacy was a hot topic in the last decade. And for good reason. A lot of companies are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.</p>
+
+<p>Companies started employing intelligent and invasive tracking methods to gather user data and use intelligent word play to hide the underlying techniques used. A lot of people have no idea how their data is being used, or that they themselves have become a product.</p>
+
+<h3 id="online-tracking-has-become-an-art">Online tracking has become an art</h3>
+
+<h4 id="free-apps">Free apps</h4>
+
+<p>Companies may offer top notch web and mobile apps to customers <em>for free</em>. Google, Facebook, Instagram, Twitter are some of the obvious examples. Everything you do while using these apps is recorded and saved in a centralized database forever. The saved data may be used for targeted ads, tracking your online activity, <a href="https://www.encyclopedia.com/books/educational-magazines/online-profiling">profiling you</a>, <a href="https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election">influencing your political views</a> etc.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Want to freak yourself out? I&#39;m gonna show just how much of your information the likes of Facebook and Google store about you without you even realising it</p>&mdash; Dylan Curran (@iamdylancurran) <a href="https://twitter.com/iamdylancurran/status/977559925680467968?ref_src=twsrc%5Etfw">March 24, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Today I saw that Spotify is giving away a <em>free</em> Google Home Mini to premium users&hellip;</p>
+
+<h4 id="cookies">Cookies</h4>
+
+<p>When you visit a website, a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookie</a> with a unique identifier is set on your device. Next time you visit the same website, that cookie is sent in the request and the website knows that you visited it before. While cookies do offer some benefits, like session management, they are heavily used for tracking and profiling.</p>
+
+<p>Also, <a href="https://en.wikipedia.org/wiki/Zombie_cookie">zombie cookies</a>.</p>
+
+<h4 id="device-fingerprinting">Device fingerprinting</h4>
+
+<p>You might be the only person who visits a particular website from a particular device, using a particular OS version, set to a particular language, with a particular screen size, and using a particular web browser. Websites and apps have access to all that data, and more.</p>
+
+<p>That&rsquo;s your unique <a href="https://pixelprivacy.com/resources/browser-fingerprinting/">device fingerprint</a>.</p>
+
+<p>Your identity can be easily revealed based on this data, without you revealing any personal information.</p>
+
+<p>You can check your device fingerprint <a href="https://panopticlick.eff.org/">here</a>.<br />
+Check out <a href="https://meta.stackexchange.com/a/331963">this answer</a> on Stack Exchange for more info.</p>
+
+<h4 id="first-party-and-third-party-trackers">First party and third party trackers</h4>
+
+<p>First party trackers are trackers employed by the website you visit. Third party trackers are trackers employed by entities other than the website you visit. If there is a third party tracker on a web page, that tracker has the ability to invite any number of other third party trackers.</p>
+
+<p>For example, if you go to <a href="https://www.nytimes.com/">nytimes.com</a>, NY Times will log your visit, know which article you read, etc.</p>
+
+<p>But&hellip; we can see that NY Times employs other third party trackers to gather your personal information as well, namely Google and Amazon trackers.</p>
+
+
+    <figure class="center" >
+        <img src="/images/privacy_build/nytimes_trackers.png"   />
+
+        
+            <figcaption class="center" >NY Times Online Trackers</figcaption>
+        
+    </figure>
+
+
+
+<h4 id="promotions">Promotions</h4>
+
+<p>I&rsquo;m seeing more and more companies trying to get my phone number or my email through <em>free</em> gift cards, coupons etc. Trader Joe&rsquo;s was giving me a $5 dollars coupon if I signed up for their offer using my phone number.<br />
+They can then use my email or phone number to match it to the profile they have on me.</p>
+
+<h4 id="only-scratching-the-surface">Only scratching the surface</h4>
+
+<p>These are just a few examples of different tracking methods. Companies spend big budgets on figuring out better ways to track us. The more data they have on us, the more money they make, the more power and influence they have.</p>
+
+<p>For a deep dive into how exactly our data is being gathered and used by corporations and governments, I highly recommend reading <a href="https://en.wikipedia.org/wiki/Permanent_Record_(autobiography)">Permanent Record</a> by Edward Snowden.</p>
+
+<h3 id="encryption-is-our-friend">Encryption is our friend</h3>
+
+<blockquote>
+<p>In this way, people can oppose their will to that of a fully mobilized superpower and win. Encryption is an embodiment of the laws of physics, and it does not listen to the bluster of states, even transnational surveillance dystopias.</p>
+</blockquote>
+
+<ul>
+<li>Julian Assange - <a href="https://en.wikipedia.org/wiki/Cypherpunks_(book)">Cypherpunks: Freedom and the Future of the Internet</a></li>
+</ul>
+
+<p><br></p>
+
+<p>Neither big corporations nor governments can crack <strong>properly implemented</strong> encryption.</p>
+
+<p>I&rsquo;m a fan of <a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof">zero-knowledge proof</a> encryption, where data is encrypted before it is sent to servers, and the key to decrypt the data is only available to the user. The key is never stored on corporate servers. Nobody, not even companies, can decrypt the data. Only the user can.</p>
+
+<h3 id="privacy-build">Privacy build</h3>
+
+<p>I will list some of the apps I started using that promote encryption and privacy. While this list is by no means exhaustive, and while better alternatives may exist, it can serve as an intro into the world of privacy focused apps.</p>
+
+<p>The first thing I recommend doing after you install a new app is to update the privacy settings accorgindly.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">TikTok &quot;had virtually all privacy features disabled by default.&quot; 😱<br><br>Next time you install an app for yourself or your children, please make checking the privacy settings the first step.<a href="https://t.co/uYxmfuLzgO">https://t.co/uYxmfuLzgO</a></p>&mdash; DuckDuckGo (@DuckDuckGo) <a href="https://twitter.com/DuckDuckGo/status/1207311306614857728?ref_src=twsrc%5Etfw">December 18, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h4 id="browser">Browser</h4>
+
+<p><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>. Mozilla has been advocating privacy for a while, and lately they stepped their game up. Their open source browser automatically blocks trackers and you can install a wide range of privacy based addons.</p>
+
+<p>I&rsquo;m using <a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17">Privacy Badger</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-container/">Facebook Container</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/">DuckDuckGo Privacy Essentials</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a> as tracker blocking addons.</p>
+
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-quick-manager/">Cookie Quick Manager</a> for managing local cookies. I try to delete them after every session.</p>
+
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">HTTPS Everywhere</a> to ensure that web traffic is encrypted.</p>
+
+<p>I also use <a href="https://www.torproject.org/">Tor Browser</a>. I fully support Tor and and their mission.<br />
+Fun fact, if you maximize the Tor Browser, you&rsquo;ll be greeted with this message.</p>
+
+
+    <figure class="center" >
+        <img src="/images/privacy_build/tor_fingerprint_popup.png"   />
+
+        
+            <figcaption class="center" >Tor Fingerprint Popup</figcaption>
+        
+    </figure>
+
+
+
+<p>Remember that online fingerprint we were talking about before&hellip;</p>
+
+<p>On my smartphone I also use the <a href="https://duckduckgo.com/app">DuckDuckGo browser</a>.</p>
+
+<h4 id="instant-messaging">Instant Messaging</h4>
+
+<p><a href="https://www.signal.org/">Signal</a>. Open source, minimalist, E2EE.<br />
+The argument against Signal is that your phone number is required. I think it&rsquo;s a fair argument. But we are diving into anonymity here. Privacy and anonymity are two separate things that should be approached differently.</p>
+
+<p>WhatsApp uses the Signal protocol as its encryption algorithm. I would never recommend WhatsApp as a secure and private messaging app though. WhatsApp is owned by Facebook. Facebook wants all your data, your friends data, and your friends friends data.</p>
+
+<p>If WhatsApp is encrypted, then how can Facebook get my data? Fair question. They don&rsquo;t care what you talk about. They care about your metadata.</p>
+
+<blockquote>
+<p>Metadata is “activity data.” All the records of all the things you do on your devices and all the things your devices do on their own. Take a phone call, for example: its metadata might include the date and time of the call, the call’s duration, the number from which the call was made, the number being called, and their locations. An email’s metadata might include information about what type of computer it was generated on, where, and when, who the computer belonged to, who sent the email, who received it, where and when it was sent and received, and who if anyone besides the sender and recipient accessed it, and where and when. Metadata can tell your surveillant the address you slept at last night and what time you got up this morning. It reveals every place you visited during your day and how long you spent there. It shows who you were in touch with and who was in touch with you. It’s this fact that obliterates any government claim that metadata is somehow not a direct window into the substance of a communication. With the dizzying volume of digital communications in the world, there is simply no way that every phone call could be listened to or email could be read. Even if it were feasible, however, it still wouldn’t be useful, and anyway, metadata makes this unnecessary by winnowing the field. This is why it’s best to regard metadata not as some benign abstraction, but as the very essence of content: it is precisely the first line of information that the party surveilling you requires.</p>
+</blockquote>
+
+<ul>
+<li>Edward Snowden - Permanent Record</li>
+</ul>
+
+<p><br></p>
+
+<p>Be mindful of metadata when using the internet. Encryption can&rsquo;t be broken for now, but a lot of apps leave beind a huge trail of metadata.</p>
+
+<h4 id="email">Email</h4>
+
+<p><a href="https://protonmail.com/">ProtonMail</a></p>
+
+<p><a href="https://www.tutanota.com/">Tutanota</a></p>
+
+<p>Simple, encrypted, open source.</p>
+
+<p>There are some differences between the two. For example ProtonMail doesn&rsquo;t encrypt the email subject, while Tutanota does.</p>
+
+<h4 id="search-engine">Search Engine</h4>
+
+<p><a href="https://duckduckgo.com/">DuckDuckGo</a></p>
+
+<p><a href="https://www.startpage.com/">StartPage</a>, anonymity built on top of Google search. Sounds like a good idea on paper&hellip;</p>
+
+<h4 id="notes">Notes</h4>
+
+<p><a href="https://standardnotes.org/">Standard Notes</a>. I love this app. Open source, encrypted, simple and easy to use and it has great extensions.</p>
+
+<p>I think note taking apps are our most personal apps. We may write down our deepest thoughts and ideas. Imagine other people having full access to your deepest thoughts. I&rsquo;m looking at you Google Keep.</p>
+
+<h4 id="password-manager">Password Manager</h4>
+
+<p><a href="https://www.dashlane.com/">Dashlane</a>. I know I&rsquo;m lacking behind here. While I do like the app and its features, it&rsquo;s not open source. I&rsquo;m looking for an alternative.</p>
+
+<h4 id="vpn">VPN</h4>
+
+<p>I tried a couple of them and they&rsquo;re all <em>fine</em>, although I hold the view that <a href="https://gist.github.com/joepie91/5a9909939e6ce7d09e29">VPNs don&rsquo;t help with privacy</a>. I use them for other purposes. Currently I&rsquo;m using PIA and the new <a href="https://fpn.firefox.com/">Firefox Private Network</a> looks nice.</p>
+
+<h4 id="os">OS</h4>
+
+<p>I do most of my work on a MacBook Pro, but there are other OSs that focus on privacy.</p>
+
+<p><a href="https://tails.boum.org/">Tails OS</a>. Private and anonymous OS built on top of Tor. It deletes your entire session at shutdown. Fits on a flash drive.</p>
+
+<p>I heard good things about <a href="https://www.qubes-os.org/">Qubes OS</a> but I have yet to try it out.</p>
+
+<h4 id="stop-using-native-apps">Stop using native apps</h4>
+
+<p>Smartphones are tracking machines, which makes native apps tracking apps. I stopped using most native apps. A browser, like Firefox and DuckDuckGo, with privacy settings cranked up and regular cookie deletion is good enough.</p>
+
+<p>This approach won&rsquo;t stop smartphone from tracking you though. <a href="https://youtu.be/VFns39RXPrU?t=3">They track you all the time</a>.</p>
+
+<h4 id="awareness">Awareness</h4>
+
+<p>The views on privacy and privacy focused apps are changing rapidly. We ended up in a situation where our private life means big money for some corporation or for the government. We are being fooled into thinking otherwise.</p>
+
+<p>One might think that Google is a tech company. It&rsquo;s not. <a href="https://www.investopedia.com/articles/investing/020515/business-google.asp">It&rsquo;s an ad company</a>. Most of its revenue comes from paid or targeted ads.</p>
+
+<p>One might think that Facebook is a social media website. It&rsquo;s not. <a href="https://www.investopedia.com/ask/answers/120114/how-does-facebook-fb-make-money.asp">It&rsquo;s an ad company</a>. Facebook primarily makes money by selling advertising space on its platform.</p>
+
+<p>Government entities keep pushing for encryption back doors, few examples being <a href="https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute">Apple</a> and <a href="https://www.forbes.com/sites/zakdoffman/2019/09/29/whatsapp-backdoorwill-facebook-be-forced-to-break-message-encryption-as-reported/#3007f19c1b38">Facebook</a>. A back door doesn&rsquo;t mean that the government or the company can view your messages, it means that <strong>anyone</strong> that has access to the master key can view your messages. It&rsquo;s a personal, security and privacy risk.</p>
+
+<p>We&rsquo;re being played.</p>
+
+<p>I&rsquo;m a strong believer in the right for privacy and I support companies and individuals who build applications having privacy as a core foundation.</p>
+
+<blockquote>
+<p>&ldquo;Arguing that you don&rsquo;t care about the right to privacy because you have nothing to hide is no
+different than saying you don&rsquo;t care about free speech because you have nothing to say.&rdquo;</p>
+</blockquote>
+
+<ul>
+<li>Edward Snowden</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Stop Over Planning</title>
@@ -290,492 +507,6 @@ Never do that! Never serve your website through HTTP. <a href="https://developer
 <p>And that&rsquo;s it.</p>
 
 <p>Now you have a website hosted by GitHub and configured with your own custom GoDaddy DNS.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Hugo Markdown Cheatsheet and Shortcodes</title>
-            <link>/posts/hugo-markdown-cheatsheet-and-shortcodes/</link>
-            <pubDate>Thu, 14 Nov 2019 20:34:55 -0500</pubDate>
-            
-            <guid>/posts/hugo-markdown-cheatsheet-and-shortcodes/</guid>
-            <description>If you&amp;rsquo;re not a Markdown expert yet, this post is for you.
-I find myself Googling simple Markdown syntax everytime, so this post is for me as well. Since I&amp;rsquo;ll be writing a decent amount of Markdown for this website, I thought I&amp;rsquo;d put together a cheatsheet I can reference anytime.
-I&amp;rsquo;m also adding some Hugo shortcodes at the end as a bonus.
-
-Markdown Cheatsheet 
-Headers # H1  H1 ## H2  H2 ### H3  H3 #### H4  H4 ##### H5  H5 ###### H6  H6 For H1 and H2 you can also use two different types of uderlines:</description>
-            <content type="html"><![CDATA[
-
-<p>If you&rsquo;re not a <a href="https://www.markdownguide.org/">Markdown</a> expert yet, this post is for you.<br />
-I find myself Googling simple Markdown syntax everytime, so this post is for me as well. Since I&rsquo;ll be writing a decent amount of Markdown for this website, I thought I&rsquo;d put together a cheatsheet I can reference anytime.</p>
-
-<p>I&rsquo;m also adding some <a href="https://gohugo.io/content-management/shortcodes">Hugo shortcodes</a> at the end as a bonus.</p>
-
-<p><br></p>
-
-<h2 id="markdown-cheatsheet">Markdown Cheatsheet</h2>
-
-<p><br></p>
-
-<h2 id="headers">Headers</h2>
-
-<pre><code># H1
-</code></pre>
-
-<h1 id="h1">H1</h1>
-
-<pre><code>## H2
-</code></pre>
-
-<h2 id="h2">H2</h2>
-
-<pre><code>### H3
-</code></pre>
-
-<h3 id="h3">H3</h3>
-
-<pre><code>#### H4
-</code></pre>
-
-<h4 id="h4">H4</h4>
-
-<pre><code>##### H5
-</code></pre>
-
-<h5 id="h5">H5</h5>
-
-<pre><code>###### H6
-</code></pre>
-
-<h6 id="h6">H6</h6>
-
-<p>For H1 and H2 you can also use two different types of uderlines:</p>
-
-<pre><code>Alt-H1
-======
-</code></pre>
-
-<h1 id="alt-h1">Alt-H1</h1>
-
-<pre><code>Alt-H2
-------
-</code></pre>
-
-<h2 id="alt-h2">Alt-H2</h2>
-
-<p><br></p>
-
-<h2 id="emphasis">Emphasis</h2>
-
-<pre><code>Italics, with *asterisks* or _underscores_.
-</code></pre>
-
-<p>Italics, with <em>asterisks</em> or <em>underscores</em>.</p>
-
-<pre><code>Bold with **asterisks** or __underscores__.
-</code></pre>
-
-<p>Bold with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
-
-<pre><code>Combined **bold and _bold italics_**.
-</code></pre>
-
-<p>Combined <strong>bold and <em>bold italics</em></strong>.</p>
-
-<pre><code>~~Strikethrough~~
-</code></pre>
-
-<p><del>Strikethrough</del></p>
-
-<p><br></p>
-
-<h2 id="lists">Lists</h2>
-
-<h3 id="ordered">Ordered</h3>
-
-<pre><code>1. First item.
-2. Second item.
-1. First item again, or third?
-6. Actual numbers don't matter, it just has to be a number.
-</code></pre>
-
-<ol>
-<li>First item.</li>
-<li>Second item.</li>
-<li>First item again, or third?</li>
-<li>Actual numbers don&rsquo;t matter, it just has to be a number.</li>
-</ol>
-
-<h3 id="unordered">Unordered</h3>
-
-<pre><code>* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-</code></pre>
-
-<ul>
-<li>Unordered list can use asterisks</li>
-<li>Or minuses</li>
-<li>Or pluses</li>
-</ul>
-
-<p><br></p>
-
-<h2 id="links">Links</h2>
-
-<pre><code>[Link](https://valinsky.com)
-</code></pre>
-
-<p><a href="https://valinsky.com">Link</a></p>
-
-<pre><code>URLs and &lt;URLs&gt; will automatically become links.  
-http://www.example.com or &lt;http://www.example.com&gt; and sometimes 
-example.com (but not on Hugo, for example).
-</code></pre>
-
-<p>URLs and &lt;URLs&gt; will automatically become links.<br />
-<a href="http://www.example.com">http://www.example.com</a> or <a href="http://www.example.com">http://www.example.com</a> and sometimes
-example.com (but not on Hugo, apparently).</p>
-
-<p><br></p>
-
-<h2 id="images">Images</h2>
-
-<p>Here&rsquo;s my favicon (hover to see the title text):</p>
-
-<pre><code>![favicon](https://valinsky.me/android-chrome-192x192.png &quot;Valinsky favicon text&quot;)
-</code></pre>
-
-<p><img src="https://valinsky.me/android-chrome-192x192.png" alt="favicon" title="Valinsky favicon text" /></p>
-
-<p><br></p>
-
-<h2 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h2>
-
-<pre><code>Inline `code` has `back-ticks around` it.
-</code></pre>
-
-<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
-
-<p><br></p>
-
-<p>JavaScript</p>
-
-<pre><code>    ```javascript
-    var s = &quot;Hello World!&quot;;
-    console.log(s);
-    ```
-</code></pre>
-
-<pre><code class="language-javascript">    var s = &quot;Hello World!&quot;;
-    console.log(s);
-</code></pre>
-
-<p><br></p>
-
-<p>Python</p>
-
-<pre><code>    ```python
-    def hello_world():
-        s = &quot;Hello World!&quot;
-    hello_world()
-    ```
-</code></pre>
-
-<pre><code class="language-python">def hello_world():
-    s = &quot;Hello World!&quot;
-hello_world()
-</code></pre>
-
-<p><br></p>
-
-<p>No language</p>
-
-<pre><code>    ```
-    No language indicated, so no syntax highlighting.
-    Still looks nice.
-    ```
-</code></pre>
-
-<pre><code>No language indicated, so no syntax highlighting.
-Still looks nice.
-</code></pre>
-
-<p>Pro tip: in order to escape the backtick ` use 4 spaces before your code.</p>
-
-<p><br></p>
-
-<h2 id="tables">Tables</h2>
-
-<p>Colons can be used to align columns.</p>
-
-<pre><code>| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| the cake      | is a lie      | $1600 |
-| the answer    | 42            |   $12 |
-| more words    | hell yeah     |    $1 |
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th align="center">Are</th>
-<th align="right">Cool</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>the cake</td>
-<td align="center">is a lie</td>
-<td align="right">$1600</td>
-</tr>
-
-<tr>
-<td>the answer</td>
-<td align="center">42</td>
-<td align="right">$12</td>
-</tr>
-
-<tr>
-<td>more words</td>
-<td align="center">hell yeah</td>
-<td align="right">$1</td>
-</tr>
-</tbody>
-</table>
-
-<p>There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don&rsquo;t need to make the
-raw Markdown line up prettily. You can also use inline Markdown.</p>
-
-<pre><code>Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-</code></pre>
-
-<table>
-<thead>
-<tr>
-<th>Markdown</th>
-<th>Less</th>
-<th>Pretty</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><em>Still</em></td>
-<td><code>renders</code></td>
-<td><strong>nicely</strong></td>
-</tr>
-
-<tr>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
-
-<p><br></p>
-
-<h2 id="blockquotes">Blockquotes</h2>
-
-<pre><code>&gt; Blockquotes look like something very important.
-&gt; Here is more important text on a different line.
-</code></pre>
-
-<blockquote>
-<p>Blockquotes look like something very important.
-Here is more important text on a different line.</p>
-</blockquote>
-
-<pre><code>&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
-</code></pre>
-
-<blockquote>
-<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&rsquo;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
-</blockquote>
-
-<p><br></p>
-
-<h2 id="inline-html">Inline HTML</h2>
-
-<pre><code>It *might* work
-
-&lt;dl&gt;
-  &lt;dt&gt;Definition list&lt;/dt&gt;
-  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
-
-  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
-  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
-&lt;/dl&gt;
-</code></pre>
-
-<p>It <em>might</em> work</p>
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
-
-<p><br></p>
-
-<h2 id="horizontal-rule">Horizontal Rule</h2>
-
-<pre><code>Three or more...
-
----
-</code></pre>
-
-<p>Three or more&hellip;</p>
-
-<hr />
-
-<pre><code>Hyphens
-
-***
-</code></pre>
-
-<p>Hyphens</p>
-
-<hr />
-
-<pre><code>Asterisks
-
-___
-</code></pre>
-
-<p>Asterisks</p>
-
-<hr />
-
-<p><br></p>
-
-<h2 id="line-breaks">Line Breaks</h2>
-
-<pre><code>Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.  
-But again, this line is separated by a single newline, but the above paragraph has to spaces at the end.
-</code></pre>
-
-<p>Here&rsquo;s a line for us to start with.</p>
-
-<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
-
-<p>This line is also a separate paragraph, but&hellip;
-This line is only separated by a single newline, so it&rsquo;s a separate line in the <em>same paragraph</em>.<br />
-But again, this line is separated by a single newline, but the above paragraph has to spaces at the end.</p>
-
-<p><br></p>
-
-<h2 id="hugo-shortcodes">Hugo shortcodes</h2>
-
-<p><br></p>
-
-<h2 id="youtube-videos">YouTube Videos</h2>
-
-<pre><code>{{&lt; youtube id=&quot;h2FxSRZcYX0&quot; &gt;}}
-</code></pre>
-
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/h2FxSRZcYX0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-
-<p><br></p>
-
-<h2 id="image">Image</h2>
-
-<pre><code>{{&lt; figure src=&quot;https://valinsky.me/android-chrome-192x192.png&quot; title=&quot;Valinsky favicon&quot; caption=&quot;Valinsky favicon&quot; &gt;}}
-</code></pre>
-
-
-    <figure class="left" >
-        <img src="https://valinsky.me/android-chrome-192x192.png"   />
-
-        
-            <figcaption class="center" >Valinsky favicon</figcaption>
-        
-    </figure>
-
-
-
-<p><br></p>
-
-<h2 id="github-gist">GitHub Gist</h2>
-
-<pre><code>{{&lt; gist valinsky be83a3cba70f4faeb0f410423821b6de &gt;}}
-</code></pre>
-
-<script type="application/javascript" src="https://gist.github.com/valinsky/be83a3cba70f4faeb0f410423821b6de.js"></script>
-
-
-<p><br></p>
-
-<h2 id="highlight">Highlight</h2>
-
-<pre><code>{{&lt; highlight html &gt;}}
-&lt;section id=&quot;main&quot;&gt;
-  &lt;div&gt;
-   &lt;h1 id=&quot;title&quot;&gt;{{ .Title }}&lt;/h1&gt;
-    {{ range .Pages }}
-        {{ .Render &quot;summary&quot;}}
-    {{ end }}
-  &lt;/div&gt;
-&lt;/section&gt;
-{{&lt; /highlight &gt;}}
-</code></pre>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
-  &lt;<span style="color:#f92672">div</span>&gt;
-   &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
-    {{ range .Pages }}
-        {{ .Render &#34;summary&#34;}}
-    {{ end }}
-  &lt;/<span style="color:#f92672">div</span>&gt;
-&lt;/<span style="color:#f92672">section</span>&gt;</code></pre></div>
-
-<p><br></p>
-
-<h2 id="instagram-image">Instagram image</h2>
-
-<pre><code>{{&lt; instagram B2_vxasjdVW &gt;}}
-</code></pre>
-
-
-
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/B2_vxasjdVW/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/B2_vxasjdVW/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/B2_vxasjdVW/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">&#34;Appreciate where you are in your journey, even if it&#39;s not where you want to be. Every season serves a purpose. This is a constant reminder I need daily. Hope at least one person reading this finds comfort in those words. Love you guys&#34; 👊🏻 Be Visually Inspired! Photo by @samciurdar #artofvisuals #bevisuallyinspired #aov #earthfocus #campingofficial #stayandwander **Editing Tools &amp; Resources Now Available! Link In Bio.**</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/artofvisuals/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Art of Visuals | CREATORS 🎨</a> (@artofvisuals) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2019-09-29T13:01:07+00:00">Sep 29, 2019 at 6:01am PDT</time></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-
-<p><br></p>
-
-<h2 id="twitter">Twitter</h2>
-
-<pre><code>{{&lt; tweet 1092548467409539072 &gt;}}
-</code></pre>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hello world! <a href="https://twitter.com/hashtag/myfirstTweet?src=hash&amp;ref_src=twsrc%5Etfw">#myfirstTweet</a></p>&mdash; Valinsky (@valinsky2k) <a href="https://twitter.com/valinsky2k/status/1092548467409539072?ref_src=twsrc%5Etfw">February 4, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p><br></p>
-
-<p>Thanks to <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam&rsquo;s markdown-here wiki</a>, which was the inspiration for this post.</p>
-
-<p><br></p>
 ]]></content>
         </item>
         
