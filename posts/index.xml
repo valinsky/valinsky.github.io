@@ -14,13 +14,13 @@
             <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
             
             <guid>/posts/privacy-build-2020/</guid>
-            <description>Privacy was a hot topic in the last decade. And for good reason. A lot of companies are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
-Companies started employing intelligent and invasive tracking methods to gather user data and use intelligent word play to hide the underlying techniques used. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
+            <description>Privacy was a hot topic in the last decade. And for good reason. Corporations are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
+Companies started employing intelligent and invasive tracking methods to gather as much user data as possible while hiding the underlying techniques implemented through intelligent word play. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
             <content type="html"><![CDATA[
 
-<p>Privacy was a hot topic in the last decade. And for good reason. A lot of companies are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.</p>
+<p>Privacy was a hot topic in the last decade. And for good reason. Corporations are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.</p>
 
-<p>Companies started employing intelligent and invasive tracking methods to gather user data and use intelligent word play to hide the underlying techniques used. A lot of people have no idea how their data is being used, or that they themselves have become a product.</p>
+<p>Companies started employing intelligent and invasive tracking methods to gather as much user data as possible while hiding the underlying techniques implemented through intelligent word play. A lot of people have no idea how their data is being used, or that they themselves have become a product.</p>
 
 <h3 id="online-tracking-has-become-an-art">Online tracking has become an art</h3>
 
@@ -77,7 +77,7 @@ They can then use my email or phone number to match it to the profile they have 
 
 <h4 id="only-scratching-the-surface">Only scratching the surface</h4>
 
-<p>These are just a few examples of different tracking methods. Companies spend big budgets on figuring out better ways to track us. The more data they have on us, the more money they make, the more power and influence they have.</p>
+<p>These are just a few examples of different tracking methods. Corporations spend big budgets on figuring out better ways to track us. The more data they have on us, the more money they make, the more power and influence they have.</p>
 
 <p>For a deep dive into how exactly our data is being gathered and used by corporations and governments, I highly recommend reading <a href="https://en.wikipedia.org/wiki/Permanent_Record_(autobiography)">Permanent Record</a> by Edward Snowden.</p>
 
@@ -154,7 +154,7 @@ The argument against Signal is that your phone number is required. I think it&rs
 
 <p><br></p>
 
-<p>Be mindful of metadata when using the internet. Encryption can&rsquo;t be broken for now, but a lot of apps leave beind a huge trail of metadata.</p>
+<p>Be mindful of metadata when using the internet. Encryption can&rsquo;t be broken, but a lot of apps leave beind a huge trail of metadata.</p>
 
 <h4 id="email">Email</h4>
 
@@ -188,7 +188,7 @@ The argument against Signal is that your phone number is required. I think it&rs
 
 <h4 id="os">OS</h4>
 
-<p>I do most of my work on a MacBook Pro, but there are other OSs that focus on privacy.</p>
+<p>I do most of my work on a MacBook Pro, but there are other OSes that focus on privacy.</p>
 
 <p><a href="https://tails.boum.org/">Tails OS</a>. Private and anonymous OS built on top of Tor. It deletes your entire session at shutdown. Fits on a flash drive.</p>
 
@@ -198,7 +198,7 @@ The argument against Signal is that your phone number is required. I think it&rs
 
 <p>Smartphones are tracking machines, which makes native apps tracking apps. I stopped using most native apps. A browser, like Firefox and DuckDuckGo, with privacy settings cranked up and regular cookie deletion is good enough.</p>
 
-<p>This approach won&rsquo;t stop smartphone from tracking you though. <a href="https://youtu.be/VFns39RXPrU?t=3">They track you all the time</a>.</p>
+<p>This approach won&rsquo;t stop your smartphone from tracking you though. It tracks you all the time! See <a href="https://youtu.be/VFns39RXPrU?t=3">this</a> and <a href="https://www.nytimes.com/interactive/2019/12/21/opinion/location-data-democracy-protests.html">this</a>.</p>
 
 <h4 id="awareness">Awareness</h4>
 
@@ -209,6 +209,8 @@ The argument against Signal is that your phone number is required. I think it&rs
 <p>One might think that Facebook is a social media website. It&rsquo;s not. <a href="https://www.investopedia.com/ask/answers/120114/how-does-facebook-fb-make-money.asp">It&rsquo;s an ad company</a>. Facebook primarily makes money by selling advertising space on its platform.</p>
 
 <p>Government entities keep pushing for encryption back doors, few examples being <a href="https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute">Apple</a> and <a href="https://www.forbes.com/sites/zakdoffman/2019/09/29/whatsapp-backdoorwill-facebook-be-forced-to-break-message-encryption-as-reported/#3007f19c1b38">Facebook</a>. A back door doesn&rsquo;t mean that the government or the company can view your messages, it means that <strong>anyone</strong> that has access to the master key can view your messages. It&rsquo;s a personal, security and privacy risk.</p>
+
+<p>Our private life, our daily activities, our thoughts and emotions, our likes and dislikes, our political views, our relationships, our own identity is being used against us. Advanced machine learning algorithms in conjunction with our data are being used to influence our behaviour and to make us think and feel in a certain way, in order to conform to big corporations and government agendas. This is next level brain washing. It&rsquo;s not like old TV propaganda. Back then everyone would watch the same generic ads and news. Now it&rsquo;s customized based on individual behaviour. It&rsquo;s personal.</p>
 
 <p>We&rsquo;re being played.</p>
 
