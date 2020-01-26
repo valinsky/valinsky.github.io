@@ -51,7 +51,7 @@ It also needs maintenance. You have to run and configure a Jenkins server, which
 
 <p>As I was writing the jobs, the pipeline was slowly coming together and I would often push the code in order to test the changes. This part was as intense as it was exciting.</p>
 
-<p>I could see the pipeline progress in the GitLab UI, and every time I would make a job pass, in that moment, I was the happiest man alive. I had a visual feedback of my progress. With each job succeeding, I could my progress increasing (by 16.6%).</p>
+<p>I could see the pipeline running in the GitLab UI, and every time I would make a job pass, in that moment, I was the happiest man alive.</p>
 
 <p>But during the time when a job would run, not knowing if it will actually pass this time or fail again, I was on the edge of my seat. I realized that sometimes I would involuntarily hold my breath in this situation.</p>
 
@@ -64,7 +64,7 @@ It&rsquo;s an art.</p>
 
 <p>As engineers we deal with errors and bugs on the regular. We use a lot of brain power trying to understand problems and to find the best solutions for them. Confusion and frustration are part of the job, but with time a good engineer will know how to handle these emotions and will learn how to be calm and collected under stress. These qualities can serve you greatly in the real world.</p>
 
-<p>And after all that mental effort, we&rsquo;re rewarded with this magical thing that does what it&rsquo;s supposed to do because we told it to it that way. It&rsquo;s a beautiful creative process.</p>
+<p>And after all that mental effort, we&rsquo;re rewarded with this magical thing that does what it&rsquo;s supposed to do because we told it to do it that way. It&rsquo;s a beautiful creative process.</p>
 ]]></content>
         </item>
         
