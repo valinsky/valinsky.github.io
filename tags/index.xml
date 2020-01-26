@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Dec 2019 00:04:35 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 19:39:43 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>blog</title>
       <link>/tags/blog/</link>
-      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+      <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
       
       <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>/tags/software/</link>
+      <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
+      
+      <guid>/tags/software/</guid>
       <description></description>
     </item>
     

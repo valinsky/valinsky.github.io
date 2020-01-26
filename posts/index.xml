@@ -5,8 +5,68 @@
         <description>Recent content in Posts on Vali Voicu</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 22 Dec 2019 00:04:35 -0500</lastBuildDate>
+        <lastBuildDate>Sat, 25 Jan 2020 19:39:43 -0500</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>The Beauty of Building Software</title>
+            <link>/posts/the-beauty-of-building-software/</link>
+            <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
+            
+            <guid>/posts/the-beauty-of-building-software/</guid>
+            <description>One of my latest adventures in the world of software was to update the CI/CD for one of our repositories. The plan was to move away from using Jenkins in favor of a full CI/CD GitLab pipeline.
+I&amp;rsquo;ve worked with Jenkins for a few years and I think it&amp;rsquo;s a solid CI/CD and build tool. It&amp;rsquo;s highly configurable and it will get the job done.
+It also needs maintenance. You have to run and configure a Jenkins server, which adds up to the (probably) high list of apps that need to be maintained.</description>
+            <content type="html"><![CDATA[
+
+<p>One of my latest adventures in the world of software was to update the CI/CD for one of our repositories. The plan was to move away from using Jenkins in favor of a full CI/CD GitLab pipeline.</p>
+
+<p>I&rsquo;ve worked with Jenkins for a few years and I think it&rsquo;s a solid CI/CD and build tool. It&rsquo;s highly configurable and it will get the job done.<br />
+It also needs maintenance. You have to run and configure a Jenkins server, which adds up to the (probably) high list of apps that need to be maintained.</p>
+
+<p>GitLab has a <a href="https://docs.gitlab.com/ee/ci/">built in CI/CD tool</a> which is configured by a <strong>.gitlab-ci.yml</strong> file placed in the repos root folder. Instead of maintaining an app server, you <em>just</em> have to write a yml file.</p>
+
+<p>The <strong>.gitlab-ci.yml</strong> contains scripts that will be executed by <a href="https://docs.gitlab.com/runner/">GitLab Runners</a> when code is pushed to the repo. Scripts can be grouped together into jobs. You can have a build job, a test job, a deploy job, a documentation job, etc. You can define your jobs to run in a specific order, together composing a pipeline.</p>
+
+<h4 id="writing-the-first-job">Writing the first job</h4>
+
+<p>That&rsquo;s what I had to do. I had to create a <strong>.gitlab-ci.yml</strong> file for this repo in order to test, build and deploy the app to specific environments.</p>
+
+<p>I haven&rsquo;t worked with GitLab pipelines before. This was all new to me. And I had a great time doing it.</p>
+
+<p>I started by reading the <a href="https://docs.gitlab.com/ee/ci/yaml/">documentation</a>, and GitLab&rsquo;s is excellent. Every question I had was answered in the docs. It was great to read through and understand how all the different pieces work and how they can creatively be combined together.</p>
+
+<p>The first thing I tried was to write a simple script that runs the unit tests. When new code was pushed to a <strong>feature</strong> branch, I wanted GitLab to run unit tests against the code through the CI. It was great to see the GitLab Runner kick in on every code push.</p>
+
+<h4 id="creating-the-pipeline">Creating the pipeline</h4>
+
+<p>I was done with the easy part. The tricky part was, when the code was merged into the <strong>master</strong> branch, a pipeline that looks something like this had to be executed:</p>
+
+<pre><code>unit test -&gt; deploy changeset -&gt; build container -&gt; deploy container -&gt; sanity check -&gt; tag
+</code></pre>
+
+<p>The pipeline will run the unit tests again, deploy the AWS stack changeset, build a Docker container and push it to ECR, deploy the container to ECS, run a basic sanity, and finally tag the code.</p>
+
+<p>If you don&rsquo;t know what all of this is, don&rsquo;t worry about it too much. The idea is that each stage has to successfully run in order for the next stage to be executed.</p>
+
+<p>As I was writing the jobs, the pipeline was slowly coming together and I would often push the code in order to test the changes. This part was as intense as it was exciting.</p>
+
+<p>I could see the pipeline progress in the GitLab UI, and every time I would make a job pass, in that moment, I was the happiest man alive. I had a visual feedback of my progress. With each job succeeding, I could my progress increasing (by 16.6%).</p>
+
+<p>But during the time when a job would run, not knowing if it will actually pass this time or fail again, I was on the edge of my seat. I realized that sometimes I would involuntarily hold my breath in this situation.</p>
+
+<p>After many happy, intense and some frustrating moments, I ended up writing the last job, where I had to tag the code that was deployed. This one was special. While at the edge of my seat again, I triggered the entire pipeline. I was watching how it was slowly progressing and&hellip; it passed! In that moment I thought <em>this is what I was born to do</em>.</p>
+
+<h4 id="software-is-beautiful">Software is beautiful</h4>
+
+<p>That was one of many moments where I reminded myself that building software is beautiful.<br />
+It&rsquo;s an art.</p>
+
+<p>As engineers we deal with errors and bugs on the regular. We use a lot of brain power trying to understand problems and to find the best solutions for them. Confusion and frustration are part of the job, but with time a good engineer will know how to handle these emotions and will learn how to be calm and collected under stress. These qualities can serve you greatly in the real world.</p>
+
+<p>And after all that mental effort, we&rsquo;re rewarded with this magical thing that does what it&rsquo;s supposed to do because we told it to it that way. It&rsquo;s a beautiful creative process.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Privacy Build 2020</title>
