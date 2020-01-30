@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>blog</title>
-      <link>https://valinsky.me/tags/blog/</link>
-      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>privacy</title>
       <link>https://valinsky.me/tags/privacy/</link>
       <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
@@ -44,6 +35,15 @@
       <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
       
       <guid>https://valinsky.me/tags/tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://valinsky.me/tags/blog/</link>
+      <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
+      
+      <guid>https://valinsky.me/tags/blog/</guid>
       <description></description>
     </item>
     
@@ -125,15 +125,6 @@
       <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
       
       <guid>https://valinsky.me/tags/godaddy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>https</title>
-      <link>https://valinsky.me/tags/https/</link>
-      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/https/</guid>
       <description></description>
     </item>
     
