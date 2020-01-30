@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>blog</title>
-      <link>https://valinsky.me/tags/blog/</link>
-      <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>software</title>
       <link>https://valinsky.me/tags/software/</link>
       <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
       
       <guid>https://valinsky.me/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://valinsky.me/tags/blog/</link>
+      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+      
+      <guid>https://valinsky.me/tags/blog/</guid>
       <description></description>
     </item>
     
