@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Vali Voicu</title>
-    <link>/categories/</link>
+    <link>https://valinsky.me/categories/</link>
     <description>Recent content in Categories on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Nov 2019 19:14:55 -0500</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://valinsky.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>privacy</title>
-      <link>/categories/privacy/</link>
+      <link>https://valinsky.me/categories/privacy/</link>
       <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
       
-      <guid>/categories/privacy/</guid>
+      <guid>https://valinsky.me/categories/privacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>/categories/tutorial/</link>
+      <link>https://valinsky.me/categories/tutorial/</link>
       <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
       
-      <guid>/categories/tutorial/</guid>
+      <guid>https://valinsky.me/categories/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>about</title>
-      <link>/categories/about/</link>
+      <link>https://valinsky.me/categories/about/</link>
       <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
       
-      <guid>/categories/about/</guid>
+      <guid>https://valinsky.me/categories/about/</guid>
       <description></description>
     </item>
     

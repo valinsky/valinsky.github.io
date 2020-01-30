@@ -2,156 +2,156 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Vali Voicu</title>
-    <link>/tags/</link>
+    <link>https://valinsky.me/tags/</link>
     <description>Recent content in Tags on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Jan 2020 19:39:43 -0500</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://valinsky.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>blog</title>
-      <link>/tags/blog/</link>
+      <link>https://valinsky.me/tags/blog/</link>
       <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>https://valinsky.me/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>software</title>
-      <link>/tags/software/</link>
+      <link>https://valinsky.me/tags/software/</link>
       <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
       
-      <guid>/tags/software/</guid>
+      <guid>https://valinsky.me/tags/software/</guid>
       <description></description>
     </item>
     
     <item>
       <title>privacy</title>
-      <link>/tags/privacy/</link>
+      <link>https://valinsky.me/tags/privacy/</link>
       <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
       
-      <guid>/tags/privacy/</guid>
+      <guid>https://valinsky.me/tags/privacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tracking</title>
-      <link>/tags/tracking/</link>
+      <link>https://valinsky.me/tags/tracking/</link>
       <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
       
-      <guid>/tags/tracking/</guid>
+      <guid>https://valinsky.me/tags/tracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>life</title>
-      <link>/tags/life/</link>
+      <link>https://valinsky.me/tags/life/</link>
       <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
       
-      <guid>/tags/life/</guid>
+      <guid>https://valinsky.me/tags/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>progress</title>
-      <link>/tags/progress/</link>
+      <link>https://valinsky.me/tags/progress/</link>
       <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
       
-      <guid>/tags/progress/</guid>
+      <guid>https://valinsky.me/tags/progress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>math</title>
-      <link>/tags/math/</link>
+      <link>https://valinsky.me/tags/math/</link>
       <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
       
-      <guid>/tags/math/</guid>
+      <guid>https://valinsky.me/tags/math/</guid>
       <description></description>
     </item>
     
     <item>
       <title>quake3</title>
-      <link>/tags/quake3/</link>
+      <link>https://valinsky.me/tags/quake3/</link>
       <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
       
-      <guid>/tags/quake3/</guid>
+      <guid>https://valinsky.me/tags/quake3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>/tags/tutorial/</link>
+      <link>https://valinsky.me/tags/tutorial/</link>
       <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
       
-      <guid>/tags/tutorial/</guid>
+      <guid>https://valinsky.me/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>analytics</title>
-      <link>/tags/analytics/</link>
+      <link>https://valinsky.me/tags/analytics/</link>
       <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
       
-      <guid>/tags/analytics/</guid>
+      <guid>https://valinsky.me/tags/analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github</title>
-      <link>/tags/github/</link>
+      <link>https://valinsky.me/tags/github/</link>
       <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
       
-      <guid>/tags/github/</guid>
+      <guid>https://valinsky.me/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>google</title>
-      <link>/tags/google/</link>
+      <link>https://valinsky.me/tags/google/</link>
       <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
       
-      <guid>/tags/google/</guid>
+      <guid>https://valinsky.me/tags/google/</guid>
       <description></description>
     </item>
     
     <item>
       <title>godaddy</title>
-      <link>/tags/godaddy/</link>
+      <link>https://valinsky.me/tags/godaddy/</link>
       <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
       
-      <guid>/tags/godaddy/</guid>
+      <guid>https://valinsky.me/tags/godaddy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>https</title>
-      <link>/tags/https/</link>
+      <link>https://valinsky.me/tags/https/</link>
       <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
       
-      <guid>/tags/https/</guid>
+      <guid>https://valinsky.me/tags/https/</guid>
       <description></description>
     </item>
     
     <item>
       <title>about</title>
-      <link>/tags/about/</link>
+      <link>https://valinsky.me/tags/about/</link>
       <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
       
-      <guid>/tags/about/</guid>
+      <guid>https://valinsky.me/tags/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>valinsky</title>
-      <link>/tags/valinsky/</link>
+      <link>https://valinsky.me/tags/valinsky/</link>
       <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
       
-      <guid>/tags/valinsky/</guid>
+      <guid>https://valinsky.me/tags/valinsky/</guid>
       <description></description>
     </item>
     

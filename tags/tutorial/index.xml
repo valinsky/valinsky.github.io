@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tutorial on Vali Voicu</title>
-    <link>/tags/tutorial/</link>
+    <link>https://valinsky.me/tags/tutorial/</link>
     <description>Recent content in tutorial on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Nov 2019 17:24:58 -0500</lastBuildDate>
     
-	<atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://valinsky.me/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
-      <link>/posts/quake3-fast-inverse-square-root/</link>
+      <link>https://valinsky.me/posts/quake3-fast-inverse-square-root/</link>
       <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
       
-      <guid>/posts/quake3-fast-inverse-square-root/</guid>
+      <guid>https://valinsky.me/posts/quake3-fast-inverse-square-root/</guid>
       <description>This is one of those magical unicorn algorithms.
 I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
 This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
@@ -24,10 +24,10 @@ This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a 
     
     <item>
       <title>How to configure your Github Pages website with your custom Godaddy domain</title>
-      <link>/posts/github-pages-with-custom-godaddy-domain/</link>
+      <link>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</link>
       <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
       
-      <guid>/posts/github-pages-with-custom-godaddy-domain/</guid>
+      <guid>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</guid>
       <description>You can use your own custom domain with GitHub Pages, instead of GitHub&amp;rsquo;s &amp;lt;username&amp;gt;.github.io domain. This GitHub Pages post covers the domain configuration steps.
 If you bought the domain on GoDaddy, I&amp;rsquo;m going to show you the exact GoDaddy DNS configuration you need.
 Go to your godaddy.com domain, and find the Manage DNS option.
