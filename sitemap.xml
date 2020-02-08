@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://valinsky.me/posts/bloxplorer/</loc>
+    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://valinsky.me/tags/bloxplorer/</loc>
+    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://valinsky.me/tags/open-source/</loc>
+    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://valinsky.me/posts/</loc>
-    <lastmod>2020-01-25T19:39:43-05:00</lastmod>
+    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://valinsky.me/tags/python/</loc>
+    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://valinsky.me/tags/</loc>
+    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://valinsky.me/</loc>
+    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
   </url>
   
   <url>
@@ -13,17 +43,7 @@
   </url>
   
   <url>
-    <loc>https://valinsky.me/tags/</loc>
-    <lastmod>2020-01-25T19:39:43-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://valinsky.me/posts/the-beauty-of-building-software/</loc>
-    <lastmod>2020-01-25T19:39:43-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/</loc>
     <lastmod>2020-01-25T19:39:43-05:00</lastmod>
   </url>
   
@@ -133,12 +153,12 @@
   </url>
   
   <url>
-    <loc>https://valinsky.me/categories/about/</loc>
+    <loc>https://valinsky.me/tags/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://valinsky.me/tags/about/</loc>
+    <loc>https://valinsky.me/categories/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
