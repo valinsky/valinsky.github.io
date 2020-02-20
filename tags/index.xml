@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Vali Voicu</title>
+    <title>Tags on Valinsky</title>
     <link>https://valinsky.me/tags/</link>
-    <description>Recent content in Tags on Vali Voicu</description>
+    <description>Recent content in Tags on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Feb 2020 10:49:18 -0500</lastBuildDate>
@@ -98,33 +98,6 @@
       <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
       
       <guid>https://valinsky.me/tags/progress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>analytics</title>
-      <link>https://valinsky.me/tags/analytics/</link>
-      <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/analytics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://valinsky.me/tags/github/</link>
-      <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google</title>
-      <link>https://valinsky.me/tags/google/</link>
-      <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/google/</guid>
       <description></description>
     </item>
     
