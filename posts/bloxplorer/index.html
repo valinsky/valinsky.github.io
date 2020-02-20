@@ -1,146 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="Dumitru Valeriu Voicu ">
-<meta name="description" content="In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python.
-Bloxplorer - short for Block Explorer - is an open source package that allows developers to make use of the full power of the Blockstream Esplora HTTP API through a clean Python interface.
-Why I wrote Bloxplorer I&amp;rsquo;m fascinated with Bitcoin, both from a technological and an economical standpoint, and with the ever growing pieces of tech surrounding it, like Lighting Network, Schnorr and Taproot to name a few." />
-<meta name="keywords" content="homepage, blog, science, informatics, development, programming, software" />
-<meta name="robots" content="noodp" />
-<meta name="theme-color" content="" />
-<link rel="canonical" href="https://valinsky.me/posts/bloxplorer/" />
-
-
-    <title>
-        
-            Bloxplorer :: Vali Voicu 
-        
-    </title>
-
-
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
-    type="text/css">
-
-
-
-<link rel="stylesheet" href="https://valinsky.me/main.min.73f55a8d452be4a71b2960620b80252cf69abd84d63fe7501abf0a39b1a70a78.css">
-
-
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="https://valinsky.me/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://valinsky.me/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://valinsky.me/favicon-16x16.png">
-    <link rel="manifest" href="https://valinsky.me/site.webmanifest">
-    <link rel="mask-icon" href="https://valinsky.me/safari-pinned-tab.svg" color="#252627">
-    <link rel="shortcut icon" href="https://valinsky.me/favicon.ico">
-    <meta name="msapplication-TileColor" content="#252627">
-    <meta name="theme-color" content="#252627">
-
-<meta itemprop="name" content="Bloxplorer">
-<meta itemprop="description" content="Bloxplorer">
-
-
-<meta itemprop="datePublished" content="2020-02-08T10:49:18-05:00" />
-<meta itemprop="dateModified" content="2020-02-08T10:49:18-05:00" />
-<meta itemprop="wordCount" content="571">
-
-
-
-<meta itemprop="keywords" content="bloxplorer,bitcoin,open source,python," />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://valinsky.me/images/triangle.jpg"/>
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Bloxplorer | ./valinsky.sh</title>
+        <meta name="Description" content="In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python."><meta property="og:title" content="Bloxplorer" />
+<meta property="og:description" content="In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://valinsky.me/posts/bloxplorer/" />
+<meta property="article:published_time" content="2020-02-08T10:49:18-05:00" />
+<meta property="article:modified_time" content="2020-02-08T10:49:18-05:00" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bloxplorer"/>
-<meta name="twitter:description" content="Bloxplorer"/>
-
-
-
-
-
-    <meta property="article:published_time" content="2020-02-08 10:49:18 -0500 EST" />
-
-
-
-
-
-
-
-
-    </head>
-
-    <body class="dark-theme">
-        <div class="container">
-            <header class="header">
-    <span class="header__inner">
-        <a href="https://valinsky.me/" style="text-decoration: none;">
-    <div class="logo">
-        
-            <span class="logo__mark">></span>
-            <span class="logo__text">$ ./vali_blog.sh</span>
-            <span class="logo__cursor" style=""></span>
-        
-    </div>
-</a>
-
-
-        <span class="header__right">
-            
-                <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://valinsky.me/posts">blog</a></li><li><a href="https://valinsky.me/about">about</a></li>
-    </ul>
-</nav>
-
-                <span class="menu-trigger">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                </span>
-            
-
-            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-</span>
-        </span>
-    </span>
-</header>
-
-
-            <div class="content">
-                
-    <main class="post">
-
-        <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
-
-            
-
-            </p>
+<meta name="twitter:description" content="In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python."/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://valinsky.me/posts/bloxplorer/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://valinsky.me/posts/the-beauty-of-building-software/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/css/lib/forkawesome/fork-awesome.min.css"><link rel="stylesheet" href="/css/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Bloxplorer",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/valinsky.me\/posts\/bloxplorer\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/valinsky.me\/images\/triangle.jpg",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "bloxplorer, bitcoin, open source, python","wordcount":  635 ,
+        "url": "https:\/\/valinsky.me\/posts\/bloxplorer\/","datePublished": "2020-02-08T10:49:18-05:00","dateModified": "2020-02-08T10:49:18-05:00","publisher": {
+                "@type": "Organization",
+                "name": "Vali Voicu",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/valinsky.me\/images\/cartoon_me.jpg",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": "In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python."
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop">
+    <div class="header-wrapper">
+        <div class="header-title animated bounceIn">
+            <a href="https://valinsky.me">./valinsky.sh</a>
         </div>
-
-        <article>
-            <h1 class="post-title">
-                <a href="https://valinsky.me/posts/bloxplorer/">Bloxplorer</a>
-            </h1>
-
-            
-
-            <div class="post-content">
-                
+        <div class="menu"><a class="menu-item" href="https://valinsky.me/posts" title="">blog</a><a class="menu-item" href="https://valinsky.me/about" title="">about</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a>
+        </div>
+    </div>
+</header><header class="mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title animated bounceIn">
+                <a href="https://valinsky.me">./valinsky.sh</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://valinsky.me/posts" title="">blog</a><a class="menu-item" href="https://valinsky.me/about" title="">about</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a>
+        </div>
+    </div>
+</header>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Bloxplorer</h1><div class="meta">
+            <div class="meta-line"><a class="author" href="about/" rel="author" target="_blank">
+                    <i class="fas fa-user-circle fa-fw"></i>Vali Voicu
+                </a>&nbsp;</div>
+            <div class="meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-08>2020-02-08</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 635 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>3 min&nbsp;</div>
+        </div><div class="featured-image"><img src="/svg/loading.min.svg" data-sizes="auto" data-src="/images/bloxplorer/bitcoin.png" alt="featured image" class="lazyload">
+</div><div class="content">
 
 <p>In this post I want to introduce <a href="https://github.com/valinsky/bloxplorer">Bloxplorer</a>, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python.</p>
 
 <p>Bloxplorer - short for Block Explorer - is an open source package that allows developers to make use of the full power of the <a href="https://github.com/Blockstream/esplora/blob/master/API.md">Blockstream Esplora HTTP API</a> through a clean Python interface.</p>
 
-<h3 id="why-i-wrote-bloxplorer">Why I wrote Bloxplorer</h3>
+<a class="post-dummy-target" id="why-i-wrote-bloxplorer"></a><h2>Why I wrote Bloxplorer</h2>
 
 <p>I&rsquo;m fascinated with Bitcoin, both from a technological and an economical standpoint, and with the ever growing pieces of tech surrounding it, like <a href="https://lightning.network/">Lighting Network</a>, <a href="https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin">Schnorr and Taproot</a> to name a few.</p>
 
@@ -150,7 +101,7 @@ Why I wrote Bloxplorer I&amp;rsquo;m fascinated with Bitcoin, both from a techno
 
 <p>I chose Blockstreams Esplora as the underlying API because Blockstream has been succesfully involved in growing the Bitcoin ecosystem for years, and also because the <a href="https://blockstream.com/liquid/">Liquid sidechain</a> is available in the same API.</p>
 
-<h3 id="usage">Usage</h3>
+<a class="post-dummy-target" id="usage"></a><h2>Usage</h2>
 
 <p>Bloxplorer is a Python block explorer for Bitcoin, Liquid and Bitcoin Testnet. It offers all the necessary tools an engineer needs in order to interact with the specific blockchain in a simple and straightforward manner.</p>
 
@@ -158,173 +109,221 @@ Why I wrote Bloxplorer I&amp;rsquo;m fascinated with Bitcoin, both from a techno
 
 <p>For example, if you want to get information about a specific Bitcoin address, you can do it like so:</p>
 
-<pre><code class="language-python">from bloxplorer import bitcoin_explorer as explorer
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> bloxplorer <span style="color:#f92672">import</span> bitcoin_explorer <span style="color:#66d9ef">as</span> explorer
 
-result = explorer.addr.get('147SwRQdpCfj5p8PnfsXV2SsVVpVcz3aPq')
-print(result.data)
+result <span style="color:#f92672">=</span> explorer<span style="color:#f92672">.</span>addr<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;147SwRQdpCfj5p8PnfsXV2SsVVpVcz3aPq&#39;</span>)
+<span style="color:#66d9ef">print</span>(result<span style="color:#f92672">.</span>data)
 
-&quot;&quot;&quot;
-{
-  'address': '147SwRQdpCfj5p8PnfsXV2SsVVpVcz3aPq',
-  'chain_stats':
-  {
-    'funded_txo_count': 1237,
-    'funded_txo_sum': 1583994506803,
-    'spent_txo_count': 1230, 'spent_txo_sum': 1575155902037,
-    'tx_count': 1701
-  },
-  'mempool_stats':
-  {
-    'funded_txo_count': 0,
-    'funded_txo_sum': 0,
-    'spent_txo_count': 0,
-    'spent_txo_sum': 0,
-    'tx_count': 0
-  }
-}
-&quot;&quot;&quot;
-</code></pre>
+<span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">  &#39;address&#39;: &#39;147SwRQdpCfj5p8PnfsXV2SsVVpVcz3aPq&#39;,
+</span><span style="color:#e6db74">  &#39;chain_stats&#39;:
+</span><span style="color:#e6db74">  {
+</span><span style="color:#e6db74">    &#39;funded_txo_count&#39;: 1237,
+</span><span style="color:#e6db74">    &#39;funded_txo_sum&#39;: 1583994506803,
+</span><span style="color:#e6db74">    &#39;spent_txo_count&#39;: 1230, &#39;spent_txo_sum&#39;: 1575155902037,
+</span><span style="color:#e6db74">    &#39;tx_count&#39;: 1701
+</span><span style="color:#e6db74">  },
+</span><span style="color:#e6db74">  &#39;mempool_stats&#39;:
+</span><span style="color:#e6db74">  {
+</span><span style="color:#e6db74">    &#39;funded_txo_count&#39;: 0,
+</span><span style="color:#e6db74">    &#39;funded_txo_sum&#39;: 0,
+</span><span style="color:#e6db74">    &#39;spent_txo_count&#39;: 0,
+</span><span style="color:#e6db74">    &#39;spent_txo_sum&#39;: 0,
+</span><span style="color:#e6db74">    &#39;tx_count&#39;: 0
+</span><span style="color:#e6db74">  }
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
 
 <p>You can also get details about a specific transaction:</p>
 
-<pre><code class="language-python">from bloxplorer import bitcoin_explorer as explorer
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> bloxplorer <span style="color:#f92672">import</span> bitcoin_explorer <span style="color:#66d9ef">as</span> explorer
 
-result = explorer.tx.get('b3eb36873d61cfde5d3780195430fe23cf79ab4313bdd3834d6eb97e9f2e9c8c')
-print(result.data)
+result <span style="color:#f92672">=</span> explorer<span style="color:#f92672">.</span>tx<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;b3eb36873d61cfde5d3780195430fe23cf79ab4313bdd3834d6eb97e9f2e9c8c&#39;</span>)
+<span style="color:#66d9ef">print</span>(result<span style="color:#f92672">.</span>data)
 
-&quot;&quot;&quot;
-{
-  'txid': 'b3eb36873d61cfde5d3780195430fe23cf79ab4313bdd3834d6eb97e9f2e9c8c',
-  'version': 1,
-  'locktime': 0,
-  'vin': [
-  {
-      'txid': '0000000000000000000000000000000000000000000000000000000000000000',
-      'vout': 4294967295,
-      'prevout': None,
-      'scriptsig': '03716809049f203f5efabe6d6d790aeab57d0c2c6db22acdf312204864aa6e0804d236bcfbf3193f216ac0aef8040000000000000008180052c2d7050000142f70726f68617368696e672e636f6d9b1d02002f',
-      'scriptsig_asm': 'OP_PUSHBYTES_3 716809 OP_PUSHBYTES_4 9f203f5e OP_RETURN_250 OP_RETURN_190 OP_2DROP OP_2DROP OP_PICK OP_PUSHBYTES_10 eab57d0c2c6db22acdf3 OP_PUSHBYTES_18 204864aa6e0804d236bcfbf3193f216ac0ae OP_RETURN_248 OP_PUSHBYTES_4 00000000 OP_0 OP_0 OP_0 OP_PUSHBYTES_8 180052c2d7050000 OP_PUSHBYTES_20 2f70726f68617368696e672e636f6d9b1d02002f',
-      'is_coinbase': True,
-      'sequence': 0
-  }],
-  'vout': [
-  {
-    'scriptpubkey': '76a9143738752136c7b5deebbded93274d69c90d3b208f88ac',
-    'scriptpubkey_asm': 'OP_DUP OP_HASH160 OP_PUSHBYTES_20 3738752136c7b5deebbded93274d69c90d3b208f OP_EQUALVERIFY OP_CHECKSIG',
-    'scriptpubkey_type': 'p2pkh',
-    'scriptpubkey_address': '162yoHmpvqCq5SztkKaiEd5LiPyxcPLYzu',
-    'value': 1260049294
-  }],
-  'size': 168,
-  'weight': 672,
-  'status': 
-  {
-    'confirmed': True,
-    'block_height': 616561,
-    'block_hash': '00000000000000000002843470daa89c41da6f52ce968e91a45385202cc813c4',
-    'block_time': 1581195408
-  }
-}
-&quot;&quot;&quot;
-</code></pre>
+<span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">  &#39;txid&#39;: &#39;b3eb36873d61cfde5d3780195430fe23cf79ab4313bdd3834d6eb97e9f2e9c8c&#39;,
+</span><span style="color:#e6db74">  &#39;version&#39;: 1,
+</span><span style="color:#e6db74">  &#39;locktime&#39;: 0,
+</span><span style="color:#e6db74">  &#39;vin&#39;: [
+</span><span style="color:#e6db74">  {
+</span><span style="color:#e6db74">      &#39;txid&#39;: &#39;0000000000000000000000000000000000000000000000000000000000000000&#39;,
+</span><span style="color:#e6db74">      &#39;vout&#39;: 4294967295,
+</span><span style="color:#e6db74">      &#39;prevout&#39;: None,
+</span><span style="color:#e6db74">      &#39;scriptsig&#39;: &#39;03716809049f203f5efabe6d6d790aeab57d0c2c6db22acdf312204864aa6e0804d236bcfbf3193f216ac0aef8040000000000000008180052c2d7050000142f70726f68617368696e672e636f6d9b1d02002f&#39;,
+</span><span style="color:#e6db74">      &#39;scriptsig_asm&#39;: &#39;OP_PUSHBYTES_3 716809 OP_PUSHBYTES_4 9f203f5e OP_RETURN_250 OP_RETURN_190 OP_2DROP OP_2DROP OP_PICK OP_PUSHBYTES_10 eab57d0c2c6db22acdf3 OP_PUSHBYTES_18 204864aa6e0804d236bcfbf3193f216ac0ae OP_RETURN_248 OP_PUSHBYTES_4 00000000 OP_0 OP_0 OP_0 OP_PUSHBYTES_8 180052c2d7050000 OP_PUSHBYTES_20 2f70726f68617368696e672e636f6d9b1d02002f&#39;,
+</span><span style="color:#e6db74">      &#39;is_coinbase&#39;: True,
+</span><span style="color:#e6db74">      &#39;sequence&#39;: 0
+</span><span style="color:#e6db74">  }],
+</span><span style="color:#e6db74">  &#39;vout&#39;: [
+</span><span style="color:#e6db74">  {
+</span><span style="color:#e6db74">    &#39;scriptpubkey&#39;: &#39;76a9143738752136c7b5deebbded93274d69c90d3b208f88ac&#39;,
+</span><span style="color:#e6db74">    &#39;scriptpubkey_asm&#39;: &#39;OP_DUP OP_HASH160 OP_PUSHBYTES_20 3738752136c7b5deebbded93274d69c90d3b208f OP_EQUALVERIFY OP_CHECKSIG&#39;,
+</span><span style="color:#e6db74">    &#39;scriptpubkey_type&#39;: &#39;p2pkh&#39;,
+</span><span style="color:#e6db74">    &#39;scriptpubkey_address&#39;: &#39;162yoHmpvqCq5SztkKaiEd5LiPyxcPLYzu&#39;,
+</span><span style="color:#e6db74">    &#39;value&#39;: 1260049294
+</span><span style="color:#e6db74">  }],
+</span><span style="color:#e6db74">  &#39;size&#39;: 168,
+</span><span style="color:#e6db74">  &#39;weight&#39;: 672,
+</span><span style="color:#e6db74">  &#39;status&#39;: 
+</span><span style="color:#e6db74">  {
+</span><span style="color:#e6db74">    &#39;confirmed&#39;: True,
+</span><span style="color:#e6db74">    &#39;block_height&#39;: 616561,
+</span><span style="color:#e6db74">    &#39;block_hash&#39;: &#39;00000000000000000002843470daa89c41da6f52ce968e91a45385202cc813c4&#39;,
+</span><span style="color:#e6db74">    &#39;block_time&#39;: 1581195408
+</span><span style="color:#e6db74">  }
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
 
 <p>You can also post your own transactions, check the current block height, see the mempool status and much more.</p>
 
 <p>The full API documentation is available <a href="https://valinsky.me/bloxplorer/index.html">here</a>.</p>
 
-<h3 id="conclusion">Conclusion</h3>
+<a class="post-dummy-target" id="conclusion"></a><h2>Conclusion</h2>
 
 <p>With Bloxplorer I saw an opportunity to help the Bitcoin ecosystem while also getting my foot through the door of open source software and I&rsquo;m very happy with the end result. At the time of this writing Bloxplorer was downloaded <a href="https://pepy.tech/project/bloxplorer/">more than 4k times</a>, which I think is amazing.</p>
 
 <p>I will be actively maintaining the package, based on the Esplora API changes, and any future improvements I see as being useful.</p>
 
 <p>Feel free to <code>pip install</code> the package from <a href="https://pypi.org/project/bloxplorer/">PyPi</a> and to play around with it and if interesented, I welcome you to submit PRs or to open issues on <a href="https://github.com/valinsky/bloxplorer">GitHub</a>.</p>
-
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-02-08</span>
             </div>
-        </article>
-
-        <hr />
-
-        <div class="post-info">
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://valinsky.me/tags/bloxplorer">bloxplorer</a></span><span class="tag"><a href="https://valinsky.me/tags/bitcoin">bitcoin</a></span><span class="tag"><a href="https://valinsky.me/tags/open-source">open source</a></span><span class="tag"><a href="https://valinsky.me/tags/python">python</a></span>
-                </p>
-
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>571 Words</p>
-
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>08-02-2020</p>
+            <div class="post-info-license"></div>
         </div>
-
-        
-            <div class="pagination">
-                <div class="pagination__title">
-                    <span class="pagination__title-h"></span>
-                    <hr />
-                </div>
-
-                <div class="pagination__buttons">
-                    
-
-                    
-                        <span class="button next">
-                            <a href="https://valinsky.me/posts/the-beauty-of-building-software/">
-                                <span class="button__text">The Beauty of Building Software</span>
-                                <span class="button__icon">→</span>
-                            </a>
-                        </span>
-                    
-                </div>
-            </div>
-        
-
-        
-    </main>
-
-            </div>
-
-            
-                <footer class="footer">
-    <div class="footer__inner">
-        <div class="footer__content">
-            
-            
-            
-            
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><span><a href="//twitter.com/share?url=https%3a%2f%2fvalinsky.me%2fposts%2fbloxplorer%2f&amp;text=Bloxplorer&amp;via=https%3a%2f%2ftwitter.com%2fvalinsky2k" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvalinsky.me%2fposts%2fbloxplorer%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a><a href="//reddit.com/submit?url=https%3a%2f%2fvalinsky.me%2fposts%2fbloxplorer%2f&amp;title=Bloxplorer" target="_blank" title="Share on Reddit">
+            <i class="fab fa-reddit fa-fw"></i>
+        </a><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fvalinsky.me%2fposts%2fbloxplorer%2f&amp;title=Bloxplorer" target="_blank" title="Share on LinkedIn">
+            <i class="fab fa-linkedin fa-fw"></i>
+        </a><a href="//news.ycombinator.com/submitlink?u=https%3a%2f%2fvalinsky.me%2fposts%2fbloxplorer%2f&amp;description=Bloxplorer" target="_blank" title="Share on Hacker News">
+            <i class="fab fa-y-combinator fa-fw"></i>
+        </a></span></div>
         </div>
     </div>
-    <div class="footer__inner">
-        <div class="footer__content">
-            <span><a href="https://valinsky.me/privacy-statement">Privacy Policy</a></span>
-            <span><a href="http://gohugo.io">Hugo</a></span>
-            <span><a href="https://github.com/rhazdon">Theme</a></span>
-            <span>&copy; 2020</span>
+
+    <div class="post-info-more">
+        <section><span class="tag">
+                        <a href="https://valinsky.me/tags/bloxplorer/"><i class="fas fa-tag fa-fw"></i>&nbsp;bloxplorer</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://valinsky.me/tags/bitcoin/"><i class="fas fa-tag fa-fw"></i>&nbsp;bitcoin</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://valinsky.me/tags/open-source/"><i class="fas fa-tag fa-fw"></i>&nbsp;open source</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://valinsky.me/tags/python/"><i class="fas fa-tag fa-fw"></i>&nbsp;python</a>&nbsp;
+                    </span></section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://valinsky.me">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="https://valinsky.me/posts/the-beauty-of-building-software/" class="prev" rel="prev" title="The Beauty of Building Software"><i class="fas fa-angle-left fa-fw"></i>The Beauty of Building Software</a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
         </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="about/" target="_blank">Vali Voicu</a></span></div>
     </div>
 </footer>
-
-            
-        </div>
-
-        
-
-
-
-
-<script type="text/javascript" src="https://valinsky.me/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-151935413-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-
-
-
-
-
-
-    </body>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><link rel="stylesheet" href="/css/lib/katex/katex.min.css"><link rel="stylesheet" href="/css/lib/katex/copy-tex.min.css"><script src="/js/lib/jquery/jquery.slim.min.js"></script><script src="/js/lib/lazysizes/lazysizes.min.js"></script><script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/js/lib/katex/katex.min.js"></script><script src="/js/lib/katex/auto-render.min.js"></script><script src="/js/lib/katex/copy-tex.min.js"></script><script src="/js/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
 </html>

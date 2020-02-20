@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Vali Voicu</title>
+    <title>Tags on ./valinsky.sh</title>
     <link>https://valinsky.me/tags/</link>
-    <description>Recent content in Tags on Vali Voicu</description>
+    <description>Recent content in Tags on ./valinsky.sh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Sat, 08 Feb 2020 10:49:18 -0500</lastBuildDate>
     
 	<atom:link href="https://valinsky.me/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -98,15 +98,6 @@
       <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
       
       <guid>https://valinsky.me/tags/progress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>math</title>
-      <link>https://valinsky.me/tags/math/</link>
-      <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/math/</guid>
       <description></description>
     </item>
     

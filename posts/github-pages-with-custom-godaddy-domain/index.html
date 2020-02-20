@@ -1,189 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="Dumitru Valeriu Voicu ">
-<meta name="description" content="You can use your own custom domain with GitHub Pages, instead of GitHub&amp;rsquo;s &amp;lt;username&amp;gt;.github.io domain. This GitHub Pages post covers the domain configuration steps.
-If you bought the domain on GoDaddy, I&amp;rsquo;m going to show you the exact GoDaddy DNS configuration you need.
-Go to your godaddy.com domain, and find the Manage DNS option.
-GoDaddy Manage DNS  Add these settings.
-GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky." />
-<meta name="keywords" content="homepage, blog, science, informatics, development, programming, software" />
-<meta name="robots" content="noodp" />
-<meta name="theme-color" content="" />
-<link rel="canonical" href="https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/" />
-
-
-    <title>
-        
-            How to configure your Github Pages website with your custom Godaddy domain :: Vali Voicu 
-        
-    </title>
-
-
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
-    type="text/css">
-
-
-
-<link rel="stylesheet" href="https://valinsky.me/main.min.73f55a8d452be4a71b2960620b80252cf69abd84d63fe7501abf0a39b1a70a78.css">
-
-
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="https://valinsky.me/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://valinsky.me/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://valinsky.me/favicon-16x16.png">
-    <link rel="manifest" href="https://valinsky.me/site.webmanifest">
-    <link rel="mask-icon" href="https://valinsky.me/safari-pinned-tab.svg" color="#252627">
-    <link rel="shortcut icon" href="https://valinsky.me/favicon.ico">
-    <meta name="msapplication-TileColor" content="#252627">
-    <meta name="theme-color" content="#252627">
-
-<meta itemprop="name" content="How to configure your Github Pages website with your custom Godaddy domain">
-<meta itemprop="description" content="How to configure your Github Pages website with your custom Godaddy domain">
-
-
-<meta itemprop="datePublished" content="2019-11-17T10:54:46-05:00" />
-<meta itemprop="dateModified" content="2019-11-17T10:54:46-05:00" />
-<meta itemprop="wordCount" content="308">
-
-  <meta itemprop="image" content="https://valinsky.me/images/github_pages_godaddy_domain/github_pages.png">
-
-
-
-<meta itemprop="keywords" content="godaddy,github,tutorial," />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://valinsky.me/images/github_pages_godaddy_domain/github_pages.png"/>
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>How to configure your Github Pages website with your custom Godaddy domain | ./valinsky.sh</title>
+        <meta name="Description" content="How to configure your Github Pages website with your custom Godaddy domain"><meta property="og:title" content="How to configure your Github Pages website with your custom Godaddy domain" />
+<meta property="og:description" content="How to configure your Github Pages website with your custom Godaddy domain" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/" />
+<meta property="article:published_time" content="2019-11-17T10:54:46-05:00" />
+<meta property="article:modified_time" content="2019-11-17T10:54:46-05:00" />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to configure your Github Pages website with your custom Godaddy domain"/>
 <meta name="twitter:description" content="How to configure your Github Pages website with your custom Godaddy domain"/>
-
-
-
-    <meta property="article:section" content="tutorial" />
-
-
-
-    <meta property="article:published_time" content="2019-11-17 10:54:46 -0500 EST" />
-
-
-
-
-
-
-
-
-    </head>
-
-    <body class="dark-theme">
-        <div class="container">
-            <header class="header">
-    <span class="header__inner">
-        <a href="https://valinsky.me/" style="text-decoration: none;">
-    <div class="logo">
-        
-            <span class="logo__mark">></span>
-            <span class="logo__text">$ ./vali_blog.sh</span>
-            <span class="logo__cursor" style=""></span>
-        
-    </div>
-</a>
-
-
-        <span class="header__right">
-            
-                <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://valinsky.me/posts">blog</a></li><li><a href="https://valinsky.me/about">about</a></li>
-    </ul>
-</nav>
-
-                <span class="menu-trigger">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                </span>
-            
-
-            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-</span>
-        </span>
-    </span>
-</header>
-
-
-            <div class="content">
-                
-    <main class="post">
-
-        <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
-
-            
-
-            </p>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="next" href="https://valinsky.me/posts/quake3-fast-inverse-square-root/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/css/lib/forkawesome/fork-awesome.min.css"><link rel="stylesheet" href="/css/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to configure your Github Pages website with your custom Godaddy domain",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/valinsky.me\/posts\/github-pages-with-custom-godaddy-domain\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/valinsky.me\/images\/triangle.jpg",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "godaddy, github, tutorial","wordcount":  318 ,
+        "url": "https:\/\/valinsky.me\/posts\/github-pages-with-custom-godaddy-domain\/","datePublished": "2019-11-17T10:54:46-05:00","dateModified": "2019-11-17T10:54:46-05:00","publisher": {
+                "@type": "Organization",
+                "name": "Vali Voicu",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/valinsky.me\/images\/cartoon_me.jpg",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": "How to configure your Github Pages website with your custom Godaddy domain"
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop">
+    <div class="header-wrapper">
+        <div class="header-title animated bounceIn">
+            <a href="https://valinsky.me">./valinsky.sh</a>
         </div>
-
-        <article>
-            <h1 class="post-title">
-                <a href="https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/">How to configure your Github Pages website with your custom Godaddy domain</a>
-            </h1>
-
-            
-
-            <div class="post-content">
-                
+        <div class="menu"><a class="menu-item" href="https://valinsky.me/posts" title="">blog</a><a class="menu-item" href="https://valinsky.me/about" title="">about</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a>
+        </div>
+    </div>
+</header><header class="mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title animated bounceIn">
+                <a href="https://valinsky.me">./valinsky.sh</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://valinsky.me/posts" title="">blog</a><a class="menu-item" href="https://valinsky.me/about" title="">about</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a>
+        </div>
+    </div>
+</header>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">How to configure your Github Pages website with your custom Godaddy domain</h1><div class="meta">
+            <div class="meta-line"><a class="author" href="about/" rel="author" target="_blank">
+                    <i class="fas fa-user-circle fa-fw"></i>Vali Voicu
+                </a>&nbsp;<span class="post-category">included in&nbsp;<i class="far fa-folder fa-fw"></i><a href="https://valinsky.me/categories/tutorial/">Tutorial</a>&nbsp;</span></div>
+            <div class="meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-11-17>2019-11-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 318 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+        </div><div class="featured-image"><img src="/svg/loading.min.svg" data-sizes="auto" data-src="/images/github_pages_godaddy_domain/github_pages.png" alt="featured image" class="lazyload">
+</div><div class="content">
 
 <p>You can use your own custom domain with <a href="https://pages.github.com/">GitHub Pages</a>, instead of GitHub&rsquo;s <strong>&lt;username&gt;.github.io</strong> domain. <a href="https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">This GitHub Pages post</a> covers the domain configuration steps.<br />
 If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDaddy DNS configuration you need.</p>
 
 <p>Go to your <a href="https://godaddy.com">godaddy.com</a> domain, and find the <em>Manage DNS</em> option.</p>
 
-
-    <figure class="center" >
-        <img src="https://valinsky.me/images/github_pages_godaddy_domain/manage_dns_setting.png"   />
-
-        
-            <figcaption class="center" >GoDaddy Manage DNS</figcaption>
-        
-    </figure>
-
+<figure>
+    <img src="/images/github_pages_godaddy_domain/manage_dns_setting.png"
+         alt="GoDaddy Manage DNS"/> <figcaption>
+            <h4>GoDaddy Manage DNS</h4><p>GoDaddy Manage DNS</p>
+        </figcaption>
+</figure>
 
 
 <p>Add these settings.</p>
 
-
-    <figure class="center" >
-        <img src="https://valinsky.me/images/github_pages_godaddy_domain/github_pages_godaddy_config_good.png"   />
-
-        
-            <figcaption class="center" >GoDaddy DNS configuration</figcaption>
-        
-    </figure>
-
+<figure>
+    <img src="/images/github_pages_godaddy_domain/github_pages_godaddy_config_good.png"
+         alt="GoDaddy DNS configuration"/> <figcaption>
+            <h4>GoDaddy DNS configuration</h4><p>GoDaddy DNS configuration</p>
+        </figcaption>
+</figure>
 
 
 <p>My website is hosted on GitHub under the <strong>valinsky.github.io</strong> domain. You&rsquo;ll have to update the CNAME with your own <strong>&lt;username&gt;.github.io</strong> domain.</p>
 
 <p>You&rsquo;ll then be greeted with this message in your GitHub respository&rsquo;s settings, right under the GitHub Pages section.</p>
 
-
-    <figure class="center" >
-        <img src="https://valinsky.me/images/github_pages_godaddy_domain/github_pages_https_not_available.png"   />
-
-        
-            <figcaption class="center" >HTTPS Not Available</figcaption>
-        
-    </figure>
-
+<figure>
+    <img src="/images/github_pages_godaddy_domain/github_pages_https_not_available.png"
+         alt="HTTPS Not Available"/> <figcaption>
+            <h4>HTTPS Not Available</h4><p>HTTPS Not Available</p>
+        </figcaption>
+</figure>
 
 
 <p>Like the message says, you have to wait <em>24 hours</em> for the internet to magically issue an <a href="https://www.digicert.com/ssl-certificate/">HTTPS SSL certificate</a> for you.</p>
@@ -192,7 +128,7 @@ If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDad
 
 <p><br></p>
 
-<h3 id="make-sure-you-unpark-your-domain">Make sure you unpark your domain</h3>
+<a class="post-dummy-target" id="make-sure-you-unpark-your-domain"></a><h3>Make sure you unpark your domain</h3>
 
 <p>Even though your certificate is not issued, you can still access your website through HTTP.<br />
 Never do that! Never serve your website through HTTP. <a href="https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https">Read why.</a></p>
@@ -203,121 +139,88 @@ Never do that! Never serve your website through HTTP. <a href="https://developer
 
 <p>My initial configuration looked like this.</p>
 
-
-    <figure class="center" >
-        <img src="https://valinsky.me/images/github_pages_godaddy_domain/github_pages_godaddy_config_bad.png"   />
-
-        
-            <figcaption class="center" >GoDaddy DNS parked configuration</figcaption>
-        
-    </figure>
-
+<figure>
+    <img src="/images/github_pages_godaddy_domain/github_pages_godaddy_config_bad.png"
+         alt="GoDaddy DNS parked configuration"/> <figcaption>
+            <h4>GoDaddy DNS parked configuration</h4><p>GoDaddy DNS parked configuration</p>
+        </figcaption>
+</figure>
 
 
 <p>Those two DNS entries were setup by GoDaddy, and I didn&rsquo;t pay much attention to them initially. If you see these in your own DNS configuration, be sure to remove them, or else you&rsquo;ll end up with a <a href="https://en.wikipedia.org/wiki/Domain_parking">parked domain</a> that won&rsquo;t work with your GitHub Pages setup.</p>
 
 <p>After I removed those entries, a few hours later my HTTPS SSL certificate was issued and I was able to activate it.</p>
 
-
-    <figure class="center" >
-        <img src="https://valinsky.me/images/github_pages_godaddy_domain/activate_https.png"   />
-
-        
-            <figcaption class="center" >HTTPS Enforced</figcaption>
-        
-    </figure>
-
+<figure>
+    <img src="/images/github_pages_godaddy_domain/activate_https.png"
+         alt="HTTPS Enforced"/> <figcaption>
+            <h4>HTTPS Enforced</h4><p>HTTPS Enforced</p>
+        </figcaption>
+</figure>
 
 
 <p>And that&rsquo;s it.</p>
 
 <p>Now you have a website hosted by GitHub and configured with your own custom GoDaddy DNS.</p>
-
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2019-11-17</span>
             </div>
-        </article>
-
-        <hr />
-
-        <div class="post-info">
-                <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://valinsky.me/tags/godaddy">godaddy</a></span><span class="tag"><a href="https://valinsky.me/tags/github">github</a></span><span class="tag"><a href="https://valinsky.me/tags/tutorial">tutorial</a></span>
-                </p>
-
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>308 Words</p>
-
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>17-11-2019</p>
+            <div class="post-info-license"></div>
         </div>
-
-        
-            <div class="pagination">
-                <div class="pagination__title">
-                    <span class="pagination__title-h"></span>
-                    <hr />
-                </div>
-
-                <div class="pagination__buttons">
-                    
-                        <span class="button previous">
-                            <a href="https://valinsky.me/posts/quake3-fast-inverse-square-root/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</span>
-                            </a>
-                        </span>
-                    
-
-                    
-                </div>
-            </div>
-        
-
-        
-    </main>
-
-            </div>
-
-            
-                <footer class="footer">
-    <div class="footer__inner">
-        <div class="footer__content">
-            
-            
-            
-            
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><span><a href="//twitter.com/share?url=https%3a%2f%2fvalinsky.me%2fposts%2fgithub-pages-with-custom-godaddy-domain%2f&amp;text=How%20to%20configure%20your%20Github%20Pages%20website%20with%20your%20custom%20Godaddy%20domain&amp;via=https%3a%2f%2ftwitter.com%2fvalinsky2k" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvalinsky.me%2fposts%2fgithub-pages-with-custom-godaddy-domain%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a><a href="//reddit.com/submit?url=https%3a%2f%2fvalinsky.me%2fposts%2fgithub-pages-with-custom-godaddy-domain%2f&amp;title=How%20to%20configure%20your%20Github%20Pages%20website%20with%20your%20custom%20Godaddy%20domain" target="_blank" title="Share on Reddit">
+            <i class="fab fa-reddit fa-fw"></i>
+        </a><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fvalinsky.me%2fposts%2fgithub-pages-with-custom-godaddy-domain%2f&amp;title=How%20to%20configure%20your%20Github%20Pages%20website%20with%20your%20custom%20Godaddy%20domain" target="_blank" title="Share on LinkedIn">
+            <i class="fab fa-linkedin fa-fw"></i>
+        </a><a href="//news.ycombinator.com/submitlink?u=https%3a%2f%2fvalinsky.me%2fposts%2fgithub-pages-with-custom-godaddy-domain%2f&amp;description=How%20to%20configure%20your%20Github%20Pages%20website%20with%20your%20custom%20Godaddy%20domain" target="_blank" title="Share on Hacker News">
+            <i class="fab fa-y-combinator fa-fw"></i>
+        </a></span></div>
         </div>
     </div>
-    <div class="footer__inner">
-        <div class="footer__content">
-            <span><a href="https://valinsky.me/privacy-statement">Privacy Policy</a></span>
-            <span><a href="http://gohugo.io">Hugo</a></span>
-            <span><a href="https://github.com/rhazdon">Theme</a></span>
-            <span>&copy; 2020</span>
+
+    <div class="post-info-more">
+        <section><span class="tag">
+                        <a href="https://valinsky.me/tags/godaddy/"><i class="fas fa-tag fa-fw"></i>&nbsp;godaddy</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://valinsky.me/tags/github/"><i class="fas fa-tag fa-fw"></i>&nbsp;github</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://valinsky.me/tags/tutorial/"><i class="fas fa-tag fa-fw"></i>&nbsp;tutorial</a>&nbsp;
+                    </span></section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://valinsky.me">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="https://valinsky.me/posts/quake3-fast-inverse-square-root/" class="next" rel="next" title="The Magic of Quake 3&#39;s Fast Inverse Square Root Explained">The Magic of Quake 3&#39;s Fast Inverse Square Root Explained<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
         </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="about/" target="_blank">Vali Voicu</a></span></div>
     </div>
 </footer>
-
-            
-        </div>
-
-        
-
-
-
-
-<script type="text/javascript" src="https://valinsky.me/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-151935413-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-
-
-
-
-
-
-    </body>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><link rel="stylesheet" href="/css/lib/katex/katex.min.css"><link rel="stylesheet" href="/css/lib/katex/copy-tex.min.css"><script src="/js/lib/jquery/jquery.slim.min.js"></script><script src="/js/lib/lazysizes/lazysizes.min.js"></script><script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/js/lib/katex/katex.min.js"></script><script src="/js/lib/katex/auto-render.min.js"></script><script src="/js/lib/katex/copy-tex.min.js"></script><script src="/js/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
 </html>

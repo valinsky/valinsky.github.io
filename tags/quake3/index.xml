@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>quake3 on Vali Voicu</title>
+    <title>quake3 on ./valinsky.sh</title>
     <link>https://valinsky.me/tags/quake3/</link>
-    <description>Recent content in quake3 on Vali Voicu</description>
+    <description>Recent content in quake3 on ./valinsky.sh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Sun, 24 Nov 2019 17:24:58 -0500</lastBuildDate>
     
 	<atom:link href="https://valinsky.me/tags/quake3/index.xml" rel="self" type="application/rss+xml" />

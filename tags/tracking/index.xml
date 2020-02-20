@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tracking on Vali Voicu</title>
+    <title>tracking on ./valinsky.sh</title>
     <link>https://valinsky.me/tags/tracking/</link>
-    <description>Recent content in tracking on Vali Voicu</description>
+    <description>Recent content in tracking on ./valinsky.sh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Sun, 22 Dec 2019 00:04:35 -0500</lastBuildDate>
     
 	<atom:link href="https://valinsky.me/tags/tracking/index.xml" rel="self" type="application/rss+xml" />
