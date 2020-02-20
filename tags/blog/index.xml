@@ -23,17 +23,6 @@ You can&amp;rsquo;t plan inspiration We&amp;rsquo;re all living that busy 21st c
     </item>
     
     <item>
-      <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
-      <link>https://valinsky.me/posts/quake3-fast-inverse-square-root/</link>
-      <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/quake3-fast-inverse-square-root/</guid>
-      <description>This is one of those magical unicorn algorithms.
-I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
-This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
-    </item>
-    
-    <item>
       <title>Privacy Statement</title>
       <link>https://valinsky.me/privacy-statement/</link>
       <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>

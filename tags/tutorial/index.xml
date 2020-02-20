@@ -6,10 +6,20 @@
     <description>Recent content in tutorial on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2019 17:24:58 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2019 00:04:35 -0500</lastBuildDate>
     
 	<atom:link href="https://valinsky.me/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Privacy Build 2020</title>
+      <link>https://valinsky.me/posts/privacy-build-2020/</link>
+      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+      
+      <guid>https://valinsky.me/posts/privacy-build-2020/</guid>
+      <description>Privacy was a hot topic in the last decade. And for good reason. Corporations are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
+Companies started employing intelligent and invasive tracking methods to gather as much user data as possible while hiding the underlying techniques implemented through intelligent word play. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
+    </item>
     
     <item>
       <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
