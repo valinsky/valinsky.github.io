@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tutorial on ./valinsky.sh</title>
+    <title>tutorial on Vali Voicu</title>
     <link>https://valinsky.me/categories/tutorial/</link>
-    <description>Recent content in tutorial on ./valinsky.sh</description>
+    <description>Recent content in tutorial on Vali Voicu</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Sun, 17 Nov 2019 10:54:46 -0500</lastBuildDate>
     
 	<atom:link href="https://valinsky.me/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
@@ -20,9 +20,8 @@
       <description>You can use your own custom domain with GitHub Pages, instead of GitHub&amp;rsquo;s &amp;lt;username&amp;gt;.github.io domain. This GitHub Pages post covers the domain configuration steps.
 If you bought the domain on GoDaddy, I&amp;rsquo;m going to show you the exact GoDaddy DNS configuration you need.
 Go to your godaddy.com domain, and find the Manage DNS option.
-  GoDaddy Manage DNSGoDaddy Manage DNS
-  Add these settings.
-  GoDaddy DNS configurationGoDaddy DNS configuration</description>
+GoDaddy Manage DNS  Add these settings.
+GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky.</description>
     </item>
     
   </channel>

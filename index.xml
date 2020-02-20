@@ -1,53 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>./valinsky.sh | ./valinsky.sh</title>
-        <link>https://valinsky.me/</link>
-        <description>./valinsky.sh | ./valinsky.sh</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 08 Feb 2020 10:49:18 -0500</lastBuildDate><atom:link href="https://valinsky.me/" rel="self" type="application/rss+xml" /><item>
-                <title>Posts</title>
-                <link>https://valinsky.me/posts/</link>
-                <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate><guid>https://valinsky.me/posts/</guid>
-                <description></description>
-            </item><item>
-                <title>Privacy Statement</title>
-                <link>https://valinsky.me/privacy-statement/</link>
-                <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate><guid>https://valinsky.me/privacy-statement/</guid>
-                <description>
-
-&lt;h2 id=&#34;github&#34;&gt;GitHub&lt;/h2&gt;
-
-&lt;p&gt;The code for this website is &lt;a href=&#34;https://github.com/valinsky/valinsky.github.io&#34;&gt;publicly available on GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The website is hosted on &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://help.github.com/en/github/site-policy/github-privacy-statement#github-pages&#34;&gt;GitHub Pages privacy policy&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If you create a GitHub Pages website, it is your responsibility to post a privacy statement that accurately describes how you
-collect, use, and share personal information and other visitor information, and how you comply with applicable data privacy
-laws, rules, and regulations. Please note that GitHub may collect Technical Information from visitors to your GitHub Pages
-website, including logs of visitor IP addresses, to maintain the security and integrity of the website and service.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;analytics&#34;&gt;Analytics&lt;/h2&gt;
-
-&lt;p&gt;We are using Google Analytics as a third party tracking service. We do not use it to track you individually or collect personal information about you. Google Analytics is used to collect information about website performance and how users of this website interact with it. This helps us understand user interests better.&lt;/p&gt;
-
-&lt;p&gt;We only collect the minimum amount of personal information required to understand the purpose of your interactions with this website. This information, as far as we are aware, will not be sold to third parties.&lt;/p&gt;
-
-&lt;p&gt;Google Analytics gathers certain simple, non-personally identifying information over time, such as your IP address, browser type, internet service provider, referring and exit pages, time stamp, and similar data about your use of this website.&lt;/p&gt;
-
-&lt;p&gt;You can opt out of Google Analytics tracking by using a script blocking browser extension or add-on and simply disabling the Google Analytics script. Google also provides a browser &lt;a href=&#34;https://tools.google.com/dlpage/gaoptout&#34;&gt;add-on to block GA&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://policies.google.com/technologies/partner-sites&#34;&gt;Googles Privacy Policy&lt;/a&gt;&lt;/p&gt;
-</description>
-            </item><item>
-                <title>About</title>
-                <link>https://valinsky.me/about/</link>
-                <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate><guid>https://valinsky.me/about/</guid>
-                <description>&lt;p&gt;Hi, my name is Vali and I love the [free, open, uncensored, secure and E2EE] internet.&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-</description>
-            </item></channel>
+  <channel>
+    <title>Vali Voicu</title>
+    <link>https://valinsky.me/</link>
+    <description>Recent content on Vali Voicu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Feb 2020 10:49:18 -0500</lastBuildDate>
+    
+	<atom:link href="https://valinsky.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bloxplorer</title>
+      <link>https://valinsky.me/posts/bloxplorer/</link>
+      <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate>
+      
+      <guid>https://valinsky.me/posts/bloxplorer/</guid>
+      <description>In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python.
+Bloxplorer - short for Block Explorer - is an open source package that allows developers to make use of the full power of the Blockstream Esplora HTTP API through a clean Python interface.
+Why I wrote Bloxplorer I&amp;rsquo;m fascinated with Bitcoin, both from a technological and an economical standpoint, and with the ever growing pieces of tech surrounding it, like Lighting Network, Schnorr and Taproot to name a few.</description>
+    </item>
+    
+    <item>
+      <title>The Beauty of Building Software</title>
+      <link>https://valinsky.me/posts/the-beauty-of-building-software/</link>
+      <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
+      
+      <guid>https://valinsky.me/posts/the-beauty-of-building-software/</guid>
+      <description>One of my latest adventures in the world of software was to update the CI/CD for one of our repositories. The plan was to move away from using Jenkins in favor of a full CI/CD GitLab pipeline.
+I&amp;rsquo;ve worked with Jenkins for a few years and I think it&amp;rsquo;s a solid CI/CD and build tool. It&amp;rsquo;s highly configurable and it will get the job done.
+It also needs maintenance. You have to run and configure a Jenkins server, which adds up to the (probably) high list of apps that need to be maintained.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Build 2020</title>
+      <link>https://valinsky.me/posts/privacy-build-2020/</link>
+      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+      
+      <guid>https://valinsky.me/posts/privacy-build-2020/</guid>
+      <description>Privacy was a hot topic in the last decade. And for good reason. Corporations are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
+Companies started employing intelligent and invasive tracking methods to gather as much user data as possible while hiding the underlying techniques implemented through intelligent word play. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
+    </item>
+    
+    <item>
+      <title>Stop Over Planning</title>
+      <link>https://valinsky.me/posts/stop-over-planning/</link>
+      <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
+      
+      <guid>https://valinsky.me/posts/stop-over-planning/</guid>
+      <description>Planning is an essential aspect of a healthy lifestyle. We try to systematically structure our daily activities in order to take full advantage of our time.
+For me it wasn&amp;rsquo;t that simple. Planning often turned out to be a productivity killer and a cause for stress. I realized that was because I didn&amp;rsquo;t know how my mind worked and I didn&amp;rsquo;t know how to adapt to it.
+You can&amp;rsquo;t plan inspiration We&amp;rsquo;re all living that busy 21st century life, trying to find a balance between family, partners, work, gym, nutrition, finances, school, friends, hobbies, hustling, side projects, lazyness, vacations, unforseen events, etc.</description>
+    </item>
+    
+    <item>
+      <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
+      <link>https://valinsky.me/posts/quake3-fast-inverse-square-root/</link>
+      <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
+      
+      <guid>https://valinsky.me/posts/quake3-fast-inverse-square-root/</guid>
+      <description>This is one of those magical unicorn algorithms.
+I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
+This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Statement</title>
+      <link>https://valinsky.me/privacy-statement/</link>
+      <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
+      
+      <guid>https://valinsky.me/privacy-statement/</guid>
+      <description>GitHub The code for this website is publicly available on GitHub.
+The website is hosted on GitHub Pages.
+GitHub Pages privacy policy
+ If you create a GitHub Pages website, it is your responsibility to post a privacy statement that accurately describes how you collect, use, and share personal information and other visitor information, and how you comply with applicable data privacy laws, rules, and regulations. Please note that GitHub may collect Technical Information from visitors to your GitHub Pages website, including logs of visitor IP addresses, to maintain the security and integrity of the website and service.</description>
+    </item>
+    
+    <item>
+      <title>How to configure your Github Pages website with your custom Godaddy domain</title>
+      <link>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</link>
+      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+      
+      <guid>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</guid>
+      <description>You can use your own custom domain with GitHub Pages, instead of GitHub&amp;rsquo;s &amp;lt;username&amp;gt;.github.io domain. This GitHub Pages post covers the domain configuration steps.
+If you bought the domain on GoDaddy, I&amp;rsquo;m going to show you the exact GoDaddy DNS configuration you need.
+Go to your godaddy.com domain, and find the Manage DNS option.
+GoDaddy Manage DNS  Add these settings.
+GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://valinsky.me/about/</link>
+      <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
+      
+      <guid>https://valinsky.me/about/</guid>
+      <description>Hi, my name is Vali and I love the [free, open, uncensored, secure and E2EE] internet.</description>
+    </item>
+    
+  </channel>
 </rss>

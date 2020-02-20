@@ -1,83 +1,695 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on ./valinsky.sh</title>
-    <link>https://valinsky.me/posts/</link>
-    <description>Recent content in Posts on ./valinsky.sh</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 08 Feb 2020 10:49:18 -0500</lastBuildDate>
-    
-	<atom:link href="https://valinsky.me/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Bloxplorer</title>
-      <link>https://valinsky.me/posts/bloxplorer/</link>
-      <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/bloxplorer/</guid>
-      <description>In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python.
+    <channel>
+        <title>Posts on Vali Voicu</title>
+        <link>https://valinsky.me/posts/</link>
+        <description>Recent content in Posts on Vali Voicu</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 08 Feb 2020 10:49:18 -0500</lastBuildDate>
+        <atom:link href="https://valinsky.me/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Bloxplorer</title>
+            <link>https://valinsky.me/posts/bloxplorer/</link>
+            <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate>
+            
+            <guid>https://valinsky.me/posts/bloxplorer/</guid>
+            <description>In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python.
 Bloxplorer - short for Block Explorer - is an open source package that allows developers to make use of the full power of the Blockstream Esplora HTTP API through a clean Python interface.
 Why I wrote Bloxplorer I&amp;rsquo;m fascinated with Bitcoin, both from a technological and an economical standpoint, and with the ever growing pieces of tech surrounding it, like Lighting Network, Schnorr and Taproot to name a few.</description>
-    </item>
-    
-    <item>
-      <title>The Beauty of Building Software</title>
-      <link>https://valinsky.me/posts/the-beauty-of-building-software/</link>
-      <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/the-beauty-of-building-software/</guid>
-      <description>One of my latest adventures in the world of software was to update the CI/CD for one of our repositories. The plan was to move away from using Jenkins in favor of a full CI/CD GitLab pipeline.
+            <content type="html"><![CDATA[
+
+<p>In this post I want to introduce <a href="https://github.com/valinsky/bloxplorer">Bloxplorer</a>, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python.</p>
+
+<p>Bloxplorer - short for Block Explorer - is an open source package that allows developers to make use of the full power of the <a href="https://github.com/Blockstream/esplora/blob/master/API.md">Blockstream Esplora HTTP API</a> through a clean Python interface.</p>
+
+<h3 id="why-i-wrote-bloxplorer">Why I wrote Bloxplorer</h3>
+
+<p>I&rsquo;m fascinated with Bitcoin, both from a technological and an economical standpoint, and with the ever growing pieces of tech surrounding it, like <a href="https://lightning.network/">Lighting Network</a>, <a href="https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin">Schnorr and Taproot</a> to name a few.</p>
+
+<p>While reading through Jimmy Songs <a href="https://github.com/jimmysong/programmingbitcoin">Programming Bitcoin</a> book, I wanted to use the knowledge that I gained to play around with the Bitcoin blockchain using Python. I soon found out that there was no package that did what I was looking for. This was a great opportunity for me to build my first open source project that I can share with the community and to help grow the Bitcoin ecosystem, even if just by a tiny bit.</p>
+
+<p>What I wanted to achieve was the simplest way a Python engineer can interact with the Bitcoin blockchain.</p>
+
+<p>I chose Blockstreams Esplora as the underlying API because Blockstream has been succesfully involved in growing the Bitcoin ecosystem for years, and also because the <a href="https://blockstream.com/liquid/">Liquid sidechain</a> is available in the same API.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>Bloxplorer is a Python block explorer for Bitcoin, Liquid and Bitcoin Testnet. It offers all the necessary tools an engineer needs in order to interact with the specific blockchain in a simple and straightforward manner.</p>
+
+<p>The methods exposed by the package are organized into 6 categories: Addresses, Transactions, Blocks, Fees, Mempool and Assets. Assets is available only for Liquid.</p>
+
+<p>For example, if you want to get information about a specific Bitcoin address, you can do it like so:</p>
+
+<pre><code class="language-python">from bloxplorer import bitcoin_explorer as explorer
+
+result = explorer.addr.get('147SwRQdpCfj5p8PnfsXV2SsVVpVcz3aPq')
+print(result.data)
+
+&quot;&quot;&quot;
+{
+  'address': '147SwRQdpCfj5p8PnfsXV2SsVVpVcz3aPq',
+  'chain_stats':
+  {
+    'funded_txo_count': 1237,
+    'funded_txo_sum': 1583994506803,
+    'spent_txo_count': 1230, 'spent_txo_sum': 1575155902037,
+    'tx_count': 1701
+  },
+  'mempool_stats':
+  {
+    'funded_txo_count': 0,
+    'funded_txo_sum': 0,
+    'spent_txo_count': 0,
+    'spent_txo_sum': 0,
+    'tx_count': 0
+  }
+}
+&quot;&quot;&quot;
+</code></pre>
+
+<p>You can also get details about a specific transaction:</p>
+
+<pre><code class="language-python">from bloxplorer import bitcoin_explorer as explorer
+
+result = explorer.tx.get('b3eb36873d61cfde5d3780195430fe23cf79ab4313bdd3834d6eb97e9f2e9c8c')
+print(result.data)
+
+&quot;&quot;&quot;
+{
+  'txid': 'b3eb36873d61cfde5d3780195430fe23cf79ab4313bdd3834d6eb97e9f2e9c8c',
+  'version': 1,
+  'locktime': 0,
+  'vin': [
+  {
+      'txid': '0000000000000000000000000000000000000000000000000000000000000000',
+      'vout': 4294967295,
+      'prevout': None,
+      'scriptsig': '03716809049f203f5efabe6d6d790aeab57d0c2c6db22acdf312204864aa6e0804d236bcfbf3193f216ac0aef8040000000000000008180052c2d7050000142f70726f68617368696e672e636f6d9b1d02002f',
+      'scriptsig_asm': 'OP_PUSHBYTES_3 716809 OP_PUSHBYTES_4 9f203f5e OP_RETURN_250 OP_RETURN_190 OP_2DROP OP_2DROP OP_PICK OP_PUSHBYTES_10 eab57d0c2c6db22acdf3 OP_PUSHBYTES_18 204864aa6e0804d236bcfbf3193f216ac0ae OP_RETURN_248 OP_PUSHBYTES_4 00000000 OP_0 OP_0 OP_0 OP_PUSHBYTES_8 180052c2d7050000 OP_PUSHBYTES_20 2f70726f68617368696e672e636f6d9b1d02002f',
+      'is_coinbase': True,
+      'sequence': 0
+  }],
+  'vout': [
+  {
+    'scriptpubkey': '76a9143738752136c7b5deebbded93274d69c90d3b208f88ac',
+    'scriptpubkey_asm': 'OP_DUP OP_HASH160 OP_PUSHBYTES_20 3738752136c7b5deebbded93274d69c90d3b208f OP_EQUALVERIFY OP_CHECKSIG',
+    'scriptpubkey_type': 'p2pkh',
+    'scriptpubkey_address': '162yoHmpvqCq5SztkKaiEd5LiPyxcPLYzu',
+    'value': 1260049294
+  }],
+  'size': 168,
+  'weight': 672,
+  'status': 
+  {
+    'confirmed': True,
+    'block_height': 616561,
+    'block_hash': '00000000000000000002843470daa89c41da6f52ce968e91a45385202cc813c4',
+    'block_time': 1581195408
+  }
+}
+&quot;&quot;&quot;
+</code></pre>
+
+<p>You can also post your own transactions, check the current block height, see the mempool status and much more.</p>
+
+<p>The full API documentation is available <a href="https://valinsky.me/bloxplorer/index.html">here</a>.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>With Bloxplorer I saw an opportunity to help the Bitcoin ecosystem while also getting my foot through the door of open source software and I&rsquo;m very happy with the end result. At the time of this writing Bloxplorer was downloaded <a href="https://pepy.tech/project/bloxplorer/">more than 4k times</a>, which I think is amazing.</p>
+
+<p>I will be actively maintaining the package, based on the Esplora API changes, and any future improvements I see as being useful.</p>
+
+<p>Feel free to <code>pip install</code> the package from <a href="https://pypi.org/project/bloxplorer/">PyPi</a> and to play around with it and if interesented, I welcome you to submit PRs or to open issues on <a href="https://github.com/valinsky/bloxplorer">GitHub</a>.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>The Beauty of Building Software</title>
+            <link>https://valinsky.me/posts/the-beauty-of-building-software/</link>
+            <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
+            
+            <guid>https://valinsky.me/posts/the-beauty-of-building-software/</guid>
+            <description>One of my latest adventures in the world of software was to update the CI/CD for one of our repositories. The plan was to move away from using Jenkins in favor of a full CI/CD GitLab pipeline.
 I&amp;rsquo;ve worked with Jenkins for a few years and I think it&amp;rsquo;s a solid CI/CD and build tool. It&amp;rsquo;s highly configurable and it will get the job done.
 It also needs maintenance. You have to run and configure a Jenkins server, which adds up to the (probably) high list of apps that need to be maintained.</description>
-    </item>
-    
-    <item>
-      <title>Privacy Build 2020</title>
-      <link>https://valinsky.me/posts/privacy-build-2020/</link>
-      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/privacy-build-2020/</guid>
-      <description>Privacy was a hot topic in the last decade. And for good reason. Corporations are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
+            <content type="html"><![CDATA[
+
+<p>One of my latest adventures in the world of software was to update the CI/CD for one of our repositories. The plan was to move away from using Jenkins in favor of a full CI/CD GitLab pipeline.</p>
+
+<p>I&rsquo;ve worked with Jenkins for a few years and I think it&rsquo;s a solid CI/CD and build tool. It&rsquo;s highly configurable and it will get the job done.<br />
+It also needs maintenance. You have to run and configure a Jenkins server, which adds up to the (probably) high list of apps that need to be maintained.</p>
+
+<p>GitLab has a <a href="https://docs.gitlab.com/ee/ci/">built in CI/CD tool</a> which is configured by a <strong>.gitlab-ci.yml</strong> file placed in the repos root folder. Instead of maintaining an app server, you <em>just</em> have to write a yml file.</p>
+
+<p>The <strong>.gitlab-ci.yml</strong> contains scripts that will be executed by <a href="https://docs.gitlab.com/runner/">GitLab Runners</a> when code is pushed to the repo. Scripts can be grouped together into jobs. You can have a build job, a test job, a deploy job, a documentation job, etc. You can define your jobs to run in a specific order, together composing a pipeline.</p>
+
+<h4 id="writing-the-first-job">Writing the first job</h4>
+
+<p>That&rsquo;s what I had to do. I had to create a <strong>.gitlab-ci.yml</strong> file for this repo in order to test, build and deploy the app to specific environments.</p>
+
+<p>I haven&rsquo;t worked with GitLab pipelines before. This was all new to me. And I had a great time doing it.</p>
+
+<p>I started by reading the <a href="https://docs.gitlab.com/ee/ci/yaml/">documentation</a>, and GitLab&rsquo;s is excellent. Every question I had was answered in the docs. It was great to read through and understand how all the different pieces work and how they can creatively be combined together.</p>
+
+<p>The first thing I tried was to write a simple script that runs the unit tests. When new code was pushed to a <strong>feature</strong> branch, I wanted GitLab to run unit tests against the code through the CI. It was great to see the GitLab Runner kick in on every code push.</p>
+
+<h4 id="creating-the-pipeline">Creating the pipeline</h4>
+
+<p>I was done with the easy part. The tricky part was, when the code was merged into the <strong>master</strong> branch, a pipeline that looks something like this had to be executed:</p>
+
+<pre><code>unit test -&gt; deploy changeset -&gt; build container -&gt; deploy container -&gt; sanity check -&gt; tag
+</code></pre>
+
+<p>The pipeline will run the unit tests again, deploy the AWS stack changeset, build a Docker container and push it to ECR, deploy the container to ECS, run a basic sanity, and finally tag the code.</p>
+
+<p>If you don&rsquo;t know what all of this is, don&rsquo;t worry about it too much. The idea is that each stage has to successfully run in order for the next stage to be executed.</p>
+
+<p>As I was writing the jobs, the pipeline was slowly coming together and I would often push the code in order to test the changes. This part was as intense as it was exciting.</p>
+
+<p>I could see the pipeline running in the GitLab UI, and every time I would make a job pass, in that moment, I was the happiest man alive.</p>
+
+<p>But during the time when a job would run, not knowing if it will actually pass this time or fail again, I was on the edge of my seat. I realized that sometimes I would involuntarily hold my breath in this situation.</p>
+
+<p>After many happy, intense and some frustrating moments, I ended up writing the last job, where I had to tag the code that was deployed. This one was special. While at the edge of my seat again, I triggered the entire pipeline. I was watching how it was slowly progressing and&hellip; it passed! In that moment I thought <em>this is what I was born to do</em>.</p>
+
+<h4 id="software-is-beautiful">Software is beautiful</h4>
+
+<p>That was one of many moments where I reminded myself that building software is beautiful.<br />
+It&rsquo;s an art.</p>
+
+<p>As engineers we deal with errors, bugs and new features on the regular. We use a lot of brain power trying to understand problems and to find the best solutions for them. Confusion and frustration are part of the job, but with time a good engineer will know how to handle these emotions and will learn how to be calm and collected under stress. These qualities can serve you greatly in the real world.</p>
+
+<p>We also spend a good amount of time on research. We check if other people have encountered the same problem, read documentations, comments, code. It can become exhausting.</p>
+
+<p>But after all that mental effort, we&rsquo;re rewarded with this magical thing that does what it&rsquo;s supposed to do because we told it to do it that way. It&rsquo;s a beautiful creative process.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Privacy Build 2020</title>
+            <link>https://valinsky.me/posts/privacy-build-2020/</link>
+            <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+            
+            <guid>https://valinsky.me/posts/privacy-build-2020/</guid>
+            <description>Privacy was a hot topic in the last decade. And for good reason. Corporations are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.
 Companies started employing intelligent and invasive tracking methods to gather as much user data as possible while hiding the underlying techniques implemented through intelligent word play. A lot of people have no idea how their data is being used, or that they themselves have become a product.</description>
-    </item>
-    
-    <item>
-      <title>Stop Over Planning</title>
-      <link>https://valinsky.me/posts/stop-over-planning/</link>
-      <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/stop-over-planning/</guid>
-      <description>Planning is an essential aspect of a healthy lifestyle. We try to systematically structure our daily activities in order to take full advantage of our time.
+            <content type="html"><![CDATA[
+
+<p>Privacy was a hot topic in the last decade. And for good reason. Corporations are thriving based on the business model of gathering as much data as they can from their customers and using that data to gain influence and to generate profit.</p>
+
+<p>Companies started employing intelligent and invasive tracking methods to gather as much user data as possible while hiding the underlying techniques implemented through intelligent word play. A lot of people have no idea how their data is being used, or that they themselves have become a product.</p>
+
+<h3 id="online-tracking-has-become-an-art">Online tracking has become an art</h3>
+
+<h4 id="free-apps">Free apps</h4>
+
+<p>Companies may offer top notch web and mobile apps to customers <em>for free</em>. Google, Facebook, Instagram, Twitter are some of the obvious examples. Everything you do while using these apps is recorded and saved in a centralized database forever. The saved data may be used for targeted ads, tracking your online activity, <a href="https://www.encyclopedia.com/books/educational-magazines/online-profiling">profiling you</a>, <a href="https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election">influencing your political views</a> etc.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Want to freak yourself out? I&#39;m gonna show just how much of your information the likes of Facebook and Google store about you without you even realising it</p>&mdash; Dylan Curran (@iamdylancurran) <a href="https://twitter.com/iamdylancurran/status/977559925680467968?ref_src=twsrc%5Etfw">March 24, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Today I saw that Spotify is giving away a <em>free</em> Google Home Mini to premium users&hellip;</p>
+
+<h4 id="cookies">Cookies</h4>
+
+<p>When you visit a website, a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookie</a> with a unique identifier is set on your device. Next time you visit the same website, that cookie is sent in the request and the website knows that you visited it before. While cookies do offer some benefits, like session management, they are heavily used for tracking and profiling.</p>
+
+<p>Also, <a href="https://en.wikipedia.org/wiki/Zombie_cookie">zombie cookies</a>.</p>
+
+<h4 id="device-fingerprinting">Device fingerprinting</h4>
+
+<p>You might be the only person who visits a particular website from a particular device, using a particular OS version, set to a particular language, with a particular screen size, and using a particular web browser. Websites and apps have access to all that data, and more.</p>
+
+<p>That&rsquo;s your unique <a href="https://pixelprivacy.com/resources/browser-fingerprinting/">device fingerprint</a>.</p>
+
+<p>Your identity can be easily revealed based on this data, without you revealing any personal information.</p>
+
+<p>You can check your device fingerprint <a href="https://panopticlick.eff.org/">here</a>.<br />
+Check out <a href="https://meta.stackexchange.com/a/331963">this answer</a> on Stack Exchange for more info.</p>
+
+<h4 id="first-party-and-third-party-trackers">First party and third party trackers</h4>
+
+<p>First party trackers are trackers employed by the website you visit. Third party trackers are trackers employed by entities other than the website you visit. If there is a third party tracker on a web page, that tracker has the ability to invite any number of other third party trackers.</p>
+
+<p>For example, if you go to <a href="https://www.nytimes.com/">nytimes.com</a>, NY Times will log your visit, know which article you read, etc.</p>
+
+<p>But&hellip; we can see that NY Times employs other third party trackers to gather your personal information as well, namely Google and Amazon trackers.</p>
+
+
+    <figure class="center" >
+        <img src="/images/privacy_build/nytimes_trackers.png"   />
+
+        
+            <figcaption class="center" >NY Times Online Trackers</figcaption>
+        
+    </figure>
+
+
+
+<h4 id="promotions">Promotions</h4>
+
+<p>I&rsquo;m seeing more and more companies trying to get my phone number or my email through <em>free</em> gift cards, coupons etc. Trader Joe&rsquo;s was giving me a $5 dollars coupon if I signed up for their offer using my phone number.<br />
+They can then use my email or phone number to match it to the profile they have on me.</p>
+
+<h4 id="only-scratching-the-surface">Only scratching the surface</h4>
+
+<p>These are just a few examples of different tracking methods. Corporations spend big budgets on figuring out better ways to track us. The more data they have on us, the more money they make, the more power and influence they have.</p>
+
+<p>For a deep dive into how exactly our data is being gathered and used by corporations and governments, I highly recommend reading <a href="https://en.wikipedia.org/wiki/Permanent_Record_(autobiography)">Permanent Record</a> by Edward Snowden.</p>
+
+<h3 id="encryption-is-our-friend">Encryption is our friend</h3>
+
+<blockquote>
+<p>In this way, people can oppose their will to that of a fully mobilized superpower and win. Encryption is an embodiment of the laws of physics, and it does not listen to the bluster of states, even transnational surveillance dystopias.</p>
+</blockquote>
+
+<ul>
+<li>Julian Assange - <a href="https://en.wikipedia.org/wiki/Cypherpunks_(book)">Cypherpunks: Freedom and the Future of the Internet</a></li>
+</ul>
+
+<p><br></p>
+
+<p>Neither big corporations nor governments can crack <strong>properly implemented</strong> encryption.</p>
+
+<p>I&rsquo;m a fan of <a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof">zero-knowledge proof</a> encryption, where data is encrypted before it is sent to servers, and the key to decrypt the data is only available to the user. The key is never stored on corporate servers. Nobody, not even companies, can decrypt the data. Only the user can.</p>
+
+<h3 id="privacy-build">Privacy build</h3>
+
+<p>I will list some of the apps I started using that promote encryption and privacy. While this list is by no means exhaustive, and while better alternatives may exist, it can serve as an intro into the world of privacy focused apps.</p>
+
+<p>The first thing I recommend doing after you install a new app is to update the privacy settings accorgindly.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">TikTok &quot;had virtually all privacy features disabled by default.&quot; 😱<br><br>Next time you install an app for yourself or your children, please make checking the privacy settings the first step.<a href="https://t.co/uYxmfuLzgO">https://t.co/uYxmfuLzgO</a></p>&mdash; DuckDuckGo (@DuckDuckGo) <a href="https://twitter.com/DuckDuckGo/status/1207311306614857728?ref_src=twsrc%5Etfw">December 18, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h4 id="browser">Browser</h4>
+
+<p><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>. Mozilla has been advocating privacy for a while, and lately they stepped their game up. Their open source browser automatically blocks trackers and you can install a wide range of privacy based addons.</p>
+
+<p>I&rsquo;m using <a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17">Privacy Badger</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-container/">Facebook Container</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/">DuckDuckGo Privacy Essentials</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a> as tracker blocking addons.</p>
+
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-quick-manager/">Cookie Quick Manager</a> for managing local cookies. I try to delete them after every session.</p>
+
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">HTTPS Everywhere</a> to ensure that web traffic is encrypted.</p>
+
+<p>I also use <a href="https://www.torproject.org/">Tor Browser</a>. I fully support Tor and and their mission.<br />
+Fun fact, if you maximize the Tor Browser, you&rsquo;ll be greeted with this message.</p>
+
+
+    <figure class="center" >
+        <img src="/images/privacy_build/tor_fingerprint_popup.png"   />
+
+        
+            <figcaption class="center" >Tor Fingerprint Popup</figcaption>
+        
+    </figure>
+
+
+
+<p>Remember that online fingerprint we were talking about before&hellip;</p>
+
+<p>On my smartphone I also use the <a href="https://duckduckgo.com/app">DuckDuckGo browser</a>.</p>
+
+<h4 id="instant-messaging">Instant Messaging</h4>
+
+<p><a href="https://www.signal.org/">Signal</a>. Open source, minimalist, E2EE.<br />
+The argument against Signal is that your phone number is required. I think it&rsquo;s a fair argument. But we are diving into anonymity here. Privacy and anonymity are two separate things that should be approached differently.</p>
+
+<p>WhatsApp uses the Signal protocol as its encryption algorithm. I would never recommend WhatsApp as a secure and private messaging app though. WhatsApp is owned by Facebook. Facebook wants all your data, your friends data, and your friends friends data.</p>
+
+<p>If WhatsApp is encrypted, then how can Facebook get my data? Fair question. They don&rsquo;t care what you talk about. They care about your metadata.</p>
+
+<blockquote>
+<p>Metadata is “activity data.” All the records of all the things you do on your devices and all the things your devices do on their own. Take a phone call, for example: its metadata might include the date and time of the call, the call’s duration, the number from which the call was made, the number being called, and their locations. An email’s metadata might include information about what type of computer it was generated on, where, and when, who the computer belonged to, who sent the email, who received it, where and when it was sent and received, and who if anyone besides the sender and recipient accessed it, and where and when. Metadata can tell your surveillant the address you slept at last night and what time you got up this morning. It reveals every place you visited during your day and how long you spent there. It shows who you were in touch with and who was in touch with you. It’s this fact that obliterates any government claim that metadata is somehow not a direct window into the substance of a communication. With the dizzying volume of digital communications in the world, there is simply no way that every phone call could be listened to or email could be read. Even if it were feasible, however, it still wouldn’t be useful, and anyway, metadata makes this unnecessary by winnowing the field. This is why it’s best to regard metadata not as some benign abstraction, but as the very essence of content: it is precisely the first line of information that the party surveilling you requires.</p>
+</blockquote>
+
+<ul>
+<li>Edward Snowden - Permanent Record</li>
+</ul>
+
+<p><br></p>
+
+<p>Be mindful of metadata when using the internet. Encryption can&rsquo;t be broken, but a lot of apps leave beind a huge trail of metadata.</p>
+
+<h4 id="email">Email</h4>
+
+<p><a href="https://protonmail.com/">ProtonMail</a></p>
+
+<p><a href="https://www.tutanota.com/">Tutanota</a></p>
+
+<p>Simple, encrypted, open source.</p>
+
+<p>There are some differences between the two. For example ProtonMail doesn&rsquo;t encrypt the email subject, while Tutanota does.</p>
+
+<h4 id="search-engine">Search Engine</h4>
+
+<p><a href="https://duckduckgo.com/">DuckDuckGo</a></p>
+
+<p><a href="https://www.startpage.com/">StartPage</a>, anonymity built on top of Google search. Sounds like a good idea on paper&hellip;</p>
+
+<h4 id="notes">Notes</h4>
+
+<p><a href="https://standardnotes.org/">Standard Notes</a>. I love this app. Open source, encrypted, simple and easy to use and it has great extensions.</p>
+
+<p>I think note taking apps are our most personal apps. We may write down our deepest thoughts and ideas. Imagine other people having full access to your deepest thoughts. I&rsquo;m looking at you Google Keep.</p>
+
+<h4 id="password-manager">Password Manager</h4>
+
+<p><a href="https://www.dashlane.com/">Dashlane</a>. I know I&rsquo;m lacking behind here. While I do like the app and its features, it&rsquo;s not open source. I&rsquo;m looking for an alternative.</p>
+
+<h4 id="vpn">VPN</h4>
+
+<p>I tried a couple of them and they&rsquo;re all <em>fine</em>, although I hold the view that <a href="https://gist.github.com/joepie91/5a9909939e6ce7d09e29">VPNs don&rsquo;t help with privacy</a>. I use them for other purposes. Currently I&rsquo;m using PIA and the new <a href="https://fpn.firefox.com/">Firefox Private Network</a> looks nice.</p>
+
+<h4 id="os">OS</h4>
+
+<p>I do most of my work on a MacBook Pro, but there are other OSes that focus on privacy.</p>
+
+<p><a href="https://tails.boum.org/">Tails OS</a>. Private and anonymous OS built on top of Tor. It deletes your entire session at shutdown. Fits on a flash drive.</p>
+
+<p>I heard good things about <a href="https://www.qubes-os.org/">Qubes OS</a> but I have yet to try it out.</p>
+
+<h4 id="stop-using-native-apps">Stop using native apps</h4>
+
+<p>Smartphones are tracking machines, which makes native apps tracking apps. I stopped using most native apps. A browser, like Firefox and DuckDuckGo, with privacy settings cranked up and regular cookie deletion is good enough.</p>
+
+<p>This approach won&rsquo;t stop your smartphone from tracking you though. It tracks you all the time! See <a href="https://youtu.be/VFns39RXPrU?t=3">this</a> and <a href="https://www.nytimes.com/interactive/2019/12/21/opinion/location-data-democracy-protests.html">this</a>.</p>
+
+<h4 id="awareness">Awareness</h4>
+
+<p>The views on privacy and privacy focused apps are changing rapidly. We ended up in a situation where our private life means big money for some corporation or for the government. We are being fooled into thinking otherwise.</p>
+
+<p>One might think that Google is a tech company. It&rsquo;s not. <a href="https://www.investopedia.com/articles/investing/020515/business-google.asp">It&rsquo;s an ad company</a>. Most of its revenue comes from paid or targeted ads.</p>
+
+<p>One might think that Facebook is a social media website. It&rsquo;s not. <a href="https://www.investopedia.com/ask/answers/120114/how-does-facebook-fb-make-money.asp">It&rsquo;s an ad company</a>. Facebook primarily makes money by selling advertising space on its platform.</p>
+
+<p>Government entities keep pushing for encryption back doors, few examples being <a href="https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute">Apple</a> and <a href="https://www.forbes.com/sites/zakdoffman/2019/09/29/whatsapp-backdoorwill-facebook-be-forced-to-break-message-encryption-as-reported/#3007f19c1b38">Facebook</a>. A back door doesn&rsquo;t mean that the government or the company can view your messages, it means that <strong>anyone</strong> that has access to the master key can view your messages. It&rsquo;s a personal, security and privacy risk.</p>
+
+<p>Our private life, our daily activities, our thoughts and emotions, our likes and dislikes, our political views, our relationships, our own identity is being used against us. Advanced machine learning algorithms in conjunction with our data are being used to influence our behaviour and to make us think and feel in a certain way, in order to conform to big corporations and government agendas. This is next level brain washing. It&rsquo;s not like old TV propaganda. Back then everyone would watch the same generic ads and news. Now it&rsquo;s customized based on individual behaviour. It&rsquo;s personal.</p>
+
+<p>We&rsquo;re being played.</p>
+
+<p>I&rsquo;m a strong believer in the right for privacy and I support companies and individuals who build applications having privacy as a core foundation.</p>
+
+<blockquote>
+<p>&ldquo;Arguing that you don&rsquo;t care about the right to privacy because you have nothing to hide is no
+different than saying you don&rsquo;t care about free speech because you have nothing to say.&rdquo;</p>
+</blockquote>
+
+<ul>
+<li>Edward Snowden</li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Stop Over Planning</title>
+            <link>https://valinsky.me/posts/stop-over-planning/</link>
+            <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
+            
+            <guid>https://valinsky.me/posts/stop-over-planning/</guid>
+            <description>Planning is an essential aspect of a healthy lifestyle. We try to systematically structure our daily activities in order to take full advantage of our time.
 For me it wasn&amp;rsquo;t that simple. Planning often turned out to be a productivity killer and a cause for stress. I realized that was because I didn&amp;rsquo;t know how my mind worked and I didn&amp;rsquo;t know how to adapt to it.
 You can&amp;rsquo;t plan inspiration We&amp;rsquo;re all living that busy 21st century life, trying to find a balance between family, partners, work, gym, nutrition, finances, school, friends, hobbies, hustling, side projects, lazyness, vacations, unforseen events, etc.</description>
-    </item>
-    
-    <item>
-      <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
-      <link>https://valinsky.me/posts/quake3-fast-inverse-square-root/</link>
-      <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/quake3-fast-inverse-square-root/</guid>
-      <description>This is one of those magical unicorn algorithms.
+            <content type="html"><![CDATA[
+
+<p>Planning is an essential aspect of a healthy lifestyle. We try to systematically structure our daily activities in order to take full advantage of our time.<br />
+For me it wasn&rsquo;t that simple. Planning often turned out to be a productivity killer and a cause for stress. I realized that was because I didn&rsquo;t know how my mind worked and I didn&rsquo;t know how to adapt to it.</p>
+
+<h3 id="you-can-t-plan-inspiration">You can&rsquo;t plan inspiration</h3>
+
+<p>We&rsquo;re all living that busy 21st century life, trying to find a balance between family, partners, work, gym, nutrition, finances, school, friends, hobbies, hustling, side projects, lazyness, vacations, unforseen events, etc. Trying to order the modern hectic life by planning every detail would seem like a good&hellip; plan.</p>
+
+<p>And it is.<br />
+We need to plan out our life in order to fully experience it, but we also need to experience life in order to plan it.</p>
+
+<p>Alex Ellis wrote a <a href="https://alexanderell.is/posts/trust-in-your-unconscious/">great post</a> about how the human mind works in the background. He goes into detail about the <em>focused</em> and <em>diffuse</em> modes of thinking, mainly how our mind works when we actively think about a problem and when we let it wander.</p>
+
+<blockquote>
+<p>The focused mode is for filling your mind with information, and the diffuse mode is great at processing that information, forming connections between existing concepts, and developing new ideas.</p>
+</blockquote>
+
+<p>In diffuse mode, while we are not actively thinking about a particular problem, our mind is capable of coming up with fresh and new solutions to problems we were previously struggling with.</p>
+
+<p>In the article he quotes Dan Rockmore from <a href="https://www.newyorker.com/culture/annals-of-inquiry/the-myth-and-magic-of-generating-new-ideas">The Myth and Magic of Generating New Ideas</a></p>
+
+<blockquote>
+<p>It’s just a feeling of being free, of forgetting for a moment that we are bound by gravity and logic and convention, of letting the magic happen.</p>
+</blockquote>
+
+<p>One thing I realized is that this magical inspiration is impossible to plan.</p>
+
+<p>We need to trust our unconscious in order to overcome this beautiful uncertainty.</p>
+
+<h3 id="the-dilemma">The dilemma</h3>
+
+<p>Today I planned on going to the gym Monday, Wednesday and Friday next week. Wednesday comes, and all of a sudden I have a great idea for that project I haven&rsquo;t worked on in a while.</p>
+
+<p>My mind was continuously connecting mental dots in the diffuse mode, and now I feel inspired. These <a href="https://en.wikipedia.org/wiki/Eureka_effect"><code>AHA!</code></a> moments are some of the best moments in life.</p>
+
+<p>The problem is that when my past self created this plan, it didn&rsquo;t take into account how my present self will feel. That&rsquo;s impossible.
+Now I have to make a choice. Either stick to the plan, or ride this impromptu inspiration train and see where it leads.</p>
+
+<p>The choice between the plan my past self created for me, and where my current self is leaning towards can be intimidating. It&rsquo;s a cause for stress - <em>oh fuck I planned on doing X, but I want to do Y now, but if I do Y, I won&rsquo;t do X</em>. A bad choice can easily kill my productivity because I&rsquo;ll be forcing something that doesn&rsquo;t come natural to me.</p>
+
+<h3 id="planning-is-a-tool">Planning is a tool</h3>
+
+<p>So what&rsquo;s the answer? The answer is that planning is just another <strong>tool</strong> in our arsenal. We have to learn how to use it, not be used by it.</p>
+
+<p>I think that flexibility and adaptability are crucial in letting discipline guide you towards your goals, short term and long term.</p>
+
+<p>My long term goal is to be fit and healthy, not to conform to the fictional mental bariers my mind created for me which it now falsely interprets as discipline.</p>
+
+<p>I think that we need to create personal standards for ourselves, to grow and identify with these standards, and when the time is right, to break free from them. <strong>Kill your master.</strong></p>
+
+<p>With this in mind, the answer I found to the above dilemma is to let today be a resting day, adapt by creating a short term goal of seeing where my current inspiration takes me, and tomorrow go and kill it at the gym. I may not even make it to the gym tomorrow, who knows. Maybe do some pushups at home. Either way, I won&rsquo;t loose track of the long term goal.</p>
+
+<p>The realization that you always have a choice and that you&rsquo;re not bound by your own stories feels like that huge metaphorical weight being lifted of off your chest. Feels like freedom.</p>
+
+<h3 id="using-the-tool">Using the tool</h3>
+
+<p>I used to try and finish every book I started, even if I didn&rsquo;t like it that much. Even if it took months, or years. Sometimes it started feeling like chore.<br />
+Now I can easily start reading a new book while I&rsquo;m reading another book. Sometimes I bounce between 4 or 5 books. When I want to read about a particular subject, I find the book about that and continue where I left off. Or reread a chapter. It&rsquo;s not even about finshing the book anymore, it&rsquo;s about understanding concepts.</p>
+
+<p>Planning doesn&rsquo;t mean to always stick to whatever stories your mind created in the past. I can come back to reading book X anytime.</p>
+
+<p>Another example would be when we try to do to many things in a short amount of time. That can be a big cause for stress.<br />
+Without understanding how my mind worked I was easily trapped in self guilt because of the fantasies my past self created - <em>I&rsquo;ve planned to do all these things today, if I don&rsquo;t do them I will feel bad and useless.</em></p>
+
+<p>That sense of guilt is useless. I&rsquo;m learning how to prioritize and how to be fully engaged in what I choose to do, while understanding and trusting the power of my - conscious and unconscious - mind.</p>
+
+<p>This concept should be familiar with software engineers. Software, requirements, technologies, libraries, etc. change all the time and at such a rapid pace that flexibility and adaptability are crucial skills to have. Just because you planned on coding this new feature today, a whole lot of things can happen that can stop you from doing that.</p>
+
+<h3 id="final-thoughts">Final thoughts</h3>
+
+<p>I created this website long before I actually started writing anything. I didn&rsquo;t feel like it was the right moment yet, even though I wanted to have my own blog for a long time. I didn&rsquo;t force it. I could see thoughts of guilt and stress trying to creep up into my mind - <em>your website is ready and you didn&rsquo;t write anything yet! looser.</em> But I didn&rsquo;t give in to those feelings. You have to keep that <a href="https://www.youtube.com/watch?v=4PkrhH-bkpk">monkey mind</a> in check.</p>
+
+<p>Of course, every situation is different and you may need to think more about what to do next. That&rsquo;s fine. This life is nuts anyway. Just don&rsquo;t let plans intervene with your growth. Where there is a will there is, at least, a way. <a href="https://www.youtube.com/watch?v=cJMwBwFj5nQ">Be water</a>.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
+            <link>https://valinsky.me/posts/quake3-fast-inverse-square-root/</link>
+            <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
+            
+            <guid>https://valinsky.me/posts/quake3-fast-inverse-square-root/</guid>
+            <description>This is one of those magical unicorn algorithms.
 I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
 This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
-    </item>
-    
-    <item>
-      <title>How to configure your Github Pages website with your custom Godaddy domain</title>
-      <link>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</link>
-      <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</guid>
-      <description>You can use your own custom domain with GitHub Pages, instead of GitHub&amp;rsquo;s &amp;lt;username&amp;gt;.github.io domain. This GitHub Pages post covers the domain configuration steps.
+            <content type="html"><![CDATA[<p>This is one of those magical unicorn algorithms.</p>
+
+<p>I was always intrigued by this small piece of code, because it&rsquo;s such a unique and elegant solution to a common problem, and it&rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.</p>
+
+<p>This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</p>
+
+<p>Nowadays programmers might think to solve this problem by simply importing a library and calling a function.</p>
+
+<p>But back in 1999 the Quake 3 Arena developers realized it was computationally expensive to calculate the inverse square root of a floating point number on a large scale using traditional methods.</p>
+
+<p>One ninja developer came up with a solution that bypassed this limitation, and the <a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Fast inverse square root algorithm</a> was born.</p>
+
+<pre><code class="language-c">float Q_rsqrt( float number )
+{
+    long i;
+    float x2, y;
+    const float threehalfs = 1.5F;
+
+    x2 = number * 0.5F;
+    y  = number;
+    i  = * ( long * ) &amp;y;                       // evil floating point bit level hacking
+    i  = 0x5f3759df - ( i &gt;&gt; 1 );               // what the fuck? 
+    y  = * ( float * ) &amp;i;
+    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+    return y;
+}
+</code></pre>
+
+<p>The function makes use of <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton’s method</a>. Newton’s method is used for finding better approximations to the roots of a mathematical function.</p>
+
+<p>It looks like this:</p>
+
+<p>$$ x_{1} = x_{0} - \frac{f(x_{0})}{f&rsquo;(x_{0})} $$</p>
+
+<p>\( x_{0} \) is an initial approximation, and the formula generates \( x_{1} \) which is an even better approximation. The more iterations you perform, the better the approximation.</p>
+
+<p>We want to find the value of \( 1 / \sqrt{number} \), so we are looking for a solution to the equation \( f(x) = x^{-2} - number \). Take your best guess as to what the solution would be, and call it \( x_{0} \). We are only interested in the positive solution.</p>
+
+<p>We now know that \( f(x_{0}) \) is \( x_{0}^{-2} - number \). For clarification, <strong>number</strong> is the number which we want to find the inverse square root for, the input parameter to our C function above.</p>
+
+<p>Our Newton method now becomes:</p>
+
+<p>$$ x_{1} = x_{0} - \frac{x_{0}^{-2} - number}{-2 x_{0}^{-3}} $$</p>
+
+<p>After some algebraic magic (feel free to compute the result yourself), our equation becomes:</p>
+
+<p>$$ x_{1} = x_{0}(\frac{3}{2} - \frac{1}{2} * x_{0}^{2} * number) $$</p>
+
+<p>This is similar to line 12 in the C code.</p>
+
+<pre><code class="language-c">y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+</code></pre>
+
+<p>Remember when I asked you to guess the first approximation, \( x_{0} \)? Well, how do we get the value for it?</p>
+
+<p>Simple answer… magic.</p>
+
+<p>To quote Gary Tarolli, who (very modestly) takes partial credit for writing the function:</p>
+
+<blockquote>
+<p>Which actually is doing a floating point computation in integer - it took a long time to figure out how and why this works, and I can&rsquo;t remember the details anymore.</p>
+</blockquote>
+
+<p>It is not known how the exact value of the magic number <strong>0x5f3759df</strong> was determined.<br />
+What is known is that, if we take our input number and divide it by 2 (<a href="https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Right_shift_%3E%3E">shift it to the right by 1</a>), and then subtract this number from the magic number, we get a really good first estimate.</p>
+
+<p>To note, the input number is a <code>float</code>. In order to divide by 2 by shifting the bits to the right, it is converted into a <code>long</code> integer. Then it is converted back into a <code>float</code>.</p>
+
+<pre><code class="language-c">i  = * ( long * ) &amp;y;                       // evil floating point bit level hacking
+i  = 0x5f3759df - ( i &gt;&gt; 1 );               // what the fuck? 
+y  = * ( float * ) &amp;i;
+</code></pre>
+
+<p>This estimate, which is \( x_{0} \) in our mathematical function above, is then used in calculating the next approximation. The result is so close to the desired value, that a second iteration is not even needed anymore, as denoted by the commented code on line 13.</p>
+
+<pre><code class="language-c">    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+</code></pre>
+
+<p>You can read more about the Fast inverse square root <a href="https://www.beyond3d.com/content/articles/8">here</a> and <a href="https://www.beyond3d.com/content/articles/15">here</a>.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>How to configure your Github Pages website with your custom Godaddy domain</title>
+            <link>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</link>
+            <pubDate>Sun, 17 Nov 2019 10:54:46 -0500</pubDate>
+            
+            <guid>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</guid>
+            <description>You can use your own custom domain with GitHub Pages, instead of GitHub&amp;rsquo;s &amp;lt;username&amp;gt;.github.io domain. This GitHub Pages post covers the domain configuration steps.
 If you bought the domain on GoDaddy, I&amp;rsquo;m going to show you the exact GoDaddy DNS configuration you need.
 Go to your godaddy.com domain, and find the Manage DNS option.
-  GoDaddy Manage DNSGoDaddy Manage DNS
-  Add these settings.
-  GoDaddy DNS configurationGoDaddy DNS configuration</description>
-    </item>
-    
-  </channel>
+GoDaddy Manage DNS  Add these settings.
+GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky.</description>
+            <content type="html"><![CDATA[
+
+<p>You can use your own custom domain with <a href="https://pages.github.com/">GitHub Pages</a>, instead of GitHub&rsquo;s <strong>&lt;username&gt;.github.io</strong> domain. <a href="https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">This GitHub Pages post</a> covers the domain configuration steps.<br />
+If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDaddy DNS configuration you need.</p>
+
+<p>Go to your <a href="https://godaddy.com">godaddy.com</a> domain, and find the <em>Manage DNS</em> option.</p>
+
+
+    <figure class="center" >
+        <img src="/images/github_pages_godaddy_domain/manage_dns_setting.png"   />
+
+        
+            <figcaption class="center" >GoDaddy Manage DNS</figcaption>
+        
+    </figure>
+
+
+
+<p>Add these settings.</p>
+
+
+    <figure class="center" >
+        <img src="/images/github_pages_godaddy_domain/github_pages_godaddy_config_good.png"   />
+
+        
+            <figcaption class="center" >GoDaddy DNS configuration</figcaption>
+        
+    </figure>
+
+
+
+<p>My website is hosted on GitHub under the <strong>valinsky.github.io</strong> domain. You&rsquo;ll have to update the CNAME with your own <strong>&lt;username&gt;.github.io</strong> domain.</p>
+
+<p>You&rsquo;ll then be greeted with this message in your GitHub respository&rsquo;s settings, right under the GitHub Pages section.</p>
+
+
+    <figure class="center" >
+        <img src="/images/github_pages_godaddy_domain/github_pages_https_not_available.png"   />
+
+        
+            <figcaption class="center" >HTTPS Not Available</figcaption>
+        
+    </figure>
+
+
+
+<p>Like the message says, you have to wait <em>24 hours</em> for the internet to magically issue an <a href="https://www.digicert.com/ssl-certificate/">HTTPS SSL certificate</a> for you.</p>
+
+<p>That was not the case for me.</p>
+
+<p><br></p>
+
+<h3 id="make-sure-you-unpark-your-domain">Make sure you unpark your domain</h3>
+
+<p>Even though your certificate is not issued, you can still access your website through HTTP.<br />
+Never do that! Never serve your website through HTTP. <a href="https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https">Read why.</a></p>
+
+<p>When I was setting up my own custom domain for this website, I waited 24 hours, then another 24 hours, and yet another 24 hours, but the certificate wasn&rsquo;t getting issued.</p>
+
+<p>I soon realized the problem was with GoDaddy&rsquo;s DNS configuration.</p>
+
+<p>My initial configuration looked like this.</p>
+
+
+    <figure class="center" >
+        <img src="/images/github_pages_godaddy_domain/github_pages_godaddy_config_bad.png"   />
+
+        
+            <figcaption class="center" >GoDaddy DNS parked configuration</figcaption>
+        
+    </figure>
+
+
+
+<p>Those two DNS entries were setup by GoDaddy, and I didn&rsquo;t pay much attention to them initially. If you see these in your own DNS configuration, be sure to remove them, or else you&rsquo;ll end up with a <a href="https://en.wikipedia.org/wiki/Domain_parking">parked domain</a> that won&rsquo;t work with your GitHub Pages setup.</p>
+
+<p>After I removed those entries, a few hours later my HTTPS SSL certificate was issued and I was able to activate it.</p>
+
+
+    <figure class="center" >
+        <img src="/images/github_pages_godaddy_domain/activate_https.png"   />
+
+        
+            <figcaption class="center" >HTTPS Enforced</figcaption>
+        
+    </figure>
+
+
+
+<p>And that&rsquo;s it.</p>
+
+<p>Now you have a website hosted by GitHub and configured with your own custom GoDaddy DNS.</p>
+]]></content>
+        </item>
+        
+    </channel>
 </rss>
