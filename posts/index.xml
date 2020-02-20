@@ -317,7 +317,9 @@ Fun fact, if you maximize the Tor Browser, you&rsquo;ll be greeted with this mes
 <h4 id="instant-messaging">Instant Messaging</h4>
 
 <p><a href="https://www.signal.org/">Signal</a>. Open source, minimalist, E2EE.<br />
-The argument against Signal is that your phone number is required. I think it&rsquo;s a fair argument. But we are diving into anonymity here. Privacy and anonymity are two separate things that should be approached differently.</p>
+The argument against Signal is that your phone number is required. I think it&rsquo;s a fair argument, and Signal is aware of it. But we are diving into anonymity here. Privacy and anonymity are two separate things that should be approached differently.</p>
+
+<p>The reason why Signal asks for your phone number is that it can piggyback on your contact list straight from your phone, instead of storing those contacts on their servers. They seem alergic to storing user sensitive information.</p>
 
 <p>WhatsApp uses the Signal protocol as its encryption algorithm. I would never recommend WhatsApp as a secure and private messaging app though. WhatsApp is owned by Facebook. Facebook wants all your data, your friends data, and your friends friends data.</p>
 
