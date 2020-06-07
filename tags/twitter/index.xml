@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Valinsky</title>
-    <link>https://valinsky.me/tags/python/</link>
-    <description>Recent content in python on Valinsky</description>
+    <title>twitter on Valinsky</title>
+    <link>https://valinsky.me/tags/twitter/</link>
+    <description>Recent content in twitter on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Jun 2020 15:15:12 -0400</lastBuildDate>
     
-	<atom:link href="https://valinsky.me/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://valinsky.me/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
       <description>On the 11th of May, 2020, at block height 630.000, the 3rd Bitcoin halving event happened.
 For us Bitcoin nerds this was a huge event, not only because it happens every 4 years or because of its economic implications, but also because it shows the beautiful system that Bitcoin has in place, a system that has been working flawlessly since 2009.
 To commemorate this event, I thought about creating a Twitter bot that keeps track of how many blocks are left until the next halving.</description>
-    </item>
-    
-    <item>
-      <title>Bloxplorer</title>
-      <link>https://valinsky.me/posts/bloxplorer/</link>
-      <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/bloxplorer/</guid>
-      <description>In this post I want to introduce Bloxplorer, a simple yet very effective Bitcoin and Liquid blockchain explorer I wrote in Python.
-Bloxplorer - short for Block Explorer - is an open source package that allows developers to make use of the full power of the Blockstream Esplora HTTP API through a clean Python interface.
-Why I wrote Bloxplorer I&amp;rsquo;m fascinated with Bitcoin, both from a technological and an economical standpoint, and with the ever growing pieces of tech surrounding it, like Lighting Network, Schnorr and Taproot to name a few.</description>
     </item>
     
   </channel>

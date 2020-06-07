@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Vali Voicu ">
+<meta name="description" content="On the 11th of May, 2020, at block height 630.000, the 3rd Bitcoin halving event happened.
+For us Bitcoin nerds this was a huge event, not only because it happens every 4 years or because of its economic implications, but also because it shows the beautiful system that Bitcoin has in place, a system that has been working flawlessly since 2009.
+To commemorate this event, I thought about creating a Twitter bot that keeps track of how many blocks are left until the next halving." />
+<meta name="keywords" content="homepage, blog, science, informatics, development, programming, software" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://valinsky.me/posts/i-built-a-twitter-bot/" />
+
+
+    <title>
+        
+            I Built a Twitter Bot :: Valinsky 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://valinsky.me/main.min.73f55a8d452be4a71b2960620b80252cf69abd84d63fe7501abf0a39b1a70a78.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://valinsky.me/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://valinsky.me/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://valinsky.me/favicon-16x16.png">
+    <link rel="manifest" href="https://valinsky.me/site.webmanifest">
+    <link rel="mask-icon" href="https://valinsky.me/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://valinsky.me/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+<meta itemprop="name" content="I Built a Twitter Bot">
+<meta itemprop="description" content="Twitter Bot">
+
+
+<meta itemprop="datePublished" content="2020-06-07T15:15:12-04:00" />
+<meta itemprop="dateModified" content="2020-06-07T15:15:12-04:00" />
+<meta itemprop="wordCount" content="702">
+
+  <meta itemprop="image" content="https://valinsky.me/images/bot/halfbtc.jpg">
+
+
+
+<meta itemprop="keywords" content="bot,twitter,python," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://valinsky.me/images/bot/halfbtc.jpg"/>
+
+<meta name="twitter:title" content="I Built a Twitter Bot"/>
+<meta name="twitter:description" content="Twitter Bot"/>
+
+
+
+
+
+    <meta property="article:published_time" content="2020-06-07 15:15:12 -0400 EDT" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://valinsky.me/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Don&#39;t trust. Verify.</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://valinsky.me/posts">blog</a></li><li><a href="https://valinsky.me/about">about</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://valinsky.me/posts/i-built-a-twitter-bot/">I Built a Twitter Bot</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p>On the 11th of May, 2020, at block height <a href="https://www.blockchain.com/btc/block/000000000000000000024bead8df69990852c202db0e0097c1a12ea637d7e96d">630.000</a>, the 3rd <a href="https://www.bitcoinblockhalf.com/">Bitcoin halving</a> event happened.</p>
+
+<p>For us Bitcoin nerds this was a huge event, not only because it happens every 4 years or because of its economic implications, but also because it shows the beautiful system that Bitcoin has in place, a system that has been working flawlessly since 2009.</p>
+
+<p>To commemorate this event, I thought about creating a Twitter bot that keeps track of how many blocks are left until the next halving. It seemed like a great weekend project, and I wanted to have my own bot for a while.</p>
+
+<h3 id="writing-the-bot">Writing the bot</h3>
+
+<p>I wrote the bot in Python.</p>
+
+<pre><code class="language-python">from bloxplorer import bitcoin_explorer
+import tweepy
+
+
+# API Access Keys
+API_KEY = 'api_key'
+API_KEY_SECRET = 'api_secret_key'
+ACCESS_TOKEN = 'access_token'
+ACCESS_TOKEN_SECRET = 'access_token_secret'
+
+HALVING_TIME = 210000  # blocks
+
+
+def progress_bar(percent: float, length: int = 20) -&gt; str:
+    # Return a progress bar: ██████████⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+    fill = '█'
+    bar = '⣿' * length
+    return f'{fill * int((percent / 100) * length)}{bar}'[:length]
+
+
+def tweet(message: str) -&gt; None:
+    # Twitter auth
+    auth = tweepy.OAuthHandler(API_KEY, API_KEY_SECRET)
+    auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+    api = tweepy.API(auth)
+    # post to Twitter
+    api.update_status(message)
+
+
+if __name__ == '__main__':
+    block_height = int(bitcoin_explorer.blocks.get_last_height().data)
+    end_time = HALVING_TIME
+
+    while block_height &gt; end_time:
+        end_time += HALVING_TIME
+    start_time = end_time - HALVING_TIME
+    blocks_left = end_time - block_height
+    days_left = (blocks_left * 10) // 1440
+    percent = round(((block_height - start_time) * 100) / HALVING_TIME, 2)
+
+    message = f&quot;&quot;&quot;{progress_bar(percent)} {percent}%
+Blocks left until the next halving: {blocks_left}
+Blocks mined: {block_height}
+Days left: ~{days_left}
+&quot;&quot;&quot;
+
+    tweet(message)
+
+</code></pre>
+
+<p>The bot uses <a href="https://valinsky.me/posts/bloxplorer/">Bloxplorer</a> to get the current block height, and then it checks to see how many blocks are left until the next halving. At the time of this writing, the next halving will occur at block height 840.000.</p>
+
+<p>I added an ASCII progress bar to show the progress made in terms of percents. Thought that was a neat thing to have in a tweet.</p>
+
+<p>I&rsquo;m also calculating the number of days left. This number is just an approximation, because I&rsquo;m using a constant block generation time of 10 minutes, and in reality that is not always the case.</p>
+
+<p>In order to interact with the Twitter API I used <a href="https://github.com/tweepy/tweepy">tweepy</a>.<br />
+First I had to go on Twitter and create a <a href="https://developer.twitter.com/en/docs/basics/developer-portal/overview">developer account</a> for myself. Then I had to create a <a href="https://developer.twitter.com/en/docs/basics/apps/overview">developer app</a> which lets me generate the necessary keys to interact with the Twitter API.<br />
+After I got the keys, I used them with Tweepy as seen in the <code>tweet</code> function above. With those 4 lines of code I was able to hit the Twitter API to post tweets. Pretty nice.</p>
+
+<p>It&rsquo;s a simple and cute little script, but it does the job.</p>
+
+<h3 id="deploying-the-bot">Deploying the bot</h3>
+
+<p>I wanted the bot to post a tweet every day at a certain time. Enter cloud based cron jobs. Since this is a small pet project, I didn&rsquo;t want to pay for any cloud services. I wanted something simple and free.</p>
+
+<p>Initially I tried using <a href="https://pythonanywhere.com">pythonanywhere.com</a>. It supported python, it had the functionality of scheduling tasks, and it was a freemium service. Exactly what I need.<br />
+After I created an account, uploaded my code and created the scheduled task&hellip; it failed. That&rsquo;s because for free accounts <a href="https://pythonanywhere.com">pythonanywhere.com</a> <a href="https://www.pythonanywhere.com/whitelist/">whitelists only certain sites</a>. My bot uses Bloxplorer to make HTTP calls to the <a href="https://github.com/Blockstream/esplora/blob/master/API.md">Blockstream Esplora</a> API to get the current block height. Since that API is not whitelisted, the request didn&rsquo;t go through. Bummer!</p>
+
+<p>Next!</p>
+
+<p>I heard a lot of talk about <a href="https://www.heroku.com/">Heroku</a> during my software engineering career, and now seemed like the perfect time to try it out. Just like <a href="https://pythonanywhere.com">pythonanywhere.com</a>, it had everything I wanted. Again I went through the same song and dance of creating an account, creating an app, pushing my code and scheduling the task with <a href="https://devcenter.heroku.com/articles/scheduler">Heroku Scheduler</a>. This time it worked! Sweet!</p>
+
+<h3 id="btchalvingtimer">@BtcHalvingTimer</h3>
+
+<p>I scheduled the bot to tweet every day at 12:00 AM UTC. I&rsquo;m excited to see the progress bar fill up while we&rsquo;re slowly approaching the 4th Bitcoin halving.</p>
+
+<p>Here&rsquo;s the bot&rsquo;s first tweet, with many more to come, daily.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 1.66%<br>Blocks left until the next halving: 206506<br>Blocks mined: 633494<br>Days left: ~1434</p>&mdash; Bitcoin Halving Timer (@BtcHalvingTimer) <a href="https://twitter.com/BtcHalvingTimer/status/1269472637190844419?ref_src=twsrc%5Etfw">June 7, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://valinsky.me/tags/bot">bot</a></span><span class="tag"><a href="https://valinsky.me/tags/twitter">twitter</a></span><span class="tag"><a href="https://valinsky.me/tags/python">python</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>702 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>07-06-2020</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://valinsky.me/posts/bloxplorer/">
+                                <span class="button__text">Bloxplorer</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+            
+            
+            
+            
+        
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span><a href="https://valinsky.me/privacy-statement">Privacy Policy</a></span>
+            <span><a href="http://gohugo.io">Hugo</a></span>
+            <span><a href="https://github.com/rhazdon">Theme</a></span>
+            <span>&copy; 2020</span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://valinsky.me/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-151935413-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
+
+
+
+
+    </body>
+</html>
