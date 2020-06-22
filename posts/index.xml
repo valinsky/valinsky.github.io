@@ -71,8 +71,7 @@ if __name__ == '__main__':
 
     message = f&quot;&quot;&quot;🚀🚀🚀🚀 #bitcoin 🚀🚀🚀🚀
 {progress_bar(percent)} {percent}%
-Blocks left until the next halving: {blocks_left:,}
-Blocks mined: {block_height:,}
+Blocks left: {blocks_left:,}
 Days left: ~{days_left:,}
 &quot;&quot;&quot;
 
@@ -84,7 +83,7 @@ Days left: ~{days_left:,}
 
 <p>I added an ASCII progress bar to show the progress made in terms of percents. Thought that was a neat thing to have in a tweet.</p>
 
-<p>I&rsquo;m also calculating the number of days left. This number is just an approximation, because I&rsquo;m using a constant block generation time of 10 minutes, and in reality that is not always the case.</p>
+<p>I&rsquo;m also calculating the number of days left. This number is an approximation, because I&rsquo;m using a constant block generation time of 10 minutes, and in reality that is not always the case.</p>
 
 <p>In order to interact with the Twitter API I used <a href="https://github.com/tweepy/tweepy">tweepy</a>.<br />
 First I had to go on Twitter and create a <a href="https://developer.twitter.com/en/docs/basics/developer-portal/overview">developer account</a> for myself. Then I had to create a <a href="https://developer.twitter.com/en/docs/basics/apps/overview">developer app</a> which lets me generate the necessary keys to interact with the Twitter API.<br />
