@@ -55,17 +55,6 @@ Companies started employing intelligent and invasive tracking methods to gather 
     </item>
     
     <item>
-      <title>Stop Over Planning</title>
-      <link>https://valinsky.me/posts/stop-over-planning/</link>
-      <pubDate>Mon, 02 Dec 2019 21:40:31 -0500</pubDate>
-      
-      <guid>https://valinsky.me/posts/stop-over-planning/</guid>
-      <description>Planning is an essential aspect of a healthy lifestyle. We try to systematically structure our daily activities in order to take full advantage of our time.
-For me it wasn&amp;rsquo;t that simple. Planning often turned out to be a productivity killer and a cause for stress. I realized that was because I didn&amp;rsquo;t know how my mind worked and I didn&amp;rsquo;t know how to adapt to it.
-You can&amp;rsquo;t plan inspiration We&amp;rsquo;re all living that busy 21st century life, trying to find a balance between family, partners, work, gym, nutrition, finances, school, friends, hobbies, hustling, side projects, lazyness, vacations, unforseen events, etc.</description>
-    </item>
-    
-    <item>
       <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
       <link>https://valinsky.me/posts/quake3-fast-inverse-square-root/</link>
       <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
@@ -107,8 +96,7 @@ GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky.</d
       <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
       
       <guid>https://valinsky.me/about/</guid>
-      <description>Hello, my name is Vali and I am a netizen.
-I love the free, open, uncensored, secure and E2EE internet.</description>
+      <description>Coding, scalability, decentralization, censorship resistance, sovereignity, FOSS, E2EE, security.</description>
     </item>
     
   </channel>

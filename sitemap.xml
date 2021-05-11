@@ -83,26 +83,6 @@
   </url>
   
   <url>
-    <loc>https://valinsky.me/tags/blog/</loc>
-    <lastmod>2019-12-02T21:40:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/life/</loc>
-    <lastmod>2019-12-02T21:40:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/progress/</loc>
-    <lastmod>2019-12-02T21:40:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/posts/stop-over-planning/</loc>
-    <lastmod>2019-12-02T21:40:31-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://valinsky.me/posts/quake3-fast-inverse-square-root/</loc>
     <lastmod>2019-11-24T17:24:58-05:00</lastmod>
   </url>
@@ -138,12 +118,12 @@
   </url>
   
   <url>
-    <loc>https://valinsky.me/categories/about/</loc>
+    <loc>https://valinsky.me/tags/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://valinsky.me/tags/about/</loc>
+    <loc>https://valinsky.me/categories/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
   
