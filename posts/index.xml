@@ -461,7 +461,7 @@ The argument against Signal is that your phone number is required. I think it&rs
 
 <h4 id="password-manager">Password Manager</h4>
 
-<p><a href="https://www.dashlane.com/">Dashlane</a>. I know I&rsquo;m lacking behind here. While I do like the app and its features, it&rsquo;s not open source. I&rsquo;m looking for an alternative.</p>
+<p><a href="https://bitwarden.com/">Bitwarden</a>. Simple, secure and open source. The free plan should be fine for most users. The paid plan also offers 2FA codes which I&rsquo;m gladly using over Google Auth or Authy.</p>
 
 <h4 id="vpn">VPN</h4>
 
