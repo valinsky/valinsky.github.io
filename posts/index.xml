@@ -27,19 +27,21 @@ The apps that I ended up still using work well on CalyxOS.</description>
 <p>One app that I find particularly helpful is <a href="https://calyxos.org/about/tech/datura/">Datura Firewall</a> which blocks other apps from having a network connection. This comes in handy when you want to block network access to privacy invasing apps while not in use. Looking at you Google Maps.</p>
 <p>When installing apps I first try to see if I can install the .apk directly. If you do this make sure you&rsquo;re not downloading malware. Always validate that the .apk comes from a trusted source before installing it.</p>
 <p>My second option is to use <a href="https://f-droid.org/">F-Droid</a> which is a great FOSS repo for Android apps.</p>
-<p>I use <a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a> as a last resort, although I try to use it as little as possible. Aurora is a FOSS alternative to the Google Play store and you can find most Android apps there. One tip with Aurora is that sometime the app you&rsquo;re searching for might not show up in the search results. If this happens to you, try searching for the Google Play app link in a search engine (ex. DuckDuckGo) and open the link with Aurora.</p>
+<p>I use <a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a> as a last resort, although I try to use it as little as possible. Aurora is a FOSS alternative to the Google Play store and you can find most Android apps there. One tip with Aurora is that sometimes the app you&rsquo;re searching for might not show up in the search results. If this happens to you, try searching for the Google Play app link in a search engine (ex. DuckDuckGo) and open the link with Aurora.</p>
 <h3 id="notifications">Notifications</h3>
-<p>Notifications also work well. Haven&rsquo;t had any problems with notification heavy apps like Protonmail, Tutanota, Signal etc. I did experience some problems while on GrapheneOS, some app notifications weren&rsquo;t working or they were arriving late, although I&rsquo;ve heard they work a lot better now.</p>
+<p>Notifications also work well. Haven&rsquo;t had any problems with notification heavy apps like Protonmail, Tutanota, Signal etc.</p>
+<p>I did experience some problems while on GrapheneOS, some app notifications weren&rsquo;t working or they were arriving late, although I&rsquo;ve heard they work a lot better now.</p>
 <h3 id="battery-life">Battery life</h3>
-<p>Regarding battery life, it&rsquo;s way, way better than stock Android. I can use the phone for 2 days, while before I was using it for one day.</p>
+<p>It&rsquo;s way, way better than stock Android. I can use the phone for 2 days, while before I was using it for one day.</p>
 <p>Who would&rsquo;ve thought that by not hitting the Google APIs with all of your data all the time can have such a significant impact on battery life.</p>
 <h3 id="calyxos-vs-grapheneos">CalyxOS vs. GrapheneOS</h3>
-<p>I find CalyxOS to be more user friendly and the experience has been smooth so far. I think GrapheneOS is an excellent privacy focused OS and the privacy aficionados should give it a try, although my experience with it hasn&rsquo;t been as smooth as with CalyxOS.</p>
+<p>I find CalyxOS to be more user friendly and the experience has been pretty smooth so far. I think GrapheneOS is an excellent privacy focused OS and the privacy aficionados should give it a try, although my experience with it hasn&rsquo;t been as smooth as with CalyxOS.</p>
 <p>Personally I see GrapheneOS being installed on a phone that is used for sensitive information that you mostly keep at home, and CalyxOS as your daily driver. I know that Daniel Micay, the lead developer of GrapheneOS, is continuously working on improving it. One cool feature he added is the <a href="https://grapheneos.org/usage#sandboxed-play-services">Sandboxed Play services</a> which should provide a better overall experience.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>In conclusion I recommend CalyxOS.</p>
+<p>I recommend CalyxOS.</p>
 <p>If you&rsquo;re a privacy enthusiast go and check it out. I also recommend <a href="https://sethforprivacy.com/posts/switching-to-calyxos/">this article</a> from Seth. Try out GrapheneOS too if you want to go hard core on privacy.</p>
-<p>I don&rsquo;t think I&rsquo;ll ever go back to stock Android after experiencing CalyxOS. And damn it feels good to not have Big Brother breathing down your neck all the time.</p>
+<p>I don&rsquo;t think I&rsquo;ll ever go back to stock Android after experiencing CalyxOS.</p>
+<p>And damn it feels good to not have Big Brother breathing down your neck all the time.</p>
 ]]></content>
         </item>
         
