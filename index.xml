@@ -54,14 +54,5 @@ GoDaddy Manage DNS  Add these settings.
 GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky.</description>
     </item>
     
-    <item>
-      <title>About</title>
-      <link>https://valinsky.me/about/</link>
-      <pubDate>Thu, 14 Nov 2019 20:35:02 -0500</pubDate>
-      
-      <guid>https://valinsky.me/about/</guid>
-      <description>I write software. Sometimes I write about software. </description>
-    </item>
-    
   </channel>
 </rss>
