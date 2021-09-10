@@ -6,11 +6,7 @@
     <description>Recent content in twitter on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2020 15:15:12 -0400</lastBuildDate>
-    
-	<atom:link href="https://valinsky.me/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 07 Jun 2020 15:15:12 -0400</lastBuildDate><atom:link href="https://valinsky.me/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I Built a Twitter Bot</title>
       <link>https://valinsky.me/posts/i-built-a-twitter-bot/</link>

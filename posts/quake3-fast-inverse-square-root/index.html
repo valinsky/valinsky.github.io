@@ -27,7 +27,7 @@ This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a 
 
 
 
-<link rel="stylesheet" href="https://valinsky.me/main.min.73f55a8d452be4a71b2960620b80252cf69abd84d63fe7501abf0a39b1a70a78.css">
+<link rel="stylesheet" href="https://valinsky.me/main.min.c467f70f5562ac8543d81da2f25cb1364ba4359b62a040d8ecd5bce0ef0a2edc.css">
 
 
 
@@ -42,19 +42,10 @@ This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a 
     <meta name="theme-color" content="#252627">
 
 <meta itemprop="name" content="The Magic of Quake 3&#39;s Fast Inverse Square Root Explained">
-<meta itemprop="description" content="The Magic of Quake 3&#39;s Fast Inverse Square Root Explained">
-
-
-<meta itemprop="datePublished" content="2019-11-24T17:24:58-05:00" />
+<meta itemprop="description" content="The Magic of Quake 3&#39;s Fast Inverse Square Root Explained"><meta itemprop="datePublished" content="2019-11-24T17:24:58-05:00" />
 <meta itemprop="dateModified" content="2019-11-24T17:24:58-05:00" />
-<meta itemprop="wordCount" content="765">
-
-  <meta itemprop="image" content="https://valinsky.me/images/quake3/quake3.jpg">
-
-
-
-<meta itemprop="keywords" content="tutorial," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="wordCount" content="765"><meta itemprop="image" content="https://valinsky.me/images/quake3/quake3.jpg">
+<meta itemprop="keywords" content="tutorial," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/quake3/quake3.jpg"/>
 
 <meta name="twitter:title" content="The Magic of Quake 3&#39;s Fast Inverse Square Root Explained"/>
@@ -137,86 +128,54 @@ This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a 
 
             <div class="post-content">
                 <p>This is one of those magical unicorn algorithms.</p>
-
 <p>I was always intrigued by this small piece of code, because it&rsquo;s such a unique and elegant solution to a common problem, and it&rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.</p>
-
 <p>This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</p>
-
 <p>Nowadays programmers might think to solve this problem by simply importing a library and calling a function.</p>
-
 <p>But back in 1999 the Quake 3 Arena developers realized it was computationally expensive to calculate the inverse square root of a floating point number on a large scale using traditional methods.</p>
-
 <p>One ninja developer came up with a solution that bypassed this limitation, and the <a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">Fast inverse square root algorithm</a> was born.</p>
-
-<pre><code class="language-c">float Q_rsqrt( float number )
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">float</span> <span style="color:#a6e22e">Q_rsqrt</span>( <span style="color:#66d9ef">float</span> number )
 {
-    long i;
-    float x2, y;
-    const float threehalfs = 1.5F;
+    <span style="color:#66d9ef">long</span> i;
+    <span style="color:#66d9ef">float</span> x2, y;
+    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">float</span> threehalfs <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5F</span>;
 
-    x2 = number * 0.5F;
-    y  = number;
-    i  = * ( long * ) &amp;y;                       // evil floating point bit level hacking
-    i  = 0x5f3759df - ( i &gt;&gt; 1 );               // what the fuck? 
-    y  = * ( float * ) &amp;i;
-    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
-//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
-    return y;
+    x2 <span style="color:#f92672">=</span> number <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5F</span>;
+    y  <span style="color:#f92672">=</span> number;
+    i  <span style="color:#f92672">=</span> <span style="color:#f92672">*</span> ( <span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span> ) <span style="color:#f92672">&amp;</span>y;                       <span style="color:#75715e">// evil floating point bit level hacking
+</span><span style="color:#75715e"></span>    i  <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x5f3759df</span> <span style="color:#f92672">-</span> ( i <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span> );               <span style="color:#75715e">// what the fuck? 
+</span><span style="color:#75715e"></span>    y  <span style="color:#f92672">=</span> <span style="color:#f92672">*</span> ( <span style="color:#66d9ef">float</span> <span style="color:#f92672">*</span> ) <span style="color:#f92672">&amp;</span>i;
+    y  <span style="color:#f92672">=</span> y <span style="color:#f92672">*</span> ( threehalfs <span style="color:#f92672">-</span> ( x2 <span style="color:#f92672">*</span> y <span style="color:#f92672">*</span> y ) );   <span style="color:#75715e">// 1st iteration
+</span><span style="color:#75715e">//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> y;
 }
-</code></pre>
-
-<p>The function makes use of <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton’s method</a>. Newton’s method is used for finding better approximations to the roots of a mathematical function.</p>
-
+</code></pre></div><p>The function makes use of <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton’s method</a>. Newton’s method is used for finding better approximations to the roots of a mathematical function.</p>
 <p>It looks like this:</p>
-
-<p>$$ x_{1} = x_{0} - \frac{f(x_{0})}{f&rsquo;(x_{0})} $$</p>
-
+<p>$$ x_{1} = x_{0} - \frac{f(x_{0})}{f'(x_{0})} $$</p>
 <p>\( x_{0} \) is an initial approximation, and the formula generates \( x_{1} \) which is an even better approximation. The more iterations you perform, the better the approximation.</p>
-
 <p>We want to find the value of \( 1 / \sqrt{number} \), so we are looking for a solution to the equation \( f(x) = x^{-2} - number \). Take your best guess as to what the solution would be, and call it \( x_{0} \). We are only interested in the positive solution.</p>
-
 <p>We now know that \( f(x_{0}) \) is \( x_{0}^{-2} - number \). For clarification, <strong>number</strong> is the number which we want to find the inverse square root for, the input parameter to our C function above.</p>
-
 <p>Our Newton method now becomes:</p>
-
 <p>$$ x_{1} = x_{0} - \frac{x_{0}^{-2} - number}{-2 x_{0}^{-3}} $$</p>
-
 <p>After some algebraic magic (feel free to compute the result yourself), our equation becomes:</p>
-
 <p>$$ x_{1} = x_{0}(\frac{3}{2} - \frac{1}{2} * x_{0}^{2} * number) $$</p>
-
 <p>This is similar to line 12 in the C code.</p>
-
-<pre><code class="language-c">y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
-</code></pre>
-
-<p>Remember when I asked you to guess the first approximation, \( x_{0} \)? Well, how do we get the value for it?</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">y  <span style="color:#f92672">=</span> y <span style="color:#f92672">*</span> ( threehalfs <span style="color:#f92672">-</span> ( x2 <span style="color:#f92672">*</span> y <span style="color:#f92672">*</span> y ) );   <span style="color:#75715e">// 1st iteration
+</span></code></pre></div><p>Remember when I asked you to guess the first approximation, \( x_{0} \)? Well, how do we get the value for it?</p>
 <p>Simple answer… magic.</p>
-
 <p>To quote Gary Tarolli, who (very modestly) takes partial credit for writing the function:</p>
-
 <blockquote>
 <p>Which actually is doing a floating point computation in integer - it took a long time to figure out how and why this works, and I can&rsquo;t remember the details anymore.</p>
 </blockquote>
-
-<p>It is not known how the exact value of the magic number <strong>0x5f3759df</strong> was determined.<br />
+<p>It is not known how the exact value of the magic number <strong>0x5f3759df</strong> was determined.<br>
 What is known is that, if we take our input number and divide it by 2 (<a href="https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Right_shift_%3E%3E">shift it to the right by 1</a>), and then subtract this number from the magic number, we get a really good first estimate.</p>
-
 <p>To note, the input number is a <code>float</code>. In order to divide by 2 by shifting the bits to the right, it is converted into a <code>long</code> integer. Then it is converted back into a <code>float</code>.</p>
-
-<pre><code class="language-c">i  = * ( long * ) &amp;y;                       // evil floating point bit level hacking
-i  = 0x5f3759df - ( i &gt;&gt; 1 );               // what the fuck? 
-y  = * ( float * ) &amp;i;
-</code></pre>
-
-<p>This estimate, which is \( x_{0} \) in our mathematical function above, is then used in calculating the next approximation. The result is so close to the desired value, that a second iteration is not even needed anymore, as denoted by the commented code on line 13.</p>
-
-<pre><code class="language-c">    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
-//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
-</code></pre>
-
-<p>You can read more about the Fast inverse square root <a href="https://www.beyond3d.com/content/articles/8">here</a> and <a href="https://www.beyond3d.com/content/articles/15">here</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">i  <span style="color:#f92672">=</span> <span style="color:#f92672">*</span> ( <span style="color:#66d9ef">long</span> <span style="color:#f92672">*</span> ) <span style="color:#f92672">&amp;</span>y;                       <span style="color:#75715e">// evil floating point bit level hacking
+</span><span style="color:#75715e"></span>i  <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x5f3759df</span> <span style="color:#f92672">-</span> ( i <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span> );               <span style="color:#75715e">// what the fuck? 
+</span><span style="color:#75715e"></span>y  <span style="color:#f92672">=</span> <span style="color:#f92672">*</span> ( <span style="color:#66d9ef">float</span> <span style="color:#f92672">*</span> ) <span style="color:#f92672">&amp;</span>i;
+</code></pre></div><p>This estimate, which is \( x_{0} \) in our mathematical function above, is then used in calculating the next approximation. The result is so close to the desired value, that a second iteration is not even needed anymore, as denoted by the commented code on line 13.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">    y  <span style="color:#f92672">=</span> y <span style="color:#f92672">*</span> ( threehalfs <span style="color:#f92672">-</span> ( x2 <span style="color:#f92672">*</span> y <span style="color:#f92672">*</span> y ) );   <span style="color:#75715e">// 1st iteration
+</span><span style="color:#75715e">//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+</span></code></pre></div><p>You can read more about the Fast inverse square root <a href="https://www.beyond3d.com/content/articles/8">here</a> and <a href="https://www.beyond3d.com/content/articles/15">here</a>.</p>
 
             </div>
         </article>
@@ -243,9 +202,9 @@ y  = * ( float * ) &amp;i;
                 <div class="pagination__buttons">
                     
                         <span class="button previous">
-                            <a href="https://valinsky.me/posts/privacy-build-2020/">
+                            <a href="https://valinsky.me/posts/i-built-a-twitter-bot/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">Privacy Build 2020</span>
+                                <span class="button__text">I Built a Twitter Bot</span>
                             </a>
                         </span>
                     
@@ -293,7 +252,7 @@ y  = * ( float * ) &amp;i;
 
 
 
-<script type="text/javascript" src="https://valinsky.me/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+<script type="text/javascript" src="https://valinsky.me/bundle.min.08ccaf9cef8b4e0ebd0b0158e66a7bfc0ddbb2194cdb0099e8814ddb89cc7628b27b1158846564e6e03d9ffc5f4d1bc7dfc274d359f9408d1c63d73a3f7332e9.js" integrity="sha512-CMyvnO&#43;LTg69CwFY5mp7/A3bshlM2wCZ6IFN24nMdiiyexFYhGVk5uA9n/xfTRvH38J001n5QI0cY9c6P3My6Q=="></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

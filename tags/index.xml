@@ -6,11 +6,7 @@
     <description>Recent content in Tags on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2020 15:15:12 -0400</lastBuildDate>
-    
-	<atom:link href="https://valinsky.me/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 07 Jun 2020 15:15:12 -0400</lastBuildDate><atom:link href="https://valinsky.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bot</title>
       <link>https://valinsky.me/tags/bot/</link>
@@ -39,56 +35,20 @@
     </item>
     
     <item>
-      <title>bitcoin</title>
-      <link>https://valinsky.me/tags/bitcoin/</link>
-      <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate>
+      <title>tutorial</title>
+      <link>https://valinsky.me/tags/tutorial/</link>
+      <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
       
-      <guid>https://valinsky.me/tags/bitcoin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bloxplorer</title>
-      <link>https://valinsky.me/tags/bloxplorer/</link>
-      <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/bloxplorer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>open source</title>
-      <link>https://valinsky.me/tags/open-source/</link>
-      <pubDate>Sat, 08 Feb 2020 10:49:18 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/open-source/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>software</title>
-      <link>https://valinsky.me/tags/software/</link>
-      <pubDate>Sat, 25 Jan 2020 19:39:43 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/software/</guid>
+      <guid>https://valinsky.me/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>privacy</title>
       <link>https://valinsky.me/tags/privacy/</link>
-      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
+      <pubDate>Mon, 18 Nov 2019 19:14:55 -0500</pubDate>
       
       <guid>https://valinsky.me/tags/privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorial</title>
-      <link>https://valinsky.me/tags/tutorial/</link>
-      <pubDate>Sun, 22 Dec 2019 00:04:35 -0500</pubDate>
-      
-      <guid>https://valinsky.me/tags/tutorial/</guid>
       <description></description>
     </item>
     

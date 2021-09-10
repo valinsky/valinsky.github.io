@@ -29,7 +29,7 @@ GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky." /
 
 
 
-<link rel="stylesheet" href="https://valinsky.me/main.min.73f55a8d452be4a71b2960620b80252cf69abd84d63fe7501abf0a39b1a70a78.css">
+<link rel="stylesheet" href="https://valinsky.me/main.min.c467f70f5562ac8543d81da2f25cb1364ba4359b62a040d8ecd5bce0ef0a2edc.css">
 
 
 
@@ -44,19 +44,10 @@ GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky." /
     <meta name="theme-color" content="#252627">
 
 <meta itemprop="name" content="How to configure your Github Pages website with your custom Godaddy domain">
-<meta itemprop="description" content="How to configure your Github Pages website with your custom Godaddy domain">
-
-
-<meta itemprop="datePublished" content="2019-11-17T10:54:46-05:00" />
+<meta itemprop="description" content="How to configure your Github Pages website with your custom Godaddy domain"><meta itemprop="datePublished" content="2019-11-17T10:54:46-05:00" />
 <meta itemprop="dateModified" content="2019-11-17T10:54:46-05:00" />
-<meta itemprop="wordCount" content="308">
-
-  <meta itemprop="image" content="https://valinsky.me/images/github_pages_godaddy_domain/github_pages.png">
-
-
-
-<meta itemprop="keywords" content="tutorial," />
-<meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="wordCount" content="308"><meta itemprop="image" content="https://valinsky.me/images/github_pages_godaddy_domain/github_pages.png">
+<meta itemprop="keywords" content="tutorial," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/github_pages_godaddy_domain/github_pages.png"/>
 
 <meta name="twitter:title" content="How to configure your Github Pages website with your custom Godaddy domain"/>
@@ -140,13 +131,9 @@ GoDaddy DNS configuration  My website is hosted on GitHub under the valinsky." /
             
 
             <div class="post-content">
-                
-
-<p>You can use your own custom domain with <a href="https://pages.github.com/">GitHub Pages</a>, instead of GitHub&rsquo;s <strong>&lt;username&gt;.github.io</strong> domain. <a href="https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">This GitHub Pages post</a> covers the domain configuration steps.<br />
+                <p>You can use your own custom domain with <a href="https://pages.github.com/">GitHub Pages</a>, instead of GitHub&rsquo;s <strong>&lt;username&gt;.github.io</strong> domain. <a href="https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">This GitHub Pages post</a> covers the domain configuration steps.<br>
 If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDaddy DNS configuration you need.</p>
-
 <p>Go to your <a href="https://godaddy.com">godaddy.com</a> domain, and find the <em>Manage DNS</em> option.</p>
-
 
     <figure class="center" >
         <img src="https://valinsky.me/images/github_pages_godaddy_domain/manage_dns_setting.png"   />
@@ -157,9 +144,7 @@ If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDad
     </figure>
 
 
-
 <p>Add these settings.</p>
-
 
     <figure class="center" >
         <img src="https://valinsky.me/images/github_pages_godaddy_domain/github_pages_godaddy_config_good.png"   />
@@ -170,11 +155,8 @@ If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDad
     </figure>
 
 
-
 <p>My website is hosted on GitHub under the <strong>valinsky.github.io</strong> domain. You&rsquo;ll have to update the CNAME with your own <strong>&lt;username&gt;.github.io</strong> domain.</p>
-
 <p>You&rsquo;ll then be greeted with this message in your GitHub respository&rsquo;s settings, right under the GitHub Pages section.</p>
-
 
     <figure class="center" >
         <img src="https://valinsky.me/images/github_pages_godaddy_domain/github_pages_https_not_available.png"   />
@@ -185,24 +167,15 @@ If you bought the domain on GoDaddy, I&rsquo;m going to show you the exact GoDad
     </figure>
 
 
-
 <p>Like the message says, you have to wait <em>24 hours</em> for the internet to magically issue an <a href="https://www.digicert.com/ssl-certificate/">HTTPS SSL certificate</a> for you.</p>
-
 <p>That was not the case for me.</p>
-
-<p><br></p>
-
+<!-- raw HTML omitted -->
 <h3 id="make-sure-you-unpark-your-domain">Make sure you unpark your domain</h3>
-
-<p>Even though your certificate is not issued, you can still access your website through HTTP.<br />
+<p>Even though your certificate is not issued, you can still access your website through HTTP.<br>
 Never do that! Never serve your website through HTTP. <a href="https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https">Read why.</a></p>
-
 <p>When I was setting up my own custom domain for this website, I waited 24 hours, then another 24 hours, and yet another 24 hours, but the certificate wasn&rsquo;t getting issued.</p>
-
 <p>I soon realized the problem was with GoDaddy&rsquo;s DNS configuration.</p>
-
 <p>My initial configuration looked like this.</p>
-
 
     <figure class="center" >
         <img src="https://valinsky.me/images/github_pages_godaddy_domain/github_pages_godaddy_config_bad.png"   />
@@ -213,11 +186,8 @@ Never do that! Never serve your website through HTTP. <a href="https://developer
     </figure>
 
 
-
 <p>Those two DNS entries were setup by GoDaddy, and I didn&rsquo;t pay much attention to them initially. If you see these in your own DNS configuration, be sure to remove them, or else you&rsquo;ll end up with a <a href="https://en.wikipedia.org/wiki/Domain_parking">parked domain</a> that won&rsquo;t work with your GitHub Pages setup.</p>
-
 <p>After I removed those entries, a few hours later my HTTPS SSL certificate was issued and I was able to activate it.</p>
-
 
     <figure class="center" >
         <img src="https://valinsky.me/images/github_pages_godaddy_domain/activate_https.png"   />
@@ -228,9 +198,7 @@ Never do that! Never serve your website through HTTP. <a href="https://developer
     </figure>
 
 
-
 <p>And that&rsquo;s it.</p>
-
 <p>Now you have a website hosted by GitHub and configured with your own custom GoDaddy DNS.</p>
 
             </div>
@@ -301,7 +269,7 @@ Never do that! Never serve your website through HTTP. <a href="https://developer
 
 
 
-<script type="text/javascript" src="https://valinsky.me/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+<script type="text/javascript" src="https://valinsky.me/bundle.min.08ccaf9cef8b4e0ebd0b0158e66a7bfc0ddbb2194cdb0099e8814ddb89cc7628b27b1158846564e6e03d9ffc5f4d1bc7dfc274d359f9408d1c63d73a3f7332e9.js" integrity="sha512-CMyvnO&#43;LTg69CwFY5mp7/A3bshlM2wCZ6IFN24nMdiiyexFYhGVk5uA9n/xfTRvH38J001n5QI0cY9c6P3My6Q=="></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

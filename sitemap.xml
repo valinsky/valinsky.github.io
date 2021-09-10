@@ -1,135 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://valinsky.me/tags/bot/</loc>
     <lastmod>2020-06-07T15:15:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/posts/i-built-a-twitter-bot/</loc>
     <lastmod>2020-06-07T15:15:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/posts/</loc>
     <lastmod>2020-06-07T15:15:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/tags/python/</loc>
     <lastmod>2020-06-07T15:15:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/tags/</loc>
     <lastmod>2020-06-07T15:15:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/tags/twitter/</loc>
     <lastmod>2020-06-07T15:15:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/</loc>
     <lastmod>2020-06-07T15:15:12-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/bitcoin/</loc>
-    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/posts/bloxplorer/</loc>
-    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/bloxplorer/</loc>
-    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/open-source/</loc>
-    <lastmod>2020-02-08T10:49:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/software/</loc>
-    <lastmod>2020-01-25T19:39:43-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/posts/the-beauty-of-building-software/</loc>
-    <lastmod>2020-01-25T19:39:43-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/privacy/</loc>
-    <lastmod>2020-02-19T00:04:35-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/posts/privacy-build-2020/</loc>
-    <lastmod>2020-02-19T00:04:35-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://valinsky.me/tags/tutorial/</loc>
-    <lastmod>2020-02-19T00:04:35-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/posts/quake3-fast-inverse-square-root/</loc>
     <lastmod>2019-11-24T17:24:58-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://valinsky.me/tags/tutorial/</loc>
+    <lastmod>2019-11-24T17:24:58-05:00</lastmod>
+  </url><url>
     <loc>https://valinsky.me/categories/</loc>
     <lastmod>2019-11-18T19:14:55-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://valinsky.me/tags/privacy/</loc>
+    <lastmod>2019-11-18T19:14:55-05:00</lastmod>
+  </url><url>
     <loc>https://valinsky.me/categories/privacy/</loc>
     <lastmod>2019-11-18T19:14:55-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/privacy-statement/</loc>
     <lastmod>2019-11-18T19:14:55-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/posts/github-pages-with-custom-godaddy-domain/</loc>
     <lastmod>2019-11-17T10:54:46-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/categories/tutorial/</loc>
     <lastmod>2019-11-17T10:54:46-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/tags/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/categories/about/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://valinsky.me/tags/valinsky/</loc>
     <lastmod>2019-11-14T20:35:02-05:00</lastmod>
   </url>
-  
 </urlset>
