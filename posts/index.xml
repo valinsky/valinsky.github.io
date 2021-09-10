@@ -14,17 +14,20 @@
             <pubDate>Fri, 10 Sep 2021 15:15:12 -0400</pubDate>
             
             <guid>https://valinsky.me/posts/calyxos/</guid>
-            <description>I&amp;rsquo;ve been using CalyxOS for about a month on a Pixel 4a and I love it. It feels so liberating to use a mobile FOSS OS without all the privacy intruding Google spyware.
+            <description>I&amp;rsquo;ve been using CalyxOS for about a month on a Pixel 4a and I love it.
+It feels so liberating to use a mobile FOSS OS without all the privacy intruding Google spyware.
 Apps While transitioning to CalyxOS I realized I was using many apps that I didn&amp;rsquo;t really need. This was the perfect time get rid of them. The less apps you have on your phone the better.
 The apps that I ended up still using work well on CalyxOS.</description>
-            <content type="html"><![CDATA[<p>I&rsquo;ve been using <a href="https://calyxos.org/">CalyxOS</a> for about a month on a Pixel 4a and I love it. It feels so liberating to use a mobile FOSS OS without all the privacy intruding Google spyware.</p>
+            <content type="html"><![CDATA[<p>I&rsquo;ve been using <a href="https://calyxos.org/">CalyxOS</a> for about a month on a Pixel 4a and I love it.</p>
+<p>It feels so liberating to use a mobile FOSS OS without all the privacy intruding Google spyware.</p>
 <h3 id="apps">Apps</h3>
 <p>While transitioning to CalyxOS I realized I was using many apps that I didn&rsquo;t really need. This was the perfect time get rid of them. The less apps you have on your phone the better.</p>
 <p>The apps that I ended up still using work well on CalyxOS. Some require <a href="https://microg.org/">microG</a> because many of them are dependent on Google Services.
 A common argument that I hear against de-Googled mobile OS-es is that Google Maps doesn&rsquo;t work well. I&rsquo;ve experienced this with GrapheneOS myself, but on CalyxOS it seems to work ok. Everytime I use it I&rsquo;m greeted with a notification saying &ldquo;Maps won&rsquo;t run unless you update Google Play services.&rdquo; yet I ignore it and continue using the app as I normally would. Google Maps is the only Google app I still use and I&rsquo;m waiting on the day I don&rsquo;t have to use it again, but it&rsquo;s just so good that I haven&rsquo;t found a decent replacement for it yet, sigh.</p>
 <p>One app that I find particularly helpful is <a href="https://calyxos.org/about/tech/datura/">Datura Firewall</a> which blocks other apps from having a network connection. This comes in handy when you want to block network access to privacy invasing apps while not in use. Looking at you Google Maps.</p>
-<p>Notifications also work well. Haven&rsquo;t had any problems with notification heavy apps like Protonmail, Tutanota, Signal etc. I did experience some problems while on GrapheneOS, some app notifications weren&rsquo;t working or they were arriving late, although I&rsquo;ve heard they work a lot better now.</p>
 <p>When installing apps I first try to see if I can install the .apk directly. If you do this make sure you&rsquo;re not downloading malware. Always validate that the .apk comes from a trusted source before installing it. My second option is to use <a href="https://f-droid.org/">F-Droid</a> which is a great FOSS repo for Android apps. I use <a href="https://f-droid.org/en/packages/com.aurora.store/">Aurora Store</a> as a last resort, although I try to use it as little as possible. Aurora is a FOSS alternative to the Google Play store and you can find most Android apps there. One tip with Aurora is that sometime the app you&rsquo;re searching for might not show up in the search results. If this happens to you, try searching for the Google Play app link in a search engine (ex. DuckDuckGo) and open the link with Aurora.</p>
+<h3 id="notifications">Notifications</h3>
+<p>Notifications also work well. Haven&rsquo;t had any problems with notification heavy apps like Protonmail, Tutanota, Signal etc. I did experience some problems while on GrapheneOS, some app notifications weren&rsquo;t working or they were arriving late, although I&rsquo;ve heard they work a lot better now.</p>
 <h3 id="battery-life">Battery life</h3>
 <p>Regarding battery life, it&rsquo;s way, way better than stock Android. I can use the phone for 2 days, while before I was using it for one day. Who would&rsquo;ve thought that by not hitting the Google APIs with all of your data all the time can have such a significant impact on battery life.</p>
 <h3 id="calyxos-vs-grapheneos">CalyxOS vs. GrapheneOS</h3>
