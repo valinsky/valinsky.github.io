@@ -44,7 +44,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <meta itemprop="name" content="Python Anti-Pattern">
 <meta itemprop="description" content="Python Anti-Pattern"><meta itemprop="datePublished" content="2021-09-14T21:18:32-04:00" />
 <meta itemprop="dateModified" content="2021-09-14T21:18:32-04:00" />
-<meta itemprop="wordCount" content="804"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
+<meta itemprop="wordCount" content="806"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
 <meta itemprop="keywords" content="python,coding anti-pattern," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/python_antipattern/python.png"/>
 
@@ -195,6 +195,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <li>The new lambda function starts processing another csv file and starts uploading 6MB parts. It should upload 10 parts in this case.</li>
 <li>The lambda function tries to complete the multipart upload, but the <code>InvalidPart</code> exception is thrown.</li>
 </ol>
+<h3 id="debugging">Debugging</h3>
 <p>The logs were showing that the lambda function was actually trying to complete the multipart upload of a total of 15 parts, not 10 parts as it was supposed to. The ETags of the 15 uploaded parts were composed of the first 5 ETags of the parts that were already uploaded by the previous lambda function, and the 10 ETags created during the current lambda invocation.</p>
 <p>Alright&hellip; What the fuck?</p>
 <p>Why was the current lambda function still keeping track of the previous lambda functions uploaded parts?</p>
@@ -202,6 +203,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <p><code>Passing mutable lists or dictionaries as default arguments to a function can have unforeseen consequences. Usually when a programmer uses a list or dictionary as the default argument to a function, the programmer wants the program to create a new list or dictionary every time that the function is called. However, this is not what Python does. The first time that the function is called, Python creates a persistent object for the list or dictionary. Every subsequent time the function is called, Python uses that same persistent object that was created from the first call to the function.</code></p>
 <p>My <code>S3MultipartUploader.__init__</code> method was defaulting the <code>parts</code> argument to an empty list <code>[]</code>.</p>
 <p>The initial cold lambda was initialing the <code>S3MultipartUploader</code> object with <code>parts</code> as an empty list <code>[]</code>, but the subsequent lambda was not. It was <code>reusing</code> the same list that was used by the first lambda, and it was <code>appending</code> parts to it. This was possible because lambdas can reuse containers, meaning that resources are shared between lambda invocations in order to speed them up. And if you&rsquo;re not careful you can end up with unwanted data leaks between invocations.</p>
+<h3 id="solution">Solution</h3>
 <p>After understanding what was going on, the fix was easy.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> __init__(self, key: str, multipart_id: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, parts: List <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
     self<span style="color:#f92672">.</span>_bucket <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bucket&#39;</span>
