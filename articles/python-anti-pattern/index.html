@@ -44,7 +44,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <meta itemprop="name" content="Python Anti-Pattern">
 <meta itemprop="description" content="Python Anti-Pattern"><meta itemprop="datePublished" content="2021-09-14T21:18:32-04:00" />
 <meta itemprop="dateModified" content="2021-09-14T21:18:32-04:00" />
-<meta itemprop="wordCount" content="821"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
+<meta itemprop="wordCount" content="817"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
 <meta itemprop="keywords" content="python,coding anti-pattern," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/python_antipattern/python.png"/>
 
@@ -156,7 +156,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
         )
         self<span style="color:#f92672">.</span>_parts<span style="color:#f92672">.</span>append({<span style="color:#e6db74">&#39;PartNumber&#39;</span>: part_number, <span style="color:#e6db74">&#39;ETag&#39;</span>: response[<span style="color:#e6db74">&#39;ETag&#39;</span>], })
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">complete_upload</span>(self, tenant_key: str, entity_name: str) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">complete_upload</span>(self) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
         <span style="color:#e6db74">&#34;&#34;&#34;
 </span><span style="color:#e6db74">        Finish the multipart upload after all the parts have been uploaded.
 </span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
