@@ -44,7 +44,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <meta itemprop="name" content="Python Anti-Pattern">
 <meta itemprop="description" content="Python Anti-Pattern"><meta itemprop="datePublished" content="2021-09-14T21:18:32-04:00" />
 <meta itemprop="dateModified" content="2021-09-14T21:18:32-04:00" />
-<meta itemprop="wordCount" content="803"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
+<meta itemprop="wordCount" content="806"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
 <meta itemprop="keywords" content="python,coding anti-pattern," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/python_antipattern/python.png"/>
 
@@ -190,7 +190,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <li>A cold lambda function is invoked which initializes a new container.</li>
 <li>The lambda function starts processing the csv file row by row and starts multipart uploading 6MB parts. It uploads 5 parts in this case.</li>
 <li>The lambda function completes the multipart upload.</li>
-<li>The lambda dies.</li>
+<li>The lambda function successfully completes execution.</li>
 <li>A new warm lambda function is invoked, which reuses the same container.</li>
 <li>The new lambda function starts processing another csv file and starts uploading 6MB parts. It should upload 10 parts in this case.</li>
 <li>The lambda function tries to complete the multipart upload, but the <code>InvalidPart</code> exception is thrown.</li>
