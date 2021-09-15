@@ -44,7 +44,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <meta itemprop="name" content="Python Anti-Pattern">
 <meta itemprop="description" content="Python Anti-Pattern"><meta itemprop="datePublished" content="2021-09-14T21:18:32-04:00" />
 <meta itemprop="dateModified" content="2021-09-14T21:18:32-04:00" />
-<meta itemprop="wordCount" content="806"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
+<meta itemprop="wordCount" content="803"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
 <meta itemprop="keywords" content="python,coding anti-pattern," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/python_antipattern/python.png"/>
 
@@ -185,7 +185,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <p>Initial invocations of the lambda function were completing succesfully, but subsequent invocations of the lambda function within the same container were randomly failing with the following error:</p>
 <p><code>&quot;An error occurred (InvalidPart) when calling the CompleteMultipartUpload operation: One or more of the specified parts could not be found. The part may not have been uploaded, or the specified entity tag may not match the part's entity tag.&quot;</code></p>
 <p>The error was thrown by <code>multipart_uploader.complete_upload()</code>, but I wasn&rsquo;t sure why.</p>
-<p>This is what was happening, step by step:</p>
+<p>This is what was happening:</p>
 <ol>
 <li>A cold lambda function is invoked which initializes a new container.</li>
 <li>The lambda function starts processing the csv file row by row and starts multipart uploading 6MB parts. It uploads 5 parts in this case.</li>
@@ -197,7 +197,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 </ol>
 <h3 id="debugging">Debugging</h3>
 <p>The logs were showing that the lambda function was actually trying to complete the multipart upload of a total of 15 parts, not 10 parts as it was supposed to. The ETags of the 15 uploaded parts were composed of the first 5 ETags of the parts that were already uploaded by the previous lambda function, and the 10 ETags created during the current lambda invocation.</p>
-<p>Alright&hellip; What the fuck?</p>
+<p>Alright&hellip; What the fuck?!</p>
 <p>Why was the current lambda function still keeping track of the previous lambda functions uploaded parts?</p>
 <p>Well&hellip; it&rsquo;s because I was <a href="https://docs.quantifiedcode.com/python-anti-patterns/correctness/mutable_default_value_as_argument.html">using a mutable default value as an argument</a>.</p>
 <p><code>Passing mutable lists or dictionaries as default arguments to a function can have unforeseen consequences. Usually when a programmer uses a list or dictionary as the default argument to a function, the programmer wants the program to create a new list or dictionary every time that the function is called. However, this is not what Python does. The first time that the function is called, Python creates a persistent object for the list or dictionary. Every subsequent time the function is called, Python uses that same persistent object that was created from the first call to the function.</code></p>
