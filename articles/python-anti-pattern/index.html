@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Vali Voicu ">
+<meta name="description" content="I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.
+I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler.
+class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the S3 multipart upload functionality. &amp;#34;&amp;#34;&amp;#34; def __init__(self, key: str, multipart_id: str = None, parts: List = []) -&amp;gt; None: self." />
+<meta name="keywords" content="homepage, blog, programming, software" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://valinsky.me/articles/python-anti-pattern/" />
+
+
+    <title>
+        
+            Python Anti-Pattern :: Valinsky 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://valinsky.me/main.min.c467f70f5562ac8543d81da2f25cb1364ba4359b62a040d8ecd5bce0ef0a2edc.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://valinsky.me/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://valinsky.me/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://valinsky.me/favicon-16x16.png">
+    <link rel="manifest" href="https://valinsky.me/site.webmanifest">
+    <link rel="mask-icon" href="https://valinsky.me/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://valinsky.me/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+<meta itemprop="name" content="Python Anti-Pattern">
+<meta itemprop="description" content="Python Anti-Pattern"><meta itemprop="datePublished" content="2021-09-14T21:18:32-04:00" />
+<meta itemprop="dateModified" content="2021-09-14T21:18:32-04:00" />
+<meta itemprop="wordCount" content="815"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
+<meta itemprop="keywords" content="python,coding anti-pattern," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://valinsky.me/images/python_antipattern/python.png"/>
+
+<meta name="twitter:title" content="Python Anti-Pattern"/>
+<meta name="twitter:description" content="Python Anti-Pattern"/>
+
+
+
+
+
+    <meta property="article:published_time" content="2021-09-14 21:18:32 -0400 EDT" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://valinsky.me/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /blog/</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://valinsky.me/articles">articles</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://valinsky.me/articles/python-anti-pattern/">Python Anti-Pattern</a></h2>
+
+            
+
+            <div class="post-content">
+                <p>I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.</p>
+<p>I created a wrapper class around the multipart upload functionality and I was using it inside the <code>lambda_handler</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">S3MultipartUploader</span>:
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Wrapper class around the S3 multipart upload functionality.
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">def</span> __init__(self, key: str, multipart_id: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, parts: List <span style="color:#f92672">=</span> []) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+        self<span style="color:#f92672">.</span>_bucket <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bucket&#39;</span>
+        self<span style="color:#f92672">.</span>_key <span style="color:#f92672">=</span> key
+        self<span style="color:#f92672">.</span>_s3_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;s3&#39;</span>)
+        self<span style="color:#f92672">.</span>_multipart_id <span style="color:#f92672">=</span> multipart_id <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>_create_multipart()
+        self<span style="color:#f92672">.</span>_parts <span style="color:#f92672">=</span> parts
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_create_multipart</span>(self) <span style="color:#f92672">-&gt;</span> str:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Create and return a multipart id that will be used for subsequent multipart uploads.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_s3_client<span style="color:#f92672">.</span>create_multipart_upload(Bucket<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_bucket, Key<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_key)
+        <span style="color:#66d9ef">return</span> response[<span style="color:#e6db74">&#39;UploadId&#39;</span>]
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">upload_part</span>(self, data: bytes) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Upload data as a multipart.
+</span><span style="color:#e6db74">        Calculate PartNumber from self._parts length.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">        :param data: Data to be uploaded.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        part_number <span style="color:#f92672">=</span> len(self<span style="color:#f92672">.</span>_parts) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+        response <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_s3_client<span style="color:#f92672">.</span>upload_part(
+            Body<span style="color:#f92672">=</span>data, Bucket<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_bucket, Key<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_key, UploadId<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_multipart_id,
+            PartNumber<span style="color:#f92672">=</span>part_number
+        )
+        self<span style="color:#f92672">.</span>_parts<span style="color:#f92672">.</span>append({<span style="color:#e6db74">&#39;PartNumber&#39;</span>: part_number, <span style="color:#e6db74">&#39;ETag&#39;</span>: response[<span style="color:#e6db74">&#39;ETag&#39;</span>], })
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">complete_upload</span>(self, tenant_key: str, entity_name: str) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Finish the multipart upload after all the parts have been uploaded.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>_s3_client<span style="color:#f92672">.</span>complete_multipart_upload(
+            Bucket<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_bucket, Key<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_key, UploadId<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>_multipart_id,
+            MultipartUpload<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Parts&#39;</span>: self<span style="color:#f92672">.</span>_parts, }
+        )
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event: Dict, context: Dict) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+    multipart_uploader <span style="color:#f92672">=</span> S3MultipartUploader(key<span style="color:#f92672">=</span>event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;multipart_s3_key&#39;</span>))
+
+    <span style="color:#75715e"># read the CSV file row by row and keep storing rows into a buffer</span>
+    <span style="color:#75715e"># when buffer &gt; 6MB do a multipart upload</span>
+    buffer <span style="color:#f92672">=</span> CSVBuffer()
+    <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> read_s3_csv(event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;intake_s3_key&#39;</span>)):
+        buffer<span style="color:#f92672">.</span>write_row(validate_row(row))
+        <span style="color:#66d9ef">if</span> buffer<span style="color:#f92672">.</span>size <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">6291456</span>:  <span style="color:#75715e"># 6 MB</span>
+            multipart_uploader<span style="color:#f92672">.</span>upload_part(buffer)
+            buffer<span style="color:#f92672">.</span>reset()
+
+    <span style="color:#75715e"># mulitpart upload the remaining buffer and complete the multipart upload</span>
+    multipart_uploader<span style="color:#f92672">.</span>upload_part(buffer)
+    multipart_uploader<span style="color:#f92672">.</span>complete_upload()
+</code></pre></div><p>Everything worked great, until it didn&rsquo;t.</p>
+<p>Initial invocations of the lambda function were completing succesfully, but subsequent invocations of the lambda function within the same container were randomly failing.</p>
+<p>I noticed that the <code>multipart_uploader.complete_upload()</code> was throwing an exception.</p>
+<p><code>&quot;An error occurred (InvalidPart) when calling the CompleteMultipartUpload operation: One or more of the specified parts could not be found.  The part may not have been uploaded, or the specified entity tag may not match the part's entity tag.&quot;</code></p>
+<p>I eventually found the cause for the error, but I was still confused as to why it was happening. I&rsquo;ll go through the process step by step.</p>
+<ol>
+<li>A cold lambda function is invoked which initializes a new container.</li>
+<li>The lambda function starts processing the csv file row by row and starts multipart uploading 6MB parts. It uploads 5 parts in this case.</li>
+<li>The lambda function completes the multipart upload.</li>
+<li>The lambda dies.</li>
+<li>A new warm lambda function is invoked, which reuses the same container.</li>
+<li>The new lambda function starts processing another csv file and starts uploading 6MB parts. It should upload 10 parts in this case.</li>
+<li>The lambda function tries to complete the multipart upload, but the <code>InvalidPart</code> exception is thrown.</li>
+</ol>
+<p>The logs were showing that the lambda function was actually trying to complete the multipart upload of a total of 15 parts, not 10 parts as it was supposed to. The ETags of the 15 uploaded parts were composed of the first 5 ETags of the parts that were already uploaded by the previous lambda function, and the 10 ETags created during the current lambda invocation.</p>
+<p>Alright&hellip; What the fuck?</p>
+<p>Why was the current lambda function still keeping track of the previous lambda functions uploaded parts?</p>
+<p>Well&hellip; it&rsquo;s because I was <a href="https://docs.quantifiedcode.com/python-anti-patterns/correctness/mutable_default_value_as_argument.html">using a mutable default value as an argument</a>.</p>
+<p><code>Passing mutable lists or dictionaries as default arguments to a function can have unforeseen consequences. Usually when a programmer uses a list or dictionary as the default argument to a function, the programmer wants the program to create a new list or dictionary every time that the function is called. However, this is not what Python does. The first time that the function is called, Python creates a persistent object for the list or dictionary. Every subsequent time the function is called, Python uses that same persistent object that was created from the first call to the function.</code></p>
+<p>My <code>S3MultipartUploader.__init__</code> method was defaulting the <code>parts</code> argument to an empty list <code>[]</code>.</p>
+<p>The initial cold lambda was initialing the <code>S3MultipartUploader</code> object with <code>parts</code> as an empty list <code>[]</code>, but the subsequent lambda was not. It was <code>reusing</code> the same list that was used by the first lambda, and it was <code>appending</code> parts to it. This was possible because lambdas can reuse containers, meaning that resources are shared between lambda invocations in order to speed them up. And if you&rsquo;re not careful you can end up with unwanted data leaks between invocations.</p>
+<p>After understanding what was going on, the fix was easy.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> __init__(self, key: str, multipart_id: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, parts: List <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+    self<span style="color:#f92672">.</span>_bucket <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bucket&#39;</span>
+    self<span style="color:#f92672">.</span>_key <span style="color:#f92672">=</span> key
+    self<span style="color:#f92672">.</span>_s3_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;s3&#39;</span>)
+    self<span style="color:#f92672">.</span>_multipart_id <span style="color:#f92672">=</span> multipart_id <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>_create_multipart()
+    self<span style="color:#f92672">.</span>_parts <span style="color:#f92672">=</span> [] <span style="color:#66d9ef">if</span> parts <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span> <span style="color:#66d9ef">else</span> parts
+</code></pre></div><p>Instead of defaulting <code>parts</code> to a mutable empty list <code>[]</code>, default it to the immutable <code>None</code> object.</p>
+<p>Everything worked as expected after that.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://valinsky.me/tags/python">python</a></span><span class="tag"><a href="https://valinsky.me/tags/coding-anti-pattern">coding anti-pattern</a></span>
+  				</p>
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+            
+            
+            
+            
+        
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span><a href="https://valinsky.me/privacy-statement">Privacy Policy</a></span>
+            <span><a href="http://gohugo.io">Hugo</a></span>
+            <span><a href="https://github.com/rhazdon">Theme</a></span>
+            <span>&copy; 2021</span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://valinsky.me/bundle.min.08ccaf9cef8b4e0ebd0b0158e66a7bfc0ddbb2194cdb0099e8814ddb89cc7628b27b1158846564e6e03d9ffc5f4d1bc7dfc274d359f9408d1c63d73a3f7332e9.js" integrity="sha512-CMyvnO&#43;LTg69CwFY5mp7/A3bshlM2wCZ6IFN24nMdiiyexFYhGVk5uA9n/xfTRvH38J001n5QI0cY9c6P3My6Q=="></script>
+
+
+
+
+
+
+
+    </body>
+</html>

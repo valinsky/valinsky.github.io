@@ -6,7 +6,18 @@
     <description>Recent content in Articles on Valinsky</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Sep 2021 15:15:12 -0400</lastBuildDate><atom:link href="https://valinsky.me/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Sep 2021 21:18:32 -0400</lastBuildDate><atom:link href="https://valinsky.me/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Anti-Pattern</title>
+      <link>https://valinsky.me/articles/python-anti-pattern/</link>
+      <pubDate>Tue, 14 Sep 2021 21:18:32 -0400</pubDate>
+      
+      <guid>https://valinsky.me/articles/python-anti-pattern/</guid>
+      <description>I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.
+I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler.
+class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the S3 multipart upload functionality. &amp;#34;&amp;#34;&amp;#34; def __init__(self, key: str, multipart_id: str = None, parts: List = []) -&amp;gt; None: self.</description>
+    </item>
+    
     <item>
       <title>CalyxOS</title>
       <link>https://valinsky.me/articles/calyxos/</link>

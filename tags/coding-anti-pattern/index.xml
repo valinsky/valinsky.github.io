@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coding anti-pattern on Valinsky</title>
+    <link>https://valinsky.me/tags/coding-anti-pattern/</link>
+    <description>Recent content in coding anti-pattern on Valinsky</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Sep 2021 21:18:32 -0400</lastBuildDate><atom:link href="https://valinsky.me/tags/coding-anti-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Anti-Pattern</title>
+      <link>https://valinsky.me/articles/python-anti-pattern/</link>
+      <pubDate>Tue, 14 Sep 2021 21:18:32 -0400</pubDate>
+      
+      <guid>https://valinsky.me/articles/python-anti-pattern/</guid>
+      <description>I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.
+I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler.
+class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the S3 multipart upload functionality. &amp;#34;&amp;#34;&amp;#34; def __init__(self, key: str, multipart_id: str = None, parts: List = []) -&amp;gt; None: self.</description>
+    </item>
+    
+  </channel>
+</rss>
