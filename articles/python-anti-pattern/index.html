@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Vali Voicu ">
 <meta name="description" content="I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.
-I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler.
+I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler. The code is simplified for brevity.
 class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the S3 multipart upload functionality. &amp;#34;&amp;#34;&amp;#34; def __init__(self, key: str, multipart_id: str = None, parts: List = []) -&amp;gt; None: self." />
 <meta name="keywords" content="homepage, blog, programming, software" />
 <meta name="robots" content="noodp" />
@@ -44,7 +44,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <meta itemprop="name" content="Python Anti-Pattern">
 <meta itemprop="description" content="Python Anti-Pattern"><meta itemprop="datePublished" content="2021-09-14T21:18:32-04:00" />
 <meta itemprop="dateModified" content="2021-09-14T21:18:32-04:00" />
-<meta itemprop="wordCount" content="815"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
+<meta itemprop="wordCount" content="821"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
 <meta itemprop="keywords" content="python,coding anti-pattern," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/python_antipattern/python.png"/>
 
@@ -123,7 +123,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 
             <div class="post-content">
                 <p>I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.</p>
-<p>I created a wrapper class around the multipart upload functionality and I was using it inside the <code>lambda_handler</code>.</p>
+<p>I created a wrapper class around the multipart upload functionality and I was using it inside the <code>lambda_handler</code>. The code is simplified for brevity.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">S3MultipartUploader</span>:
     <span style="color:#e6db74">&#34;&#34;&#34;
 </span><span style="color:#e6db74">    Wrapper class around the S3 multipart upload functionality.

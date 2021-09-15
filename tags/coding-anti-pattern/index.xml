@@ -14,7 +14,7 @@
       
       <guid>https://valinsky.me/articles/python-anti-pattern/</guid>
       <description>I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.
-I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler.
+I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler. The code is simplified for brevity.
 class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the S3 multipart upload functionality. &amp;#34;&amp;#34;&amp;#34; def __init__(self, key: str, multipart_id: str = None, parts: List = []) -&amp;gt; None: self.</description>
     </item>
     

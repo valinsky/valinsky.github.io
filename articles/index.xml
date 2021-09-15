@@ -14,7 +14,7 @@
       
       <guid>https://valinsky.me/articles/python-anti-pattern/</guid>
       <description>I was writing a lambda function which, among other things, was supposed to read a csv file from S3, perform some validation on every row, then use boto3 to perform an S3 multipart upload.
-I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler.
+I created a wrapper class around the multipart upload functionality and I was using it inside the lambda_handler. The code is simplified for brevity.
 class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the S3 multipart upload functionality. &amp;#34;&amp;#34;&amp;#34; def __init__(self, key: str, multipart_id: str = None, parts: List = []) -&amp;gt; None: self.</description>
     </item>
     
@@ -42,14 +42,15 @@ To commemorate this event, I thought about creating a Twitter bot that keeps tra
     </item>
     
     <item>
-      <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
+      <title>The Square Root of Quake 3</title>
       <link>https://valinsky.me/articles/quake3-fast-inverse-square-root/</link>
       <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
       
       <guid>https://valinsky.me/articles/quake3-fast-inverse-square-root/</guid>
-      <description>This is one of those magical unicorn algorithms.
-I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
-This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
+      <description>This is one of those crazy algorithms.
+This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.
+Nowadays programmers might think to solve this problem by simply importing a library and calling a function.
+But back in 1999 the Quake 3 Arena developers realized it was computationally expensive to calculate the inverse square root of a floating point number on a large scale using traditional methods.</description>
     </item>
     
     <item>

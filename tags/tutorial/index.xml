@@ -8,14 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Nov 2019 17:24:58 -0500</lastBuildDate><atom:link href="https://valinsky.me/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Magic of Quake 3&#39;s Fast Inverse Square Root Explained</title>
+      <title>The Square Root of Quake 3</title>
       <link>https://valinsky.me/articles/quake3-fast-inverse-square-root/</link>
       <pubDate>Sun, 24 Nov 2019 17:24:58 -0500</pubDate>
       
       <guid>https://valinsky.me/articles/quake3-fast-inverse-square-root/</guid>
-      <description>This is one of those magical unicorn algorithms.
-I was always intrigued by this small piece of code, because it&amp;rsquo;s such a unique and elegant solution to a common problem, and it&amp;rsquo;s part of a game I played a lot as a kid. I did not understand it then, but I do now.
-This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.</description>
+      <description>This is one of those crazy algorithms.
+This algorithm estimates the inverse square root, \( 1 / \sqrt{number} \), of a positive 32 bit floating point number.
+Nowadays programmers might think to solve this problem by simply importing a library and calling a function.
+But back in 1999 the Quake 3 Arena developers realized it was computationally expensive to calculate the inverse square root of a floating point number on a large scale using traditional methods.</description>
     </item>
     
     <item>
