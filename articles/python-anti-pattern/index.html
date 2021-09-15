@@ -178,11 +178,11 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
             multipart_uploader<span style="color:#f92672">.</span>upload_part(buffer)
             buffer<span style="color:#f92672">.</span>reset()
 
-    <span style="color:#75715e"># mulitpart upload the remaining buffer and complete the multipart upload</span>
+    <span style="color:#75715e"># multipart upload the remaining buffer and complete the multipart upload</span>
     multipart_uploader<span style="color:#f92672">.</span>upload_part(buffer)
     multipart_uploader<span style="color:#f92672">.</span>complete_upload()
 </code></pre></div><p>Everything worked great, until it didn&rsquo;t.</p>
-<p>Initial invocations of the lambda function were completing succesfully, but subsequent invocations of the lambda function within the same container were randomly failing with the following error:</p>
+<p>Initial invocations of the lambda function were completing successfully, but subsequent invocations of the lambda function within the same container were randomly failing with the following error:</p>
 <p><code>&quot;An error occurred (InvalidPart) when calling the CompleteMultipartUpload operation: One or more of the specified parts could not be found. The part may not have been uploaded, or the specified entity tag may not match the part's entity tag.&quot;</code></p>
 <p>The error was thrown by <code>multipart_uploader.complete_upload()</code>, but I wasn&rsquo;t sure why.</p>
 <p>This is what was happening:</p>
