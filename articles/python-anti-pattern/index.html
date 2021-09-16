@@ -44,7 +44,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
 <meta itemprop="name" content="Python Anti-Pattern">
 <meta itemprop="description" content="Python Anti-Pattern"><meta itemprop="datePublished" content="2021-09-14T21:18:32-04:00" />
 <meta itemprop="dateModified" content="2021-09-14T21:18:32-04:00" />
-<meta itemprop="wordCount" content="806"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
+<meta itemprop="wordCount" content="814"><meta itemprop="image" content="https://valinsky.me/images/python_antipattern/python.png">
 <meta itemprop="keywords" content="python,coding anti-pattern," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://valinsky.me/images/python_antipattern/python.png"/>
 
@@ -132,7 +132,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
         self<span style="color:#f92672">.</span>_bucket <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bucket&#39;</span>
         self<span style="color:#f92672">.</span>_key <span style="color:#f92672">=</span> key
         self<span style="color:#f92672">.</span>_s3_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;s3&#39;</span>)
-        self<span style="color:#f92672">.</span>_multipart_id <span style="color:#f92672">=</span> multipart_id <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>_create_multipart()
+        self<span style="color:#f92672">.</span>_multipart_id <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_create_multipart() <span style="color:#66d9ef">if</span> multipart_id <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span> <span style="color:#66d9ef">else</span> multipart_id
         self<span style="color:#f92672">.</span>_parts <span style="color:#f92672">=</span> parts
     
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_create_multipart</span>(self) <span style="color:#f92672">-&gt;</span> str:
@@ -211,7 +211,7 @@ class S3MultipartUploader: &amp;#34;&amp;#34;&amp;#34; Wrapper class around the 
     self<span style="color:#f92672">.</span>_bucket <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bucket&#39;</span>
     self<span style="color:#f92672">.</span>_key <span style="color:#f92672">=</span> key
     self<span style="color:#f92672">.</span>_s3_client <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>client(<span style="color:#e6db74">&#39;s3&#39;</span>)
-    self<span style="color:#f92672">.</span>_multipart_id <span style="color:#f92672">=</span> multipart_id <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>_create_multipart()
+    self<span style="color:#f92672">.</span>_multipart_id <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_create_multipart() <span style="color:#66d9ef">if</span> multipart_id <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span> <span style="color:#66d9ef">else</span> multipart_id
     self<span style="color:#f92672">.</span>_parts <span style="color:#f92672">=</span> [] <span style="color:#66d9ef">if</span> parts <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span> <span style="color:#66d9ef">else</span> parts
 </code></pre></div><p>Instead of defaulting <code>parts</code> to a mutable empty list <code>[]</code>, default it to the immutable <code>None</code> object.</p>
 <p>Everything worked as expected after that.</p>
