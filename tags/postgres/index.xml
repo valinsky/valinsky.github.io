@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgres on Valinsky</title>
+    <link>https://valinsky.me/tags/postgres/</link>
+    <description>Recent content in postgres on Valinsky</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Jan 2022 10:49:18 -0500</lastBuildDate><atom:link href="https://valinsky.me/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A short story about CSV and Python</title>
+      <link>https://valinsky.me/articles/csv-python-postgres/</link>
+      <pubDate>Sat, 29 Jan 2022 10:49:18 -0500</pubDate>
+      
+      <guid>https://valinsky.me/articles/csv-python-postgres/</guid>
+      <description>The Python CSV module can&amp;rsquo;t distinguish between a NULL value and an empty string.
+Let&amp;rsquo;s say we have a CSV file with 3 columns a,b,c. First column contains a non empty string, second column contains a NULL and the third column contains an empty string:
+a,b,c some string,,&amp;quot;&amp;quot; Let&amp;rsquo;s write a simple Python script to read the CSV file:
+from csv import DictReader row_list = list(DictReader(open(&amp;#39;csv_file&amp;#39;, &amp;#39;r&amp;#39;))) print(row_list) This is how row_list looks like:</description>
+    </item>
+    
+  </channel>
+</rss>
